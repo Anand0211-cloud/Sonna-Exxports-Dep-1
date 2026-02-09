@@ -6,6 +6,9 @@ import VideoSection from '../components/VideoSection';
 import Manufacturing from '../components/Manufacturing';
 import Newsletter from '../components/Newsletter';
 import Footer from '../components/Footer';
+import Testimonials from '../components/Testimonials';
+import Certifications from '../components/Certifications';
+import InstagramFeed from '../components/InstagramFeed';
 import yusrahProfile from '../assets/team/yusrah-profile.jpg';
 import yusrahSignature from '../assets/team/yusrah-signature.png';
 
@@ -15,10 +18,9 @@ const Home = () => {
             <Header />
             <main className="flex-grow">
                 <Hero />
-                <Collections />
 
                 {/* Leadership Section */}
-                <section className="py-20 bg-white text-gray-900">
+                <section className="py-20 bg-background-light text-gray-900">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                         <div className="text-center mb-16">
                             <span className="text-primary font-bold tracking-widest text-sm uppercase">Leadership</span>
@@ -26,10 +28,10 @@ const Home = () => {
                         </div>
                         <div className="flex flex-col lg:flex-row-reverse items-center gap-12 lg:gap-20">
                             <div className="w-full lg:w-1/2 relative">
-                                <div className="absolute -top-4 -right-4 w-full h-full border-2 border-primary/30 rounded-lg"></div>
+                                <div className="absolute -top-4 -right-4 w-full h-full border-2 border-primary/30"></div>
                                 <img
                                     alt="Founder Portrait"
-                                    className="relative rounded-lg shadow-xl w-full h-[600px] object-cover object-top grayscale hover:grayscale-0 transition-all duration-500"
+                                    className="relative shadow-xl w-full h-[600px] object-cover object-top grayscale hover:grayscale-0 transition-all duration-500"
                                     src={yusrahProfile}
                                 />
                             </div>
@@ -54,9 +56,12 @@ const Home = () => {
                     </div>
                 </section>
 
+                <Collections />
                 <VideoSection />
-
                 <Manufacturing />
+                <Testimonials />
+                <Certifications />
+                <InstagramFeed />
                 <Newsletter />
             </main>
             <Footer />

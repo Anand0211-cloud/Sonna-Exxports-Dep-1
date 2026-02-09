@@ -42,14 +42,14 @@ const Editorial = () => {
                             </button>
                         </div>
                         <div className="order-1 lg:order-2 relative">
-                            <div className="absolute -inset-4 bg-accent-beige/10 rounded-xl transform rotate-3"></div>
-                            <div className="relative rounded-lg overflow-hidden aspect-[4/5] shadow-2xl">
+                            <div className="absolute -inset-4 bg-accent-beige/10 transform rotate-3"></div>
+                            <div className="relative overflow-hidden aspect-[4/5] shadow-2xl">
                                 <img
                                     src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1ybDI4BeJOE3iOXM47hPnyTZSQ-g0K_gvQ1grHqdvskoKJBLpQ45AJTM7RS9zuYlt-1IKLu3XXwxN-suml_MR5LV1RZIWk98D9bSBBtKle5M2tS95H-e65pPNtBq_ROvp2Pm3arOikmLGfWm3CMcJZSsBecaHtGdYALa8CRxDXzM1j2Y35K_oeq06c3bZxsNZXX0tAsXi7lK1ie1NHKRB7SokG2jqW4j4tPt8OoxkahflSokd0xK6WXIDn2JvQRHmHxdhkn_uqA"
                                     alt="Fashion designer working on sketches"
                                     className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
                                 />
-                                <div className="absolute bottom-6 right-6 bg-white/10 backdrop-blur-md p-4 rounded-lg border border-white/20 max-w-xs">
+                                <div className="absolute bottom-6 right-6 bg-white/10 backdrop-blur-md p-4 border border-white/20 max-w-xs">
                                     <div className="flex items-start gap-3">
                                         <span className="material-symbols-outlined text-accent-beige">format_quote</span>
                                         <p className="text-white text-sm italic font-serif">"Fashion is not just about clothes, it is about a look."</p>

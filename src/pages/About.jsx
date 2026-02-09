@@ -46,10 +46,10 @@ const About = () => {
                         </div>
                         <div className="flex flex-col lg:flex-row-reverse items-center gap-12 lg:gap-20">
                             <div className="w-full lg:w-1/2 relative">
-                                <div className="absolute -top-4 -right-4 w-full h-full border-2 border-primary/30 rounded-lg"></div>
+                                <div className="absolute -top-4 -right-4 w-full h-full border-2 border-primary/30"></div>
                                 <img
                                     alt="Founder Portrait"
-                                    className="relative rounded-lg shadow-xl w-full h-[600px] object-cover object-top grayscale hover:grayscale-0 transition-all duration-500"
+                                    className="relative shadow-xl w-full h-[600px] object-cover object-top grayscale hover:grayscale-0 transition-all duration-500"
                                     src={yusrahProfile}
                                 />
                             </div>
@@ -158,11 +158,11 @@ const About = () => {
                                 </div>
                             </div>
                             <div className="lg:col-span-7 relative">
-                                <div className="relative w-full aspect-video rounded-lg overflow-hidden shadow-2xl bg-gray-900 group cursor-pointer">
+                                <div className="relative w-full aspect-video overflow-hidden shadow-2xl bg-gray-900 group cursor-pointer">
                                     <img
                                         alt="Factory floor video thumbnail"
                                         className="w-full h-full object-cover opacity-60 group-hover:opacity-40 transition-opacity duration-300"
-                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQAu0XU3hHCsEcKNdZ7LmVW1OKZ0pN9nyoA6qulLiDVlC7WdNjfp9_Bf4lDYR6hqZ1bYSmSVvb_gNVY66lj_4GnXSlCP4O8iJVZEBu7FqBS5_WF62hFvUOaTfAVEQwC6PGSXZTaBRu-PdKNBPKU8msHTRRdg6FlQNPKRcGxJzeKNYbU_wf4JMMiiuy4ke4AS0xdRPbDiu6qdQHmauTHNDQUBXJwHQoGExZv_CAZnw01o0b4wwuei8ZoKWLHnNYJCYIkdn78chuMQ"
+                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQAu0XU3hHCsEcKNdZ7LmVW1OKZ0pN9nyoA6qulLiDVlC7WdNjfp9_Bf4lDYR6hqZ1bYSmSVvb_gNVY66lj_4GnXSlCP4O8iJVZEBu7FqBS5_WF62hFvUOaTfAVEQwC6PGSXZTaBRu-PdKNBPKU8msHTRRdg6FlQNPKRcGxJzeKNYbU_wf4JMMiiuy4ke4AS0xdRPbDiu6qdQHmauTHNDQUBXJwHQoGExZv_CAZn01o0b4wwuei8ZoKWLHnNYJCYIkdn78chuMQ"
                                     />
                                     <div className="absolute inset-0 flex items-center justify-center">
                                         <div className="w-20 h-20 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300 border border-white/50">

@@ -9,10 +9,7 @@ const Footer = () => {
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
                         <div className="flex flex-col gap-6">
                             <div className="flex items-center gap-2">
-                                <div className="size-6 bg-accent-beige rounded-full flex items-center justify-center">
-                                    <span className="material-symbols-outlined text-primary-dark text-xs">all_inclusive</span>
-                                </div>
-                                <span className="font-serif font-bold text-xl tracking-tight">SONNA</span>
+                                <span className="font-serif font-bold text-xl tracking-tight">SONNA EXXPORTS</span>
                             </div>
                             <p className="text-white/60 text-sm leading-relaxed">
                                 Premium export fashion house connecting global trends with timeless quality since 1998.

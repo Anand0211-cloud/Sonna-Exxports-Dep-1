@@ -51,7 +51,7 @@ const ProductDetail = () => {
                 <div className="lg:grid lg:grid-cols-2 lg:gap-x-12 xl:gap-x-16">
                     {/* Product Gallery */}
                     <div className="product-gallery space-y-4">
-                        <div className="aspect-w-3 aspect-h-4 bg-gray-100 dark:bg-gray-800 rounded-lg overflow-hidden relative shadow-sm group">
+                        <div className="aspect-w-3 aspect-h-4 bg-gray-100 dark:bg-gray-800 overflow-hidden relative shadow-sm group">
                             <img
                                 alt={product.alt}
                                 className="w-full h-full object-cover object-center transform transition duration-500 group-hover:scale-105"
@@ -62,7 +62,7 @@ const ProductDetail = () => {
                         {/* Thumbnails - placeholder reusing same image for now as we lack multiple angles */}
                         <div className="grid grid-cols-4 gap-4 mt-4">
                             {[1, 2, 3, 4].map((item) => (
-                                <button key={item} className={`aspect-w-1 aspect-h-1 bg-gray-100 dark:bg-gray-800 rounded-md overflow-hidden ${item === 1 ? 'ring-2 ring-primary ring-offset-2 dark:ring-offset-background-dark' : 'opacity-70 hover:opacity-100 transition-opacity'}`}>
+                                <button key={item} className={`aspect-w-1 aspect-h-1 bg-gray-100 dark:bg-gray-800 overflow-hidden ${item === 1 ? 'ring-2 ring-primary ring-offset-2 dark:ring-offset-background-dark' : 'opacity-70 hover:opacity-100 transition-opacity'}`}>
                                     <img alt="Thumbnail" className="w-full h-full object-cover object-center" src={product.image} />
                                 </button>
                             ))}
@@ -83,22 +83,22 @@ const ProductDetail = () => {
                             <h3 className="font-display text-lg font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
                                 <span className="material-symbols-outlined text-primary mr-2 text-xl">tune</span> Technical Specifications
                             </h3>
-                            <div className="grid grid-cols-2 gap-y-4 gap-x-8 text-sm">
+                            <div className="grid grid-cols-2 gap-y-6 gap-x-8">
                                 <div>
-                                    <span className="block text-gray-500 dark:text-gray-400 text-xs uppercase tracking-wider mb-1">Fabric Composition</span>
-                                    <span className="font-medium text-gray-900 dark:text-white">{product.specifications.fabric}</span>
+                                    <span className="block text-gray-700 dark:text-gray-300 text-sm uppercase tracking-wider mb-1">Fabric Composition</span>
+                                    <span className="font-medium text-lg text-gray-900 dark:text-white">{product.specifications.fabric}</span>
                                 </div>
                                 <div>
-                                    <span className="block text-gray-500 dark:text-gray-400 text-xs uppercase tracking-wider mb-1">GSM (Weight)</span>
-                                    <span className="font-medium text-gray-900 dark:text-white">{product.specifications.gsm}</span>
+                                    <span className="block text-gray-700 dark:text-gray-300 text-sm uppercase tracking-wider mb-1">GSM (Weight)</span>
+                                    <span className="font-medium text-lg text-gray-900 dark:text-white">{product.specifications.gsm}</span>
                                 </div>
                                 <div>
-                                    <span className="block text-gray-500 dark:text-gray-400 text-xs uppercase tracking-wider mb-1">Fit Type</span>
-                                    <span className="font-medium text-gray-900 dark:text-white">{product.specifications.fit}</span>
+                                    <span className="block text-gray-700 dark:text-gray-300 text-sm uppercase tracking-wider mb-1">Fit Type</span>
+                                    <span className="font-medium text-lg text-gray-900 dark:text-white">{product.specifications.fit}</span>
                                 </div>
                                 <div>
-                                    <span className="block text-gray-500 dark:text-gray-400 text-xs uppercase tracking-wider mb-1">Minimum Order Qty</span>
-                                    <span className="font-medium text-gray-900 dark:text-white">{product.specifications.moq}</span>
+                                    <span className="block text-gray-700 dark:text-gray-300 text-sm uppercase tracking-wider mb-1">Minimum Order Qty</span>
+                                    <span className="font-medium text-lg text-gray-900 dark:text-white">{product.specifications.moq}</span>
                                 </div>
                             </div>
                         </div>
@@ -108,12 +108,12 @@ const ProductDetail = () => {
                                 <h3 className="font-display text-lg font-semibold text-gray-900 dark:text-white mb-4">Customization Options</h3>
                                 <div className="space-y-4">
                                     <div className="flex items-start space-x-2">
-                                        <span className="material-symbols-outlined text-primary text-sm mt-0.5">check_circle</span>
-                                        <p className="text-sm text-gray-600 dark:text-gray-300">Custom Labels & Hangtags</p>
+                                        <span className="material-symbols-outlined text-primary text-xl mt-0.5">check_circle</span>
+                                        <p className="text-lg text-gray-800 dark:text-gray-200">Custom Labels & Hangtags</p>
                                     </div>
                                     <div className="flex items-start space-x-2">
-                                        <span className="material-symbols-outlined text-primary text-sm mt-0.5">check_circle</span>
-                                        <p className="text-sm text-gray-600 dark:text-gray-300">Embroidery or Print detailing</p>
+                                        <span className="material-symbols-outlined text-primary text-xl mt-0.5">check_circle</span>
+                                        <p className="text-lg text-gray-800 dark:text-gray-200">Embroidery or Print detailing</p>
                                     </div>
                                 </div>
                             </div>
@@ -170,7 +170,7 @@ const ProductDetail = () => {
                         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-y-10 gap-x-6 xl:gap-x-8">
                             {similarProducts.map((simProduct) => (
                                 <div key={simProduct.id} className="group relative">
-                                    <div className="w-full aspect-w-3 aspect-h-4 bg-gray-200 dark:bg-gray-700 rounded-lg overflow-hidden">
+                                    <div className="w-full aspect-w-3 aspect-h-4 bg-gray-200 dark:bg-gray-700 overflow-hidden">
                                         <img
                                             alt={simProduct.alt}
                                             className="w-full h-full object-center object-cover group-hover:opacity-75 transition-opacity"

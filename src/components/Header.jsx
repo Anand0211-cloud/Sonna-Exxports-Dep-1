@@ -8,23 +8,20 @@ const Header = () => {
                 <div className="w-full max-w-7xl flex items-center justify-between relative">
                     {/* Left Navigation (Desktop) */}
                     <nav className="hidden lg:flex items-center gap-8">
-                        <Link to="/about" className="text-white/80 hover:text-accent-beige text-sm font-medium transition-colors">About</Link>
-                        <Link to="/collections" className="text-white/80 hover:text-accent-beige text-sm font-medium transition-colors">Portfolio</Link>
+                        <Link to="/about" className="text-white/80 hover:text-accent-beige text-base font-semibold transition-colors">About</Link>
+                        <Link to="/collections" className="text-white/80 hover:text-accent-beige text-base font-semibold transition-colors">Portfolio</Link>
                     </nav>
 
                     {/* Logo (Centered on Desktop, Left on Mobile) */}
-                    <Link to="/" className="flex items-center gap-3 text-white group lg:absolute lg:left-1/2 lg:-translate-x-1/2">
-                        <div className="size-8 flex items-center justify-center rounded-full bg-accent-beige text-primary-dark transition-transform group-hover:rotate-180 duration-500">
-                            <span className="material-symbols-outlined text-xl">all_inclusive</span>
-                        </div>
+                    <Link to="/" className="flex items-center justify-center text-white group lg:absolute lg:left-1/2 lg:-translate-x-1/2">
                         <h2 className="text-white text-xl lg:text-2xl font-serif font-bold tracking-tight">SONNA EXXPORTS</h2>
                     </Link>
 
                     {/* Right Navigation (Desktop) & Mobile Toggle */}
                     <div className="flex items-center gap-8">
                         <nav className="hidden lg:flex items-center gap-8">
-                            <Link to="/customization" className="text-white/80 hover:text-accent-beige text-sm font-medium transition-colors">Customization</Link>
-                            <Link to="/contact" className="text-white/80 hover:text-accent-beige text-sm font-medium transition-colors">Contact</Link>
+                            <Link to="/customization" className="text-white/80 hover:text-accent-beige text-base font-semibold transition-colors">Customization</Link>
+                            <Link to="/contact" className="text-white/80 hover:text-accent-beige text-base font-semibold transition-colors">Contact</Link>
                         </nav>
 
                         {/* Mobile Menu Button */}

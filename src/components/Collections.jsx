@@ -2,7 +2,7 @@ import React from 'react';
 
 const CollectionItem = ({ image, title, subtitle, description, tag }) => {
     return (
-        <div className="group relative flex-1 hover:flex-[2] transition-all duration-700 ease-in-out cursor-pointer overflow-hidden rounded-2xl">
+        <div className="group relative flex-1 hover:flex-[2] transition-all duration-700 ease-in-out cursor-pointer overflow-hidden">
             <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors z-10"></div>
             <img
                 src={image}
@@ -27,7 +27,8 @@ const CollectionItem = ({ image, title, subtitle, description, tag }) => {
 };
 
 const Collections = () => {
-    const collections = [
+    // Original data
+    const baseCollections = [
         {
             image: "https://lh3.googleusercontent.com/aida-public/AB6AXuBnj3A_EwBs65_yb8EVWlwho3S7_mwDj1-e_4V4Q7Yi5uzqfX632vyRM9-Xnj2kqajCQpwb-HqCHTxLibaBhagSbaNHfQq_fpz4qP1_8KZ9IYqfnynE0PW26TPuxvJliLU_HBSfauAdcH7zbjtIqRyfYGec2V7LKqkki_iDxvJvFXYHuixvQ4idQ3FsS8J7tsWBMwE_7JcN5Dat0i8n8sz0DbRPyhb-zgZhufGPF6ZxFQA3ei2H1OHvlBxbmDjprbZcJSaXOi_Eew",
             title: "Women's Wear",
@@ -54,23 +55,72 @@ const Collections = () => {
         }
     ];
 
+    // Triplicate the data to get 12 items as requested
+    const collections = [...baseCollections, ...baseCollections, ...baseCollections].map((item, index) => ({
+        ...item,
+        id: index // add unique id for React keys
+    }));
+
+    const [startIndex, setStartIndex] = React.useState(0);
+    const itemsToShow = 4;
+
+    const nextSlide = () => {
+        setStartIndex((prev) => (prev + itemsToShow) % collections.length);
+    };
+
+    const prevSlide = () => {
+        setStartIndex((prev) => (prev - itemsToShow + collections.length) % collections.length);
+    };
+
+    // Get the current slice of items. Handle wrapping if needed, but since we jump by 4 and length is 12, it divides evenly.
+    const visibleCollections = collections.slice(startIndex, startIndex + itemsToShow);
+
     return (
-        <section className="py-20 px-4 md:px-10 w-full max-w-[1600px] mx-auto">
+        <section className="py-20 px-4 md:px-10 w-full max-w-[1600px] mx-auto bg-background-light">
             <div className="flex flex-col gap-10">
                 <div className="flex justify-between items-end px-2">
                     <div>
-                        <h3 className="text-accent-beige text-sm font-bold tracking-widest uppercase mb-2">Collections</h3>
-                        <h2 className="text-4xl md:text-5xl font-serif text-white">Curated Categories</h2>
+                        <h3 className="text-primary text-sm font-bold tracking-widest uppercase mb-2">Collections</h3>
+                        <h2 className="text-4xl md:text-5xl font-serif text-primary-dark">Curated Categories</h2>
                     </div>
-                    <a href="#" className="hidden md:flex items-center gap-2 text-white/70 hover:text-accent-beige transition-colors pb-1 border-b border-transparent hover:border-accent-beige">
-                        <span>View all categories</span>
-                        <span className="material-symbols-outlined text-sm">arrow_forward</span>
-                    </a>
                 </div>
-                <div className="flex flex-col lg:flex-row h-[1200px] lg:h-[600px] gap-2 w-full">
-                    {collections.map((item, index) => (
-                        <CollectionItem key={index} {...item} />
+
+                <div
+                    key={startIndex}
+                    className="flex flex-col lg:flex-row h-[1200px] lg:h-[600px] gap-2 w-full animate-fade-in"
+                >
+                    {visibleCollections.map((item) => (
+                        <CollectionItem key={item.id} {...item} />
                     ))}
+                </div>
+
+                {/* Slider Controls */}
+                <div className="flex justify-center items-center gap-6 mt-4">
+                    <button
+                        onClick={prevSlide}
+                        className="size-12 rounded-full border border-primary/20 flex items-center justify-center text-primary-dark hover:bg-primary hover:text-white transition-all"
+                    >
+                        <span className="material-symbols-outlined">arrow_back</span>
+                    </button>
+
+                    <div className="flex gap-2">
+                        {Array.from({ length: Math.ceil(collections.length / itemsToShow) }).map((_, idx) => (
+                            <button
+                                key={idx}
+                                onClick={() => setStartIndex(idx * itemsToShow)}
+                                className={`h-2 rounded-full transition-all duration-300 ${Math.floor(startIndex / itemsToShow) === idx ? "w-8 bg-primary" : "w-2 bg-primary/20 hover:bg-primary/40"
+                                    }`}
+                                aria-label={`Go to slide ${idx + 1}`}
+                            />
+                        ))}
+                    </div>
+
+                    <button
+                        onClick={nextSlide}
+                        className="size-12 rounded-full border border-primary/20 flex items-center justify-center text-primary-dark hover:bg-primary hover:text-white transition-all"
+                    >
+                        <span className="material-symbols-outlined">arrow_forward</span>
+                    </button>
                 </div>
             </div>
         </section>
