@@ -18,10 +18,6 @@ export default {
         "surface-light": "rgb(246, 235, 251)",
         "background-dark": "#1d151c",
         "footer-bg": "rgb(67, 34, 87)",
-        "theme-bg-primary": "rgb(var(--bg-primary) / <alpha-value>)",
-        "theme-text-primary": "rgb(var(--text-primary) / <alpha-value>)",
-        "theme-bg-secondary": "rgb(var(--bg-secondary) / <alpha-value>)",
-        "theme-text-secondary": "rgb(var(--text-secondary) / <alpha-value>)",
       },
       fontFamily: {
         "display": ["Manrope", "sans-serif"],

@@ -14,7 +14,7 @@ const Contact = () => {
                     {/* Header Text */}
                     <div className="text-center max-w-3xl mx-auto  mt-10 mb-16 animate-fade-in">
                         <span className="text-primary font-bold tracking-[0.2em] text-xs uppercase mb-3 block">Get in Touch</span>
-                        <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl text-theme-text-secondary mb-6">Let's Start a Conversation</h1>
+                        <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl text-[rgb(67,34,87)] mb-6">Let's Start a Conversation</h1>
                         <p className="text-gray-600 dark:text-gray-400 text-lg font-light leading-relaxed">
                             Whether you're looking for bespoke manufacturing or have a question about our premium collections, we're here to help you craft your identity.
                         </p>
@@ -24,7 +24,7 @@ const Contact = () => {
                     <div className="bg-white dark:bg-gray-900 rounded-3xl overflow-hidden shadow-2xl flex flex-col lg:flex-row animate-fade-in-up">
 
                         {/* Left Panel: Contact Info & Brand */}
-                        <div className="lg:w-2/5 bg-theme-bg-primary text-theme-text-primary p-10 lg:p-16 flex flex-col justify-between relative overflow-hidden">
+                        <div className="lg:w-2/5 bg-[rgb(67,34,87)] text-white p-10 lg:p-16 flex flex-col justify-between relative overflow-hidden">
                             {/* Background Texture */}
                             <div className="absolute top-0 right-0 w-64 h-64 bg-white opacity-5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
                             <div className="absolute bottom-0 left-0 w-64 h-64 bg-purple-500 opacity-10 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2"></div>
@@ -37,7 +37,7 @@ const Contact = () => {
                                         <img src={yusrahProfile} alt="Yusrah" className="w-full h-full object-cover" />
                                     </div>
                                     <div>
-                                        <p className="text-xl font-bold uppercase tracking-wider text-theme-text-primary">Sonna Exxport</p>
+                                        <p className="text-xl font-bold uppercase tracking-wider text-white">Sonna Exxport</p>
                                     </div>
 
                                 </div>
@@ -56,7 +56,7 @@ const Contact = () => {
                                             <span className="material-symbols-outlined text-accent-beige mt-1">mail</span>
                                             <div>
                                                 <p className="text-xs font-bold uppercase tracking-widest text-purple-200 mb-1">Email</p>
-                                                <a href="mailto:hello@sonnaexxports.com" className="font-serif text-xl hover:text-accent-beige transition-colors">hello@sonnaexxports.com</a>
+                                                <a href="mailto:contact@sonnaexxports.com" className="font-serif text-xl hover:text-accent-beige transition-colors">contact@sonnaexxports.com</a>
                                             </div>
                                         </div>
                                         <div className="flex items-start gap-4">
@@ -64,8 +64,8 @@ const Contact = () => {
                                             <div>
                                                 <p className="text-xs font-bold uppercase tracking-widest text-purple-200 mb-1">Headquarters</p>
                                                 <p className="font-light opacity-90 leading-relaxed">
-                                                    123 Fashion Avenue, Textile District,<br />
-                                                    Mumbai, Maharashtra, 400001
+                                                    A 504 Lodha bel Air, Patel Estate,<br />
+                                                    Mumbai, Maharashtra - 400102
                                                 </p>
                                             </div>
                                         </div>
@@ -160,7 +160,7 @@ const Contact = () => {
                                     ></textarea>
                                 </div>
 
-                                <button className="group relative w-full sm:w-auto overflow-hidden bg-theme-bg-primary text-theme-text-primary py-4 px-10 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                                <button className="group relative w-full sm:w-auto overflow-hidden bg-[rgb(67,34,87)] text-white py-4 px-10 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
                                     <span className="relative z-10 font-bold uppercase tracking-widest text-sm flex items-center justify-center gap-2">
                                         Send Inquiry
                                         <span className="material-symbols-outlined text-xl group-hover:translate-x-1 transition-transform">arrow_forward</span>
@@ -170,7 +170,7 @@ const Contact = () => {
 
                             <div className="mt-20 rounded-3xl overflow-hidden shadow-xl h-[400px] animate-fade-in-up delay-200">
                                 <iframe
-                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d120638.0645227916!2d72.8354462635467!3d19.082522320490726!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c6306644edc1%3A0x5da4ed8f8d648c69!2sMumbai%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1707645000000!5m2!1sen!2sin"
+                                    src="https://maps.google.com/maps?q=Lodha%20Bel%20Air%20Mumbai&t=&z=13&ie=UTF8&iwloc=&output=embed"
                                     width="100%"
                                     height="100%"
                                     style={{ border: 0 }}
