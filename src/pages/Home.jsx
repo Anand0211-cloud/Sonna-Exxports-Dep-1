@@ -24,7 +24,7 @@ const Home = () => {
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                         <div className="text-center mb-16">
                             <span className="text-primary font-bold tracking-widest text-sm uppercase">Leadership</span>
-                            <h2 className="font-serif text-4xl md:text-5xl text-gray-900 mt-3">The Visionary Behind SONNA</h2>
+                            <h2 className="font-serif text-4xl md:text-5xl mt-3">The Visionary Behind SONNA</h2>
                         </div>
                         <div className="flex flex-col lg:flex-row-reverse items-center gap-12 lg:gap-20">
                             <div className="w-full lg:w-1/2 relative">
@@ -36,7 +36,7 @@ const Home = () => {
                                 />
                             </div>
                             <div className="w-full lg:w-1/2 space-y-6">
-                                <h3 className="font-serif text-5xl font-bold text-gray-900">Yusrah</h3>
+                                <h3 className="font-serif text-5xl font-bold">Yusrah</h3>
                                 <p className="text-gray-600 leading-loose">
                                     With over two decades of experience in the international fashion industry, Yusrah founded SONNA EXXPORTS with a simple yet profound belief: that luxury should never come at the cost of integrity.
                                 </p>

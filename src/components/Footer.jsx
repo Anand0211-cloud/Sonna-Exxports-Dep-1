@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom';
 
 const Footer = () => {
     return (
-        <footer className="bg-[rgb(67,34,87)] border-t border-white/10 pt-16 pb-8 text-white">
+        <footer className="bg-[rgb(67,34,87)] border-t border-white/10 pt-12 pb-6 text-white">
             <div className="layout-container px-4 md:px-10 flex justify-center">
-                <div className="w-full max-w-7xl flex flex-col gap-12">
+                <div className="w-full max-w-7xl flex flex-col gap-8">
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
                         <div className="flex flex-col gap-6">
                             <div className="flex items-center gap-2">
@@ -51,7 +51,7 @@ const Footer = () => {
                             <a href="#" className="text-white/60 hover:text-accent-beige text-sm transition-colors">Shipping & Returns</a>
                         </div>
                     </div>
-                    <div className="flex flex-col md:flex-row justify-between items-center gap-4 pt-8 border-t border-white/5">
+                    <div className="flex flex-col md:flex-row justify-between items-center gap-4 pt-6 border-t border-white/5">
                         <p className="text-white/40 text-xs">© {new Date().getFullYear()} Sonna Exxports. All rights reserved.</p>
                         <div className="flex gap-6">
                             <div className="h-6 w-10 bg-white/10 rounded"></div>

@@ -5,6 +5,41 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  :root {
+    /* Deep Purple Background (Default Light Mode) */
+    --bg-primary: 67 34 87;
+    /* White Text on Deep Purple */
+    --text-primary: 255 255 255;
+
+    /* Light Gray Background (Default Light Mode Secondary) */
+    --bg-secondary: 229 231 235;
+    /* Deep Purple Text on Light Gray */
+    --text-secondary: 67 34 87;
+  }
+
+  .dark {
+    /* Light Gray Background (Dark Mode Swap) */
+    --bg-primary: 229 231 235;
+    /* Deep Purple Text on Light Gray (Dark Mode Swap) */
+    --text-primary: 67 34 87;
+
+    /* Deep Purple Background (Dark Mode Swap Secondary) */
+    --bg-secondary: 67 34 87;
+    /* White Text on Deep Purple (Dark Mode Swap Secondary) */
+    --text-secondary: 255 255 255;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: rgb(67, 34, 87);
+  }
+}
+
 ::-webkit-scrollbar {
   width: 8px;
 }
@@ -27,7 +62,50 @@
 }
 
 .glass-nav {
-  background: rgba(46, 22, 45, 0.85);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  background: rgb(67, 34, 87);
+  opacity: 1;
+}
+
+@layer utilities {
+  .animate-fade-in {
+    animation: fadeIn 1s ease-out forwards;
+  }
+
+  .animate-fade-in-up {
+    animation: fadeInUp 1s ease-out forwards;
+  }
+
+  .delay-100 {
+    animation-delay: 100ms;
+  }
+
+  .delay-200 {
+    animation-delay: 200ms;
+  }
+
+  .delay-300 {
+    animation-delay: 300ms;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

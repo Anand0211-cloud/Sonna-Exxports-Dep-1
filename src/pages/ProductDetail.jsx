@@ -72,7 +72,7 @@ const ProductDetail = () => {
                     {/* Product Info */}
                     <div className="mt-10 px-0 sm:mt-16 lg:mt-0">
                         <div className="mb-6">
-                            <h1 className="font-display text-4xl font-bold text-gray-900 dark:text-white mb-2">{product.name}</h1>
+                            <h1 className="font-display text-4xl font-bold mb-2">{product.name}</h1>
                             <p className="text-sm text-gray-500 dark:text-gray-400 font-mono tracking-wide">REF: {product.ref}</p>
                         </div>
                         <div className="prose prose-sm dark:prose-invert text-gray-600 dark:text-gray-300 mb-8">
@@ -80,7 +80,7 @@ const ProductDetail = () => {
                         </div>
 
                         <div className="bg-surface-light dark:bg-surface-dark border border-gray-200 dark:border-gray-700 rounded-lg p-6 mb-8 shadow-sm">
-                            <h3 className="font-display text-lg font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <h3 className="font-display text-lg font-semibold mb-4 flex items-center">
                                 <span className="material-symbols-outlined text-primary mr-2 text-xl">tune</span> Technical Specifications
                             </h3>
                             <div className="grid grid-cols-2 gap-y-6 gap-x-8">
@@ -105,7 +105,7 @@ const ProductDetail = () => {
 
                         <div className="space-y-6 mb-10">
                             <div className="border-t border-gray-200 dark:border-gray-700 pt-6">
-                                <h3 className="font-display text-lg font-semibold text-gray-900 dark:text-white mb-4">Customization Options</h3>
+                                <h3 className="font-display text-lg font-semibold mb-4">Customization Options</h3>
                                 <div className="space-y-4">
                                     <div className="flex items-start space-x-2">
                                         <span className="material-symbols-outlined text-primary text-xl mt-0.5">check_circle</span>
@@ -120,7 +120,7 @@ const ProductDetail = () => {
                         </div>
 
                         <div className="bg-gray-50 dark:bg-gray-800 rounded-xl p-6 border border-gray-100 dark:border-gray-700">
-                            <h4 className="text-base font-semibold text-gray-900 dark:text-white mb-2">Ready to place a bulk order?</h4>
+                            <h4 className="text-base font-semibold mb-2">Ready to place a bulk order?</h4>
                             <p className="text-sm text-gray-500 dark:text-gray-400 mb-6">Our dedicated export team will guide you through sampling, pricing, and logistics.</p>
                             <Link to="/contact" className="w-full flex items-center justify-center bg-primary text-white text-lg font-medium px-8 py-4 rounded-md shadow-lg hover:bg-opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary transition-all duration-200 transform hover:-translate-y-0.5">
                                 <span className="material-symbols-outlined mr-2">chat</span>
@@ -162,7 +162,7 @@ const ProductDetail = () => {
                 {similarProducts.length > 0 && (
                     <section className="mt-24">
                         <div className="flex items-center justify-between mb-8">
-                            <h2 className="text-2xl font-display font-bold text-gray-900 dark:text-white">Similar Export Styles</h2>
+                            <h2 className="text-2xl font-display font-bold">Similar Export Styles</h2>
                             <Link to="/collections" className="text-primary hover:text-opacity-80 font-medium flex items-center">
                                 View Collection <span className="material-symbols-outlined ml-1 text-sm">arrow_forward</span>
                             </Link>

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const Header = () => {
     return (
-        <header className="fixed top-0 z-50 w-full glass-nav border-b border-white/10 transition-all duration-300">
+        <header className="fixed top-0 z-50 w-full bg-[#432257] border-b border-white/10 transition-all duration-300">
             <div className="layout-container flex justify-center px-4 md:px-10 py-6">
                 <div className="w-full max-w-7xl flex items-center justify-between relative">
                     {/* Left Navigation (Desktop) */}

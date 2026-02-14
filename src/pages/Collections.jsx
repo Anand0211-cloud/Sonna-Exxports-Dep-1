@@ -9,14 +9,14 @@ const Collections = () => {
     return (
         <div className="flex h-auto min-h-screen w-full flex-col font-display overflow-x-hidden antialiased bg-background-light dark:bg-background-dark text-text-dark dark:text-gray-100">
             <Header />
-            <div className="w-full pt-32 pb-16 px-6 sm:px-8 lg:px-12">
+            <div className="w-full pt-32 pb-16 px-6 sm:px-10 lg:px-16">
                 {/* Header Section */}
                 <div className="flex justify-center items-center mb-16">
-                    <h1 className="font-display text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white tracking-tight">Our Portfolio</h1>
+                    <h1 className="font-serif text-4xl lg:text-5xl font-bold tracking-tight">Our Portfolio</h1>
                 </div>
 
                 {/* Product Grid */}
-                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 sm:gap-8 lg:gap-12">
+                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
                     {Products.map((product) => (
                         <Link key={product.id} to={`/product/${product.id}`} className="group block cursor-pointer">
                             <div className="relative aspect-[3/4] overflow-hidden bg-gray-100 mb-4">
@@ -33,7 +33,7 @@ const Collections = () => {
                                     />
                                 )}
                             </div>
-                            <h3 className="text-xl font-medium text-gray-900 group-hover:text-primary transition-colors">{product.name}</h3>
+                            <h3 className="text-xl font-medium group-hover:text-primary transition-colors">{product.name}</h3>
                         </Link>
                     ))}
                 </div>

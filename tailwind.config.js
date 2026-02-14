@@ -8,15 +8,20 @@ export default {
   theme: {
     extend: {
       colors: {
-        "white": "rgb(245, 225, 230)",
+        "white": "rgb(246, 235, 251)",
         "primary": "#5e2c5c",
         "primary-dark": "#2e162d",
         "primary-light": "#8e5c8c",
         "accent-beige": "#f3e5d8",
         "accent-beige-hover": "#e6d0bc",
-        "background-light": "rgb(245, 225, 230)",
-        "surface-light": "rgb(245, 225, 230)",
+        "background-light": "rgb(246, 235, 251)",
+        "surface-light": "rgb(246, 235, 251)",
         "background-dark": "#1d151c",
+        "footer-bg": "rgb(67, 34, 87)",
+        "theme-bg-primary": "rgb(var(--bg-primary) / <alpha-value>)",
+        "theme-text-primary": "rgb(var(--text-primary) / <alpha-value>)",
+        "theme-bg-secondary": "rgb(var(--bg-secondary) / <alpha-value>)",
+        "theme-text-secondary": "rgb(var(--text-secondary) / <alpha-value>)",
       },
       fontFamily: {
         "display": ["Manrope", "sans-serif"],
