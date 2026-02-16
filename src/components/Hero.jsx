@@ -2,7 +2,7 @@ import React from 'react';
 
 const Hero = () => {
     return (
-        <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+        <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-28 md:pt-20">
             <div className="absolute inset-0 z-0">
                 <img
                     src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2XA1s7XhSYYmYEpMD85HtDIOfhWMCRGNJ3TAV2cOei3bkxEMW2SHBm95loyxxv5x0-O4GrEC-Uh38__FXdxc3J1eagVrFwZmximoRxLq_YFBWnARZbf0OVLhAGGv7W_U3jwi0MBn7YrmH8doxfxsVl3FGjLXAg5HIes7clm2344LWkWn5Pxs3D6GTdofq0OJObbZLihs1BTF1n5EUMPiqqc12YmCtV2OdELM4cX09LBcF_ON8onm-_nrWw8ENorKAWOTJ6hW8Dw"
