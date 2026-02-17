@@ -14,7 +14,7 @@ const Contact = () => {
                     {/* Header Text */}
                     <div className="text-center max-w-3xl mx-auto  mt-10 mb-16 animate-fade-in">
                         <span className="text-primary font-bold tracking-[0.2em] text-xs uppercase mb-3 block">Get in Touch</span>
-                        <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl text-[rgb(67,34,87)] mb-6">Let's Start a Conversation</h1>
+                        <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl text-[#460566] mb-6">Let's Start a Conversation</h1>
                         <p className="text-gray-600 dark:text-gray-400 text-lg font-light leading-relaxed">
                             Whether you're looking for bespoke manufacturing or have a question about our premium collections, we're here to help you craft your identity.
                         </p>
@@ -24,7 +24,7 @@ const Contact = () => {
                     <div className="bg-white dark:bg-gray-900 rounded-3xl overflow-hidden shadow-2xl flex flex-col lg:flex-row animate-fade-in-up">
 
                         {/* Left Panel: Contact Info & Brand */}
-                        <div className="lg:w-2/5 bg-[rgb(67,34,87)] text-white p-10 lg:p-16 flex flex-col justify-between relative overflow-hidden">
+                        <div className="lg:w-2/5 bg-[#460566] text-white p-10 lg:p-16 flex flex-col justify-between relative overflow-hidden">
                             {/* Background Texture */}
                             <div className="absolute top-0 right-0 w-64 h-64 bg-white opacity-5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
                             <div className="absolute bottom-0 left-0 w-64 h-64 bg-purple-500 opacity-10 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2"></div>
@@ -160,7 +160,7 @@ const Contact = () => {
                                     ></textarea>
                                 </div>
 
-                                <button className="group relative w-full sm:w-auto overflow-hidden bg-[rgb(67,34,87)] text-white py-4 px-10 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                                <button className="group relative w-full sm:w-auto overflow-hidden bg-[#460566] text-white py-4 px-10 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
                                     <span className="relative z-10 font-bold uppercase tracking-widest text-sm flex items-center justify-center gap-2">
                                         Send Inquiry
                                         <span className="material-symbols-outlined text-xl group-hover:translate-x-1 transition-transform">arrow_forward</span>

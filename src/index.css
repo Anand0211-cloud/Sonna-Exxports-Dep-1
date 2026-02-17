@@ -22,11 +22,11 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: #2e162d;
+  background: #460566;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #5e2c5c;
+  background: #460566;
   border-radius: 4px;
 }
 
@@ -39,7 +39,7 @@
 }
 
 .glass-nav {
-  background: rgb(67, 34, 87);
+  background: #460566;
   opacity: 1;
 }
 

@@ -6,7 +6,7 @@ const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
     return (
-        <header className="fixed top-0 z-50 w-full bg-[#432257] border-b border-white/10 transition-all duration-300">
+        <header className="fixed top-0 z-50 w-full bg-[#460566] border-b border-white/10 transition-all duration-300">
             <div className={`layout-container flex justify-center px-4 md:px-10 ${isMenuOpen ? 'py-6' : 'py-3'} md:py-6 transition-all duration-300`}>
                 <div className="w-full max-w-7xl flex items-center justify-between relative">
                     {/* Left Navigation (Desktop) */}
@@ -43,7 +43,7 @@ const Header = () => {
                     </div>
 
                     {/* Mobile Menu Overlay */}
-                    <div className={`fixed inset-0 bg-[#432257] z-40 flex flex-col items-center justify-center gap-8 transition-transform duration-300 lg:hidden ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
+                    <div className={`fixed inset-0 bg-[#460566] z-40 flex flex-col items-center justify-center gap-8 transition-transform duration-300 lg:hidden ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
                         <div className="flex flex-col items-center gap-8">
                             <Link
                                 to="/"

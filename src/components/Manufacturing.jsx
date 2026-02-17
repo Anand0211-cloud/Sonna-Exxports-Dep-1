@@ -2,7 +2,7 @@ import React from 'react';
 
 const Manufacturing = () => {
     return (
-        <section className="py-24 bg-[rgb(67,34,87)]">
+        <section className="py-24 bg-[#460566]">
             <div className="layout-container flex justify-center px-4 md:px-10">
                 <div className="w-full max-w-7xl">
                     <div className="grid lg:grid-cols-[1.4fr_1fr] gap-12 lg:gap-20 items-center">

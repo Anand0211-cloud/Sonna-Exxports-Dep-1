@@ -55,25 +55,14 @@ const Collections = () => {
         }
     ];
 
-    // Triplicate the data to get 12 items as requested
-    const collections = [...baseCollections, ...baseCollections, ...baseCollections].map((item, index) => ({
+    // Duplicate the data to get 8 items (2 rows of 4)
+    const collections = [...baseCollections, ...baseCollections].map((item, index) => ({
         ...item,
         id: index // add unique id for React keys
     }));
 
-    const [startIndex, setStartIndex] = React.useState(0);
-    const itemsToShow = 4;
-
-    const nextSlide = () => {
-        setStartIndex((prev) => (prev + itemsToShow) % collections.length);
-    };
-
-    const prevSlide = () => {
-        setStartIndex((prev) => (prev - itemsToShow + collections.length) % collections.length);
-    };
-
-    // Get the current slice of items. Handle wrapping if needed, but since we jump by 4 and length is 12, it divides evenly.
-    const visibleCollections = collections.slice(startIndex, startIndex + itemsToShow);
+    const row1 = collections.slice(0, 4);
+    const row2 = collections.slice(4, 8);
 
     return (
         <section className="py-20 px-4 md:px-10 w-full max-w-[1600px] mx-auto bg-background-light">
@@ -85,42 +74,20 @@ const Collections = () => {
                     </div>
                 </div>
 
-                <div
-                    key={startIndex}
-                    className="flex flex-col lg:flex-row h-[1200px] lg:h-[600px] gap-2 w-full animate-fade-in"
-                >
-                    {visibleCollections.map((item) => (
-                        <CollectionItem key={item.id} {...item} />
-                    ))}
-                </div>
-
-                {/* Slider Controls */}
-                <div className="flex justify-center items-center gap-6 mt-4">
-                    <button
-                        onClick={prevSlide}
-                        className="size-12 rounded-full border border-primary/20 flex items-center justify-center text-primary-dark hover:bg-primary hover:text-white transition-all"
-                    >
-                        <span className="material-symbols-outlined">arrow_back</span>
-                    </button>
-
-                    <div className="flex gap-2">
-                        {Array.from({ length: Math.ceil(collections.length / itemsToShow) }).map((_, idx) => (
-                            <button
-                                key={idx}
-                                onClick={() => setStartIndex(idx * itemsToShow)}
-                                className={`h-2 rounded-full transition-all duration-300 ${Math.floor(startIndex / itemsToShow) === idx ? "w-8 bg-primary" : "w-2 bg-primary/20 hover:bg-primary/40"
-                                    }`}
-                                aria-label={`Go to slide ${idx + 1}`}
-                            />
+                <div className="flex flex-col gap-2 animate-fade-in">
+                    {/* Row 1 */}
+                    <div className="flex flex-col lg:flex-row h-[1200px] lg:h-[600px] gap-2 w-full">
+                        {row1.map((item) => (
+                            <CollectionItem key={item.id} {...item} />
                         ))}
                     </div>
 
-                    <button
-                        onClick={nextSlide}
-                        className="size-12 rounded-full border border-primary/20 flex items-center justify-center text-primary-dark hover:bg-primary hover:text-white transition-all"
-                    >
-                        <span className="material-symbols-outlined">arrow_forward</span>
-                    </button>
+                    {/* Row 2 */}
+                    <div className="flex flex-col lg:flex-row h-[1200px] lg:h-[600px] gap-2 w-full">
+                        {row2.map((item) => (
+                            <CollectionItem key={item.id} {...item} />
+                        ))}
+                    </div>
                 </div>
             </div>
         </section>

@@ -6,7 +6,7 @@ import VideoSection from '../components/VideoSection';
 import Manufacturing from '../components/Manufacturing';
 import Newsletter from '../components/Newsletter';
 import Footer from '../components/Footer';
-import Testimonials from '../components/Testimonials';
+
 import Certifications from '../components/Certifications';
 import InstagramFeed from '../components/InstagramFeed';
 import yusrahProfile from '../assets/team/yusrah-profile.jpg';
@@ -59,7 +59,7 @@ const Home = () => {
                 <Collections />
                 <VideoSection />
                 <Manufacturing />
-                <Testimonials />
+
                 <Certifications />
                 <InstagramFeed />
                 <Newsletter />

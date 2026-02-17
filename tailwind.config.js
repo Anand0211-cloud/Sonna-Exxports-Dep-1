@@ -9,15 +9,15 @@ export default {
     extend: {
       colors: {
         "white": "rgb(246, 235, 251)",
-        "primary": "#5e2c5c",
-        "primary-dark": "#2e162d",
+        "primary": "#460566",
+        "primary-dark": "#460566",
         "primary-light": "#8e5c8c",
         "accent-beige": "#f3e5d8",
         "accent-beige-hover": "#e6d0bc",
         "background-light": "rgb(246, 235, 251)",
         "surface-light": "rgb(246, 235, 251)",
         "background-dark": "#1d151c",
-        "footer-bg": "rgb(67, 34, 87)",
+        "footer-bg": "#460566",
       },
       fontFamily: {
         "display": ["Manrope", "sans-serif"],
