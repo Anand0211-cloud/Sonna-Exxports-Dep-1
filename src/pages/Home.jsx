@@ -31,7 +31,7 @@ const Home = () => {
                                 <div className="absolute -top-4 -right-4 w-full h-full border-2 border-primary/30"></div>
                                 <img
                                     alt="Founder Portrait"
-                                    className="relative shadow-xl w-full h-[600px] object-cover object-top grayscale hover:grayscale-0 transition-all duration-500"
+                                    className="relative shadow-xl w-full h-[600px] object-cover object-top transition-all duration-500"
                                     src={yusrahProfile}
                                 />
                             </div>

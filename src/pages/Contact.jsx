@@ -43,7 +43,7 @@ const Contact = () => {
                                 </div>
 
                                 <div>
-                                    <h3 className="font-serif text-3xl mb-8">Contact Information</h3>
+                                    <h3 className="font-serif text-3xl mb-8 text-white">Contact Information</h3>
                                     <div className="space-y-6">
                                         <div className="flex items-start gap-4">
                                             <span className="material-symbols-outlined text-accent-beige mt-1">call</span>

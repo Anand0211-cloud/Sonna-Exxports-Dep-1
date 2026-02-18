@@ -311,7 +311,7 @@ const Customization = () => {
                                         {item.icon}
                                     </div>
 
-                                    <h3 className="font-serif text-xl text-gray-800 dark:text-gray-100 relative z-10 leading-snug">
+                                    <h3 className="font-serif text-xl text-primary dark:text-gray-100 relative z-10 leading-snug">
                                         {item.text}
                                     </h3>
                                 </motion.div>

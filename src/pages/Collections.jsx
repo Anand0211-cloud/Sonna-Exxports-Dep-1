@@ -11,8 +11,12 @@ const Collections = () => {
             <Header />
             <div className="w-full pt-32 pb-16 px-6 sm:px-10 lg:px-16">
                 {/* Header Section */}
-                <div className="flex justify-center items-center mb-16">
-                    <h1 className="font-serif text-4xl lg:text-5xl font-bold tracking-tight">Our Portfolio</h1>
+                <div className="text-center max-w-3xl mx-auto mb-16 animate-fade-in">
+                    <span className="text-primary font-bold tracking-[0.2em] text-xs uppercase mb-3 block">Our Work</span>
+                    <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl text-[#460566] mb-6">Our Portfolio</h1>
+                    <p className="text-gray-600 dark:text-gray-400 text-lg font-light leading-relaxed">
+                        Explore our curated collection of premium garments, where craftsmanship meets contemporary design. Each piece tells a story of quality and dedication.
+                    </p>
                 </div>
 
                 {/* Product Grid */}

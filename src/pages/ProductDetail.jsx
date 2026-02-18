@@ -7,10 +7,14 @@ import { products } from '../data/products';
 const ProductDetail = () => {
     const { id } = useParams();
     const product = products.find(p => p.id === parseInt(id));
+    const [selectedImage, setSelectedImage] = React.useState(null);
 
     useEffect(() => {
         window.scrollTo(0, 0);
-    }, [id]);
+        if (product) {
+            setSelectedImage(product.image);
+        }
+    }, [id, product]);
 
     if (!product) {
         return (
@@ -55,15 +59,19 @@ const ProductDetail = () => {
                             <img
                                 alt={product.alt}
                                 className="w-full h-full object-cover object-center transform transition duration-500 group-hover:scale-105"
-                                src={product.image}
+                                src={selectedImage || product.image}
                             />
                             <div className="absolute top-4 left-4 bg-white dark:bg-gray-900 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-primary shadow-sm rounded-sm">New Season</div>
                         </div>
-                        {/* Thumbnails - placeholder reusing same image for now as we lack multiple angles */}
+                        {/* Thumbnails */}
                         <div className="grid grid-cols-4 gap-4 mt-4">
-                            {[1, 2, 3, 4].map((item) => (
-                                <button key={item} className={`aspect-w-1 aspect-h-1 bg-gray-100 dark:bg-gray-800 overflow-hidden ${item === 1 ? 'ring-2 ring-primary ring-offset-2 dark:ring-offset-background-dark' : 'opacity-70 hover:opacity-100 transition-opacity'}`}>
-                                    <img alt="Thumbnail" className="w-full h-full object-cover object-center" src={product.image} />
+                            {(product.images || [product.image, product.image, product.image, product.image]).map((img, index) => (
+                                <button
+                                    key={index}
+                                    onClick={() => setSelectedImage(img)}
+                                    className={`aspect-w-1 aspect-h-1 bg-gray-100 dark:bg-gray-800 overflow-hidden ${(selectedImage || product.image) === img ? 'ring-2 ring-primary ring-offset-2 dark:ring-offset-background-dark' : 'opacity-70 hover:opacity-100 transition-opacity'}`}
+                                >
+                                    <img alt={`Thumbnail ${index + 1}`} className="w-full h-full object-cover object-center" src={img} />
                                 </button>
                             ))}
                         </div>
@@ -107,17 +115,21 @@ const ProductDetail = () => {
                             <div className="border-t border-gray-200 dark:border-gray-700 pt-6">
                                 <h3 className="font-display text-lg font-semibold mb-4">Customization Options</h3>
                                 <div className="space-y-4">
-                                    <div className="flex items-start space-x-2">
-                                        <span className="material-symbols-outlined text-primary text-xl mt-0.5">check_circle</span>
-                                        <p className="text-lg text-gray-800 dark:text-gray-200">Custom Labels & Hangtags</p>
-                                    </div>
-                                    <div className="flex items-start space-x-2">
-                                        <span className="material-symbols-outlined text-primary text-xl mt-0.5">check_circle</span>
-                                        <p className="text-lg text-gray-800 dark:text-gray-200">Embroidery or Print detailing</p>
-                                    </div>
+                                    {
+                                        (product.customization || [
+                                            'Custom Labels & Hangtags',
+                                            'Embroidery or Print detailing'
+                                        ]).map((option, index) => (
+                                            <div key={index} className="flex items-start space-x-2">
+                                                <span className="material-symbols-outlined text-primary text-xl mt-0.5">check_circle</span>
+                                                <p className="text-lg text-gray-800 dark:text-gray-200">{option}</p>
+                                            </div>
+                                        ))
+                                    }
                                 </div>
                             </div>
                         </div>
+
 
                         <div className="bg-gray-50 dark:bg-gray-800 rounded-xl p-6 border border-gray-100 dark:border-gray-700">
                             <h4 className="text-base font-semibold mb-2">Ready to place a bulk order?</h4>
@@ -159,43 +171,45 @@ const ProductDetail = () => {
                 </div>
 
                 {/* Similar Styles */}
-                {similarProducts.length > 0 && (
-                    <section className="mt-24">
-                        <div className="flex items-center justify-between mb-8">
-                            <h2 className="text-2xl font-display font-bold">Similar Export Styles</h2>
-                            <Link to="/collections" className="text-primary hover:text-opacity-80 font-medium flex items-center">
-                                View Collection <span className="material-symbols-outlined ml-1 text-sm">arrow_forward</span>
-                            </Link>
-                        </div>
-                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-y-10 gap-x-6 xl:gap-x-8">
-                            {similarProducts.map((simProduct) => (
-                                <div key={simProduct.id} className="group relative">
-                                    <div className="w-full aspect-w-3 aspect-h-4 bg-gray-200 dark:bg-gray-700 overflow-hidden">
-                                        <img
-                                            alt={simProduct.alt}
-                                            className="w-full h-full object-center object-cover group-hover:opacity-75 transition-opacity"
-                                            src={simProduct.image}
-                                        />
-                                    </div>
-                                    <div className="mt-4 flex justify-between">
-                                        <div>
-                                            <h3 className="text-sm text-gray-700 dark:text-gray-200">
-                                                <Link to={`/product/${simProduct.id}`}>
-                                                    <span aria-hidden="true" className="absolute inset-0"></span>
-                                                    {simProduct.name}
-                                                </Link>
-                                            </h3>
-                                            <p className="mt-1 text-sm text-gray-500 dark:text-gray-400">{simProduct.specifications.gsm} | {simProduct.specifications.fabric}</p>
+                {
+                    similarProducts.length > 0 && (
+                        <section className="mt-24">
+                            <div className="flex items-center justify-between mb-8">
+                                <h2 className="text-2xl font-display font-bold">Similar Export Styles</h2>
+                                <Link to="/collections" className="text-primary hover:text-opacity-80 font-medium flex items-center">
+                                    View Collection <span className="material-symbols-outlined ml-1 text-sm">arrow_forward</span>
+                                </Link>
+                            </div>
+                            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-y-10 gap-x-6 xl:gap-x-8">
+                                {similarProducts.map((simProduct) => (
+                                    <div key={simProduct.id} className="group relative">
+                                        <div className="w-full aspect-w-3 aspect-h-4 bg-gray-200 dark:bg-gray-700 overflow-hidden">
+                                            <img
+                                                alt={simProduct.alt}
+                                                className="w-full h-full object-center object-cover group-hover:opacity-75 transition-opacity"
+                                                src={simProduct.image}
+                                            />
+                                        </div>
+                                        <div className="mt-4 flex justify-between">
+                                            <div>
+                                                <h3 className="text-sm text-primary dark:text-gray-200">
+                                                    <Link to={`/product/${simProduct.id}`}>
+                                                        <span aria-hidden="true" className="absolute inset-0"></span>
+                                                        {simProduct.name}
+                                                    </Link>
+                                                </h3>
+                                                <p className="mt-1 text-sm text-gray-500 dark:text-gray-400">{simProduct.specifications.gsm} | {simProduct.specifications.fabric}</p>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            ))}
-                        </div>
-                    </section>
-                )}
-            </main>
+                                ))}
+                            </div>
+                        </section>
+                    )
+                }
+            </main >
             <Footer />
-        </div>
+        </div >
     );
 };
 

@@ -1,3 +1,25 @@
+import roundNeck1 from '../assets/Round neck 1.png';
+import roundNeck2 from '../assets/Round neck 2.png';
+import roundNeck3 from '../assets/round neck 3.png';
+import polo1 from '../assets/polo 1.png';
+import polo2 from '../assets/polo 2.png';
+import polo3 from '../assets/polo 3.png';
+import hoodie1 from '../assets/hoodie 1.png';
+import hoodie2 from '../assets/hoodie 2.png';
+import hoodie3 from '../assets/hoodie 3.png';
+import sweatshirt1 from '../assets/sweatshirt 1.png';
+import sweatshirt2 from '../assets/sweatshirt 2.png';
+import sweatshirt3 from '../assets/sweatshirt 3.png';
+import oversized1 from '../assets/oversized 1.png';
+import oversized2 from '../assets/oversized 2.png';
+import oversized3 from '../assets/oversized 3.png';
+import henley1 from '../assets/henley 1.png';
+import henley2 from '../assets/henley 2.png';
+import henley3 from '../assets/henley 3.png';
+import tank1 from '../assets/tank 1.png';
+import tank2 from '../assets/tank 2.png';
+import tank3 from '../assets/tank 3.png';
+
 export const products = [
     // Menswear
     {
@@ -5,153 +27,191 @@ export const products = [
         category: 'Menswear',
         name: 'Round Neck',
         features: ['Premium Cotton', 'Classic Fit', 'Breathable Fabric'],
-        image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBbDZ5la_XcBYGKdWI2_VC1I4dtzZuo-kuZ-daCc0IpiV0Z8ziE78TPmPKYRQ_Jm3dHvL0MQI7kNporfhmP5MPexQjyyotJoMOlb3dp5XD1LvDWNtZj5GIMikyQ_KNE30yUFf78Ax6xLBRE52JPq9x7D7i2U6FDug36rSp7WlVQI_Vr5ckMSjEAnBUIqNqYrX9LXtk3tHbHoD-R4oPQweuPG8IQuSN8YYP5qWVTzlLW3iqJ_1u9xDHjPxHLRQnRlsF1Ds79au6kww',
-        hoverImage: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDNXz8Is0KJcxspNOCNabpq8ApXiGHbLjcCVkwlU96GW9Rh0EbOLi9_EInAgOI2jF8bfkIKtFBwaVE7oG4Sg-ZAfh2VNWjMIx0z0rQG9qZmhzFd-psHAb9KwOHQcAt9ELXv0ws4lK2GNnR9uTAK2EFLohtUdQ-HpRN9AMK8dJgBOAJWugjbvNqiQkGR4pZS-nY4IlYHcNWu-Evtv6erZbg9n0BVRglipye2B5Z1W6hRNuLgbEOQkSZLx9yM1Fh5uZ2HWr04G3B1GQ',
+        image: roundNeck1,
+        hoverImage: roundNeck2,
+        images: [roundNeck1, roundNeck2, roundNeck3],
         alt: 'Man wearing a classic white round neck t-shirt',
-        ref: 'SX-MW-2024-RN',
-        description: 'A staple for any wardrobe, our Round Neck T-shirt is crafted from premium cotton for unmatched comfort and durability. Designed with a classic fit, it serves as the perfect base layer or standalone piece.',
+        ref: 'SX–MW–RN–01',
+        description: 'A core essential in men’s apparel, our Round Neck T-shirt is manufactured for comfort, structure, and long-term durability. Designed for bulk production, it serves as a reliable base for private label collections and wholesale distribution.',
         specifications: {
-            fabric: '100% Premium Cotton',
-            gsm: '180 GSM',
-            fit: 'Classic / Regular Fit',
-            moq: '500 Pieces'
-        }
+            fabric: '100% Cotton / Cotton Blends (Customizable)',
+            gsm: '160–220 GSM',
+            fit: 'Regular / Slim / Oversized',
+            moq: '300–500 Pieces'
+        },
+        customization: [
+            'Custom Labels & Hangtags',
+            'Embroidery or Print Detailing',
+            'Fabric & GSM Customization',
+            'Color Development'
+        ]
     },
     {
         id: 2,
         category: 'Menswear',
         name: 'Polo',
         features: ['Pique Cotton', 'Ribbed Collar', 'Smart Casual'],
-        image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBbDZ5la_XcBYGKdWI2_VC1I4dtzZuo-kuZ-daCc0IpiV0Z8ziE78TPmPKYRQ_Jm3dHvL0MQI7kNporfhmP5MPexQjyyotJoMOlb3dp5XD1LvDWNtZj5GIMikyQ_KNE30yUFf78Ax6xLBRE52JPq9x7D7i2U6FDug36rSp7WlVQI_Vr5ckMSjEAnBUIqNqYrX9LXtk3tHbHoD-R4oPQweuPG8IQuSN8YYP5qWVTzlLW3iqJ_1u9xDHjPxHLRQnRlsF1Ds79au6kww',
-        hoverImage: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDNXz8Is0KJcxspNOCNabpq8ApXiGHbLjcCVkwlU96GW9Rh0EbOLi9_EInAgOI2jF8bfkIKtFBwaVE7oG4Sg-ZAfh2VNWjMIx0z0rQG9qZmhzFd-psHAb9KwOHQcAt9ELXv0ws4lK2GNnR9uTAK2EFLohtUdQ-HpRN9AMK8dJgBOAJWugjbvNqiQkGR4pZS-nY4IlYHcNWu-Evtv6erZbg9n0BVRglipye2B5Z1W6hRNuLgbEOQkSZLx9yM1Fh5uZ2HWr04G3B1GQ',
+        image: polo1,
+        hoverImage: polo2,
+        images: [polo1, polo2, polo3],
         alt: 'Classic polo shirt with textured fabric',
-        ref: 'SX-MW-2024-PL',
-        description: 'Elevate your casual wear with our Pique Cotton Polo. Featuring a durable ribbed collar and cuffs, this shirt offers a smart-casual look suitable for various occasions.',
+        ref: 'SX–MW–PO–02',
+        description: 'Our men’s Polo T-shirt is structured for retail collections and corporate requirements. Manufactured with precision stitching and collar reinforcement, it balances comfort with a refined finish suitable for private labels and uniform programs.',
         specifications: {
-            fabric: '100% Cotton Pique',
-            gsm: '220 GSM',
-            fit: 'Slim / Regular Fit',
-            moq: '300 Pieces'
-        }
+            fabric: 'Cotton Piqué / Blended Piqué',
+            gsm: '200–240 GSM',
+            fit: 'Regular / Tailored Fit',
+            moq: '300–500 Pieces'
+        },
+        customization: [
+            'Custom Collar & Placket Styles',
+            'Embroidery Branding',
+            'Custom Labeling',
+            'Bespoke Packaging'
+        ]
     },
     {
         id: 3,
         category: 'Menswear',
         name: 'Hoodies',
         features: ['Fleece Lined', 'Adjustable Hood', 'Kangaroo Pocket'],
-        image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDdO6S9dedDKE8jV_-c5UkDaskWSdFqzP6iyibHQWyABr5mpu0vl74NqDqvThtgIecuilcEsEaj8XpgXeeiPSWdVk4UKEtwPTDUl0BH5P94pmp1Dx_wudOSQ0djeoGmLGfwFZNdxAGRSOgeo_aetqQWqn3EinroQ6fZY0geT3m-grjWYpYX55itUsG08Fu6AAU4pzNVmwD2o8HtTIcmXu0_upiiawM6cO-mUVdJ1DS2CHcva66weXoQjS_5Nxifg19G2hgLKorPkw',
-        hoverImage: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDNXz8Is0KJcxspNOCNabpq8ApXiGHbLjcCVkwlU96GW9Rh0EbOLi9_EInAgOI2jF8bfkIKtFBwaVE7oG4Sg-ZAfh2VNWjMIx0z0rQG9qZmhzFd-psHAb9KwOHQcAt9ELXv0ws4lK2GNnR9uTAK2EFLohtUdQ-HpRN9AMK8dJgBOAJWugjbvNqiQkGR4pZS-nY4IlYHcNWu-Evtv6erZbg9n0BVRglipye2B5Z1W6hRNuLgbEOQkSZLx9yM1Fh5uZ2HWr04G3B1GQ',
+        image: hoodie1,
+        hoverImage: hoodie2,
+        images: [hoodie1, hoodie2, hoodie3],
         alt: 'Comfortable oversized hoodie',
-        ref: 'SX-MW-2024-HD',
-        description: 'Warmth meets style in our premium Fleece Lined Hoodie. Complete with a spacious kangaroo pocket and adjustable hood, it is essential for cooler weather.',
+        ref: 'SX–MW–HD–03',
+        description: 'Built for structured bulk manufacturing, our Hoodies are designed with reinforced seams and premium fabric blends. Suitable for retail brands, winter collections, and promotional apparel programs.',
         specifications: {
-            fabric: 'Cotton / Polyester Blend',
-            gsm: '300 GSM',
-            fit: 'Oversized / Relaxed',
-            moq: '200 Pieces'
-        }
+            fabric: 'Cotton Fleece / Terry / Blends',
+            gsm: '280–350 GSM',
+            fit: 'Regular / Oversized',
+            moq: '300–500 Pieces'
+        },
+        customization: [
+            'Screen Printing',
+            'Puff & Specialty Prints',
+            'Custom Drawcords & Trims',
+            'Private Labeling'
+        ]
     },
     {
         id: 4,
         category: 'Menswear',
         name: 'Sweatshirt',
         features: ['Cotton Blend', 'Ribbed Cuffs', 'Relaxed Fit'],
-        image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDNXz8Is0KJcxspNOCNabpq8ApXiGHbLjcCVkwlU96GW9Rh0EbOLi9_EInAgOI2jF8bfkIKtFBwaVE7oG4Sg-ZAfh2VNWjMIx0z0rQG9qZmhzFd-psHAb9KwOHQcAt9ELXv0ws4lK2GNnR9uTAK2EFLohtUdQ-HpRN9AMK8dJgBOAJWugjbvNqiQkGR4pZS-nY4IlYHcNWu-Evtv6erZbg9n0BVRglipye2B5Z1W6hRNuLgbEOQkSZLx9yM1Fh5uZ2HWr04G3B1GQ',
-        hoverImage: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBbDZ5la_XcBYGKdWI2_VC1I4dtzZuo-kuZ-daCc0IpiV0Z8ziE78TPmPKYRQ_Jm3dHvL0MQI7kNporfhmP5MPexQjyyotJoMOlb3dp5XD1LvDWNtZj5GIMikyQ_KNE30yUFf78Ax6xLBRE52JPq9x7D7i2U6FDug36rSp7WlVQI_Vr5ckMSjEAnBUIqNqYrX9LXtk3tHbHoD-R4oPQweuPG8IQuSN8YYP5qWVTzlLW3iqJ_1u9xDHjPxHLRQnRlsF1Ds79au6kww',
+        image: sweatshirt1,
+        hoverImage: sweatshirt2,
+        images: [sweatshirt1, sweatshirt2, sweatshirt3],
         alt: 'Soft premium sweatshirt',
-        ref: 'SX-MW-2024-SW',
-        description: 'Our classic Sweatshirt combines a relaxed fit with soft, durable fabric. The ribbed cuffs and hem ensure a secure fit that holds its shape.',
+        ref: 'SX–MW–SW–04',
+        description: 'Our men’s Sweatshirts are manufactured for durability and structured fall. Designed for scalable production, they offer clean finishing and consistent sizing across bulk orders.',
         specifications: {
-            fabric: '80% Cotton, 20% Polyester',
-            gsm: '280 GSM',
-            fit: 'Relaxed Fit',
-            moq: '400 Pieces'
-        }
+            fabric: 'Fleece / French Terry',
+            gsm: '260–320 GSM',
+            fit: 'Regular / Relaxed',
+            moq: '300–500 Pieces'
+        },
+        customization: [
+            'Embroidery & Print',
+            'Rib & Cuff Variations',
+            'Custom Branding',
+            'Fabric Customization'
+        ]
     },
     {
         id: 5,
         category: 'Menswear',
-        name: 'Oversized',
+        name: 'Full Sleeve T-Shirt',
         features: ['Streetwear Style', 'Drop Shoulder', 'Heavyweight Fabric'],
         image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDdO6S9dedDKE8jV_-c5UkDaskWSdFqzP6iyibHQWyABr5mpu0vl74NqDqvThtgIecuilcEsEaj8XpgXeeiPSWdVk4UKEtwPTDUl0BH5P94pmp1Dx_wudOSQ0djeoGmLGfwFZNdxAGRSOgeo_aetqQWqn3EinroQ6fZY0geT3m-grjWYpYX55itUsG08Fu6AAU4pzNVmwD2o8HtTIcmXu0_upiiawM6cO-mUVdJ1DS2CHcva66weXoQjS_5Nxifg19G2hgLKorPkw',
         hoverImage: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDNXz8Is0KJcxspNOCNabpq8ApXiGHbLjcCVkwlU96GW9Rh0EbOLi9_EInAgOI2jF8bfkIKtFBwaVE7oG4Sg-ZAfh2VNWjMIx0z0rQG9qZmhzFd-psHAb9KwOHQcAt9ELXv0ws4lK2GNnR9uTAK2EFLohtUdQ-HpRN9AMK8dJgBOAJWugjbvNqiQkGR4pZS-nY4IlYHcNWu-Evtv6erZbg9n0BVRglipye2B5Z1W6hRNuLgbEOQkSZLx9yM1Fh5uZ2HWr04G3B1GQ',
-        alt: 'Trendy oversized t-shirt',
-        ref: 'SX-MW-2024-OV',
-        description: 'Make a statement with our Oversized Tee. Featuring drop shoulders and heavyweight fabric, it delivers the perfect modern streetwear silhouette.',
+        alt: 'Long sleeve shirt',
+        ref: 'SX–MW–FS–05',
+        description: 'Designed for transitional collections and layering, our Full Sleeve T-shirts combine breathable fabric with reinforced stitching for reliable export-quality production.',
         specifications: {
-            fabric: '100% Heavyweight Cotton',
-            gsm: '240 GSM',
-            fit: 'Oversized',
-            moq: '250 Pieces'
-        }
+            fabric: '100% Cotton / Blends',
+            gsm: '160–220 GSM',
+            fit: 'Regular / Slim',
+            moq: '300–500 Pieces'
+        },
+        customization: [
+            'Print & Embroidery',
+            'Custom Sleeve Detailing',
+            'Labels & Tags',
+            'Color Matching'
+        ]
     },
     {
         id: 6,
         category: 'Menswear',
-        name: 'Full Sleeves',
+        name: 'Oversized T-Shirt',
         features: ['Layering Essential', 'Soft Touch', 'Tailored Fit'],
-        image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBbDZ5la_XcBYGKdWI2_VC1I4dtzZuo-kuZ-daCc0IpiV0Z8ziE78TPmPKYRQ_Jm3dHvL0MQI7kNporfhmP5MPexQjyyotJoMOlb3dp5XD1LvDWNtZj5GIMikyQ_KNE30yUFf78Ax6xLBRE52JPq9x7D7i2U6FDug36rSp7WlVQI_Vr5ckMSjEAnBUIqNqYrX9LXtk3tHbHoD-R4oPQweuPG8IQuSN8YYP5qWVTzlLW3iqJ_1u9xDHjPxHLRQnRlsF1Ds79au6kww',
-        hoverImage: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDNXz8Is0KJcxspNOCNabpq8ApXiGHbLjcCVkwlU96GW9Rh0EbOLi9_EInAgOI2jF8bfkIKtFBwaVE7oG4Sg-ZAfh2VNWjMIx0z0rQG9qZmhzFd-psHAb9KwOHQcAt9ELXv0ws4lK2GNnR9uTAK2EFLohtUdQ-HpRN9AMK8dJgBOAJWugjbvNqiQkGR4pZS-nY4IlYHcNWu-Evtv6erZbg9n0BVRglipye2B5Z1W6hRNuLgbEOQkSZLx9yM1Fh5uZ2HWr04G3B1GQ',
-        alt: 'Long sleeve shirt',
-        ref: 'SX-MW-2024-FS',
-        description: 'Perfect for transitional weather, our Full Sleeves shirt offers a soft touch and tailored fit. An ideal layering piece for any season.',
+        image: oversized1,
+        hoverImage: oversized2,
+        images: [oversized1, oversized2, oversized3],
+        alt: 'Trendy oversized t-shirt',
+        ref: 'SX–MW–OS–06',
+        description: 'Our Oversized T-shirts are developed for contemporary streetwear and modern retail collections. Manufactured with controlled proportions and consistent finishing for scalable production.',
         specifications: {
-            fabric: 'Cotton / Modal Blend',
-            gsm: '160 GSM',
-            fit: 'Tailored Fit',
-            moq: '500 Pieces'
-        }
+            fabric: 'Premium Cotton / Heavy Cotton',
+            gsm: '220–260 GSM',
+            fit: 'Oversized / Relaxed',
+            moq: '300–500 Pieces'
+        },
+        customization: [
+            'Heavyweight Fabric Options',
+            'Puff Print & Graphic Printing',
+            'Custom Neck Rib',
+            'Private Labeling'
+        ]
     },
     {
         id: 7,
         category: 'Menswear',
-        name: 'Henley Neck',
+        name: 'Henley T-Shirt',
         features: ['Button Placket', 'Waffle Knit', 'Casual Comfort'],
-        image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDNXz8Is0KJcxspNOCNabpq8ApXiGHbLjcCVkwlU96GW9Rh0EbOLi9_EInAgOI2jF8bfkIKtFBwaVE7oG4Sg-ZAfh2VNWjMIx0z0rQG9qZmhzFd-psHAb9KwOHQcAt9ELXv0ws4lK2GNnR9uTAK2EFLohtUdQ-HpRN9AMK8dJgBOAJWugjbvNqiQkGR4pZS-nY4IlYHcNWu-Evtv6erZbg9n0BVRglipye2B5Z1W6hRNuLgbEOQkSZLx9yM1Fh5uZ2HWr04G3B1GQ',
-        hoverImage: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBbDZ5la_XcBYGKdWI2_VC1I4dtzZuo-kuZ-daCc0IpiV0Z8ziE78TPmPKYRQ_Jm3dHvL0MQI7kNporfhmP5MPexQjyyotJoMOlb3dp5XD1LvDWNtZj5GIMikyQ_KNE30yUFf78Ax6xLBRE52JPq9x7D7i2U6FDug36rSp7WlVQI_Vr5ckMSjEAnBUIqNqYrX9LXtk3tHbHoD-R4oPQweuPG8IQuSN8YYP5qWVTzlLW3iqJ_1u9xDHjPxHLRQnRlsF1Ds79au6kww',
+        image: henley1,
+        hoverImage: henley2,
+        images: [henley1, henley2, henley3],
         alt: 'Stylish henley neck shirt',
-        ref: 'SX-MW-2024-HN',
-        description: 'The Henley Neck adds a rugged edge to casual wear. Featuring a distinct button placket and textured waffle knit, it combines comfort with effortless style.',
+        ref: 'SX–MW–HN–07',
+        description: 'The Henley combines structured casual design with durable construction. Ideal for premium retail and private label collections requiring subtle detailing and refined finishing.',
         specifications: {
-            fabric: 'Cotton / Elastane Waffle',
-            gsm: '200 GSM',
-            fit: 'Slim Fit',
-            moq: '300 Pieces'
-        }
+            fabric: 'Cotton / Blended Knit',
+            gsm: '180–220 GSM',
+            fit: 'Regular / Slim',
+            moq: '300–500 Pieces'
+        },
+        customization: [
+            'Button Placket Variations',
+            'Embroidery',
+            'Custom Labeling',
+            'Fabric Customization'
+        ]
     },
     {
         id: 8,
         category: 'Menswear',
-        name: 'Tank Top',
+        name: 'Tank',
         features: ['Summer Essential', 'Athletic Cut', 'Lightweight'],
-        image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBbDZ5la_XcBYGKdWI2_VC1I4dtzZuo-kuZ-daCc0IpiV0Z8ziE78TPmPKYRQ_Jm3dHvL0MQI7kNporfhmP5MPexQjyyotJoMOlb3dp5XD1LvDWNtZj5GIMikyQ_KNE30yUFf78Ax6xLBRE52JPq9x7D7i2U6FDug36rSp7WlVQI_Vr5ckMSjEAnBUIqNqYrX9LXtk3tHbHoD-R4oPQweuPG8IQuSN8YYP5qWVTzlLW3iqJ_1u9xDHjPxHLRQnRlsF1Ds79au6kww',
-        hoverImage: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDNXz8Is0KJcxspNOCNabpq8ApXiGHbLjcCVkwlU96GW9Rh0EbOLi9_EInAgOI2jF8bfkIKtFBwaVE7oG4Sg-ZAfh2VNWjMIx0z0rQG9qZmhzFd-psHAb9KwOHQcAt9ELXv0ws4lK2GNnR9uTAK2EFLohtUdQ-HpRN9AMK8dJgBOAJWugjbvNqiQkGR4pZS-nY4IlYHcNWu-Evtv6erZbg9n0BVRglipye2B5Z1W6hRNuLgbEOQkSZLx9yM1Fh5uZ2HWr04G3B1GQ',
+        image: tank1,
+        hoverImage: tank2,
+        images: [tank1, tank2, tank3],
         alt: 'Classic ribbed tank top',
-        ref: 'SX-MW-2024-TT',
-        description: 'Beat the heat with our lightweight Tank Top. The athletic cut permits freedom of movement, making it a summer essential.',
+        ref: 'SX–MW–TK–08',
+        description: 'Manufactured for activewear, summer collections, and promotional requirements, our Tanks are produced with breathable fabrics and structured armhole finishing for export-quality standards.',
         specifications: {
-            fabric: '100% Cotton Rib',
-            gsm: '150 GSM',
-            fit: 'Athletic Cut',
-            moq: '600 Pieces'
-        }
+            fabric: 'Cotton / Performance Blends',
+            gsm: '140–180 GSM',
+            fit: 'Regular / Athletic',
+            moq: '300–500 Pieces'
+        },
+        customization: [
+            'Print & Branding',
+            'Custom Cuts',
+            'Labeling & Tags',
+            'Color Development'
+        ]
     },
-    // Babysuit
-    {
-        id: 9,
-        category: 'Babysuit',
-        name: 'Baby Sleep Suit',
-        features: ['Organic Cotton', 'Snap Buttons', 'Gentle on Skin'],
-        image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuD9WDnyvfDEeXBH8fHivyZ7PYK0U6T6TkfYoaeyspmnbPslNx4f4oP5etmLJ91zgUqCyVRBjBhCdOlTbwTgEuv8KGPjz0W-d79XcHAqKR-ohn7oDOn5DPMFXD1ugIhxaWztUfGeOQgEpCwtE7uBe7WKZY7knG1pqcKEXxkVYXQ4YVUKWOG_A6-vM80-eCjQENDPkG9zDre0d2aYpHtSbn6ngSt3m9kUbWeTkIiBBZKSMuNylMR8P1Rg6S1u1sOPaLwZMfSTG-wuEQ',
-        hoverImage: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDdO6S9dedDKE8jV_-c5UkDaskWSdFqzP6iyibHQWyABr5mpu0vl74NqDqvThtgIecuilcEsEaj8XpgXeeiPSWdVk4UKEtwPTDUl0BH5P94pmp1Dx_wudOSQ0djeoGmLGfwFZNdxAGRSOgeo_aetqQWqn3EinroQ6fZY0geT3m-grjWYpYX55itUsG08Fu6AAU4pzNVmwD2o8HtTIcmXu0_upiiawM6cO-mUVdJ1DS2CHcva66weXoQjS_5Nxifg19G2hgLKorPkw',
-        alt: 'Soft and cozy baby sleep suit',
-        ref: 'SX-BB-2024-SS',
-        description: 'Ensure a peaceful sleep for the little ones with our Baby Sleep Suit. Made from 100% organic cotton, it features easy-snap buttons and ultra-soft fabric gentle on sensitive skin.',
-        specifications: {
-            fabric: '100% Organic Cotton',
-            gsm: '180 GSM',
-            fit: 'Comfort Fit',
-            moq: '500 Pieces'
-        }
-    }
+
 ];

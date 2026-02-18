@@ -14,6 +14,7 @@
   h5,
   h6 {
     font-family: 'Playfair Display', serif;
+    @apply text-primary;
   }
 }
 
