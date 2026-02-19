@@ -49,8 +49,8 @@ const Collections = () => {
     const row2 = portfolioItems.slice(4, 8);
 
     return (
-        <section className="py-20 px-4 md:px-10 w-full max-w-[1600px] mx-auto bg-background-light">
-            <div className="flex flex-col gap-10">
+        <section className="py-20 w-full bg-background-light">
+            <div className="px-4 md:px-10 max-w-[1600px] mx-auto flex flex-col gap-10">
                 <div className="flex justify-between items-end px-2">
                     <div>
                         <h3 className="text-primary text-sm font-bold tracking-widest uppercase mb-2">Collections</h3>
