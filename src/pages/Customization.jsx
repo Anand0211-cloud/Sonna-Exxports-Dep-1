@@ -335,7 +335,7 @@ const Customization = () => {
                 {/* 5. CTA Section */}
                 <section className="py-20 bg-primary text-white text-center px-6">
                     <div className="max-w-4xl mx-auto">
-                        <h2 className="font-serif text-4xl md:text-5xl mb-8">Ready to Create Your Collection?</h2>
+                        <h2 className="font-serif text-4xl md:text-5xl mb-8 text-white">Ready to Create Your Collection?</h2>
                         <p className="text-white/80 text-xl font-light mb-12 max-w-2xl mx-auto">
                             Transform your vision into reality with our premium customization services. Let's discuss your specific requirements.
                         </p>
