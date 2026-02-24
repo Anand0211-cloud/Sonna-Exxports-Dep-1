@@ -23,16 +23,16 @@ const Collections = () => {
                 <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
                     {Products.map((product) => (
                         <Link key={product.id} to={`/product/${product.id}`} className="group block cursor-pointer">
-                            <div className="relative aspect-[3/4] overflow-hidden bg-gray-100 mb-4">
+                            <div className="relative aspect-[4/5] overflow-hidden bg-[#f8f8f8] mb-4 group rounded-md">
                                 <img
                                     alt={product.alt}
-                                    className="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-105 opacity-100 group-hover:opacity-0"
+                                    className="absolute inset-0 w-full h-full object-cover object-top transform transition-transform duration-700 group-hover:scale-[1.03] opacity-100 group-hover:opacity-0"
                                     src={product.image}
                                 />
                                 {product.hoverImage && (
                                     <img
                                         alt={product.alt}
-                                        className="absolute inset-0 w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-105 opacity-0 group-hover:opacity-100"
+                                        className="absolute inset-0 w-full h-full object-cover object-top transform transition-transform duration-700 group-hover:scale-[1.03] opacity-0 group-hover:opacity-100"
                                         src={product.hoverImage}
                                     />
                                 )}

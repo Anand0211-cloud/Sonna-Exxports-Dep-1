@@ -4,6 +4,21 @@ import { Zap, Box, TrendingUp, ShieldCheck, Globe } from 'lucide-react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 
+// School Uniforms
+import school1 from '../assets/School Uniform 1.png';
+import school2 from '../assets/School Uniform 2.png';
+import school3 from '../assets/School Uniform 3.png';
+
+// Industrial Uniforms
+import industrialBlue from '../assets/Industrial Uniform (blue).png';
+import industrialGreen from '../assets/Industrial Uniform (green).png';
+import industrialRed from '../assets/Industrial Uniform (red).png';
+
+// Corporate Uniforms
+import corporate1 from '../assets/Corporate Uniform 1.png';
+import corporate2 from '../assets/Corporate Uniform 2.png';
+import corporate3 from '../assets/Corporate Uniform 3.png';
+
 const Customization = () => {
     const [activeCategory, setActiveCategory] = useState('school');
 
@@ -21,16 +36,16 @@ const Customization = () => {
             fabric: "Poly-Viscose / High-Grade Cotton",
             variants: [
                 {
-                    name: "Classic Navy",
-                    image: "https://lh3.googleusercontent.com/aida-public/AB6AXuBbDZ5la_XcBYGKdWI2_VC1I4dtzZuo-kuZ-daCc0IpiV0Z8ziE78TPmPKYRQ_Jm3dHvL0MQI7kNporfhmP5MPexQjyyotJoMOlb3dp5XD1LvDWNtZj5GIMikyQ_KNE30yUFf78Ax6xLBRE52JPq9x7D7i2U6FDug36rSp7WlVQI_Vr5ckMSjEAnBUIqNqYrX9LXtk3tHbHoD-R4oPQweuPG8IQuSN8YYP5qWVTzlLW3iqJ_1u9xDHjPxHLRQnRlsF1Ds79au6kww"
+                    name: "Design 1",
+                    image: school1
                 },
                 {
-                    name: "Heritage Grey",
-                    image: "https://lh3.googleusercontent.com/aida-public/AB6AXuCnEpYgIqIlDIoU3RonE0xQsaY_NcL3hggTX9gJQgm287l4nCqIYMv-tObNvFCFioSA0SbqnDAY2-JhJ9Bykr3w4B3hyoIhtejeYvV_c13WItyoQp7omZ0avvB22pTFbBJj4vk1KKMoMFrXQbvh0wncsjTf5j_FttTbSUOWjlsKmo8s3smu1KG_jcRO01TMvyPf7oO0g8snnMa_23Oev0ullGAi7kXsHSYaxbBRltnGHv8bG3BHLMZL3Ck-GFFE66nrLzwjf0E3jw"
+                    name: "Design 2",
+                    image: school2
                 },
                 {
-                    name: "Crimson Red",
-                    image: "https://lh3.googleusercontent.com/aida-public/AB6AXuCPonUOwHr2Ie0YKk3mY0AcYNdYpiIZASW20iU4JmF38IBl1EKXxLxhrOQIQetMLu_5Jl8rzZpFMqXxIucUZEZQKxNniw9B4jEqq3MZmOoruB_uks0PaCAj6dFDQEE8EZFQyhIQuv6De4O3Q5LBoIAwivG4ALlJNBdOSIgK7QvL5beHS4ud51iqwaruLi58aiePvCC3wXHeuAdKCCKrNAwWtmqBAcDR1Wrm7FHlwNmE3SL2tiZXwWTIL8P2Z_QeWX5rKMKvHoT7rg"
+                    name: "Design 3",
+                    image: school3
                 }
             ]
         },
@@ -47,16 +62,16 @@ const Customization = () => {
             fabric: "Heavy-duty Twill / Treated Cotton",
             variants: [
                 {
-                    name: "Safety Orange",
-                    image: "https://lh3.googleusercontent.com/aida-public/AB6AXuDdO6S9dedDKE8jV_-c5UkDaskWSdFqzP6iyibHQWyABr5mpu0vl74NqDqvThtgIecuilcEsEaj8XpgXeeiPSWdVk4UKEtwPTDUl0BH5P94pmp1Dx_wudOSQ0djeoGmLGfwFZNdxAGRSOgeo_aetqQWqn3EinroQ6fZY0geT3m-grjWYpYX55itUsG08Fu6AAU4pzNVmwD2o8HtTIcmXu0_upiiawM6cO-mUVdJ1DS2CHcva66weXoQjS_5Nxifg19G2hgLKorPkw"
+                    name: "Industrial Blue",
+                    image: industrialBlue
                 },
                 {
-                    name: "Utility Blue",
-                    image: "https://lh3.googleusercontent.com/aida-public/AB6AXuDAnLndt2iQ_9JI6nccq2C0vYdaJHws6Ej7GyKvXmgE5-lMPeKz_pPORlHzJJT7K8eV1WSOXJ49gtqKaUddChUPV5b7iKhNSPHLcLZoKYQgyyUU1jUg28z4WvMfkExD9HIvwR3ckzEGRNvZtKnkZoiMytzyIpEZxzqsYsJJb4KCb9KbYhK7OcgsXDgusNZjCE7GvZ-VlhRf6PhJa_QLrH5AwN4VePP6INPdEdyAlv_3OgxsD1xrh04MHG_kHuMQt1QRkUjBxA_fJQ"
+                    name: "Industrial Green",
+                    image: industrialGreen
                 },
                 {
-                    name: "Slate Grey",
-                    image: "https://images.unsplash.com/photo-1542272617-08f086303294?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80"
+                    name: "Industrial Red",
+                    image: industrialRed
                 }
             ]
         },
@@ -73,16 +88,16 @@ const Customization = () => {
             fabric: "Fine Cotton / Linen Blends",
             variants: [
                 {
-                    name: "Executive White",
-                    image: "https://lh3.googleusercontent.com/aida-public/AB6AXuBbDZ5la_XcBYGKdWI2_VC1I4dtzZuo-kuZ-daCc0IpiV0Z8ziE78TPmPKYRQ_Jm3dHvL0MQI7kNporfhmP5MPexQjyyotJoMOlb3dp5XD1LvDWNtZj5GIMikyQ_KNE30yUFf78Ax6xLBRE52JPq9x7D7i2U6FDug36rSp7WlVQI_Vr5ckMSjEAnBUIqNqYrX9LXtk3tHbHoD-R4oPQweuPG8IQuSN8YYP5qWVTzlLW3iqJ_1u9xDHjPxHLRQnRlsF1Ds79au6kww"
+                    name: "Design 1",
+                    image: corporate1
                 },
                 {
-                    name: "Modern Blue",
-                    image: "https://images.unsplash.com/photo-1593030761757-71bd90dbe3e4?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80"
+                    name: "Design 2",
+                    image: corporate2
                 },
                 {
-                    name: "Charcoal Black",
-                    image: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80"
+                    name: "Design 3",
+                    image: corporate3
                 }
             ]
         }
@@ -170,13 +185,13 @@ const Customization = () => {
                             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
                                 {uniformDetails[activeCategory].variants.map((variant, index) => (
                                     <div key={index} className="group bg-white dark:bg-gray-900 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100 dark:border-gray-800">
-                                        <div className="relative aspect-[4/5] overflow-hidden bg-gray-200">
+                                        <div className="relative overflow-hidden bg-white flex items-center justify-center border-b border-gray-100 dark:border-gray-800">
                                             <img
                                                 src={variant.image}
                                                 alt={variant.name}
-                                                className="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-105"
+                                                className="w-full h-auto object-cover transform transition-transform duration-700 group-hover:scale-[1.03]"
                                             />
-                                            <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300"></div>
+                                            <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-300"></div>
                                         </div>
                                         <div className="p-6 text-center">
                                             <h4 className="font-serif text-xl text-[#460566] mb-2">{variant.name}</h4>
@@ -273,28 +288,28 @@ const Customization = () => {
                             {[
                                 {
                                     text: "Fast sampling for quicker approvals",
-                                    icon: <Zap className="w-8 h-8 text-white" />,
-                                    color: "bg-blue-500"
+                                    icon: <Zap className="w-8 h-8 text-primary" />,
+                                    color: "bg-primary/5"
                                 },
                                 {
                                     text: "Convenient order quantities",
-                                    icon: <Box className="w-8 h-8 text-white" />,
-                                    color: "bg-purple-500"
+                                    icon: <Box className="w-8 h-8 text-primary" />,
+                                    color: "bg-primary/5"
                                 },
                                 {
                                     text: "Cost-effective manufacturing for larger orders",
-                                    icon: <TrendingUp className="w-8 h-8 text-white" />,
-                                    color: "bg-green-500"
+                                    icon: <TrendingUp className="w-8 h-8 text-primary" />,
+                                    color: "bg-primary/5"
                                 },
                                 {
                                     text: "Strict quality control systems",
-                                    icon: <ShieldCheck className="w-8 h-8 text-white" />,
-                                    color: "bg-red-500"
+                                    icon: <ShieldCheck className="w-8 h-8 text-primary" />,
+                                    color: "bg-primary/5"
                                 },
                                 {
                                     text: "International export compliance",
-                                    icon: <Globe className="w-8 h-8 text-white" />,
-                                    color: "bg-indigo-500"
+                                    icon: <Globe className="w-8 h-8 text-primary" />,
+                                    color: "bg-primary/5"
                                 }
                             ].map((item, index) => (
                                 <motion.div
@@ -305,9 +320,9 @@ const Customization = () => {
                                     transition={{ duration: 0.5, delay: index * 0.1 }}
                                     className={`group relative bg-white dark:bg-gray-800 rounded-2xl p-8 hover:shadow-2xl transition-all duration-300 border border-gray-100 dark:border-gray-700 hover:-translate-y-2 flex flex-col items-center text-center overflow-hidden ${index === 4 ? 'md:col-span-2 lg:col-span-1 lg:col-start-2' : ''}`}
                                 >
-                                    <div className={`absolute top-0 right-0 w-24 h-24 bg-gradient-to-br ${item.color.replace('bg-', 'from-')}/10 to-transparent rounded-bl-full -mr-6 -mt-6 transition-transform group-hover:scale-150 duration-700 ease-out`}></div>
+                                    <div className={`absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-primary/10 to-transparent rounded-bl-full -mr-6 -mt-6 transition-transform group-hover:scale-150 duration-700 ease-out`}></div>
 
-                                    <div className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl ${item.color} shadow-lg shadow-${item.color.replace('bg-', '')}/30 mb-6 group-hover:rotate-6 transition-transform duration-300`}>
+                                    <div className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-primary/10 mb-6 group-hover:rotate-6 transition-transform duration-300`}>
                                         {item.icon}
                                     </div>
 

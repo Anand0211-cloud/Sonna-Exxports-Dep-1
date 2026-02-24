@@ -1,24 +1,55 @@
 import roundNeck1 from '../assets/Round neck 1.png';
 import roundNeck2 from '../assets/Round neck 2.png';
-import roundNeck3 from '../assets/round neck 3.png';
+import roundNeck3 from '../assets/Round neck 3.jpg';
+import roundNeck4 from '../assets/Round neck 4.jpg';
+import roundNeck5 from '../assets/Round neck 5.jpg';
+import roundNeck6 from '../assets/Round neck 6.jpg';
+
 import polo1 from '../assets/polo 1.png';
 import polo2 from '../assets/polo 2.png';
-import polo3 from '../assets/polo 3.png';
+import polo3 from '../assets/polo 3.jpg';
+import polo4 from '../assets/polo 4.jpg';
+import polo5 from '../assets/polo 5.jpg';
+import polo6 from '../assets/polo 6.jpg';
+
 import hoodie1 from '../assets/hoodie 1.png';
 import hoodie2 from '../assets/hoodie 2.png';
-import hoodie3 from '../assets/hoodie 3.png';
+import hoodie3 from '../assets/hoodie 3.jpg';
+import hoodie4 from '../assets/hoodie 4.jpg';
+import hoodie5 from '../assets/hoodie 5.jpg';
+import hoodie6 from '../assets/hoodie 6.jpg';
+
 import sweatshirt1 from '../assets/sweatshirt 1.png';
 import sweatshirt2 from '../assets/sweatshirt 2.png';
-import sweatshirt3 from '../assets/sweatshirt 3.png';
+import sweatshirt3 from '../assets/sweatshirt 3.jpg';
+import sweatshirt4 from '../assets/sweatshirt 4.jpg';
+import sweatshirt5 from '../assets/sweatshirt 5.jpg';
+import sweatshirt6 from '../assets/sweatshirt 6.jpg';
+
 import oversized1 from '../assets/oversized 1.png';
 import oversized2 from '../assets/oversized 2.png';
-import oversized3 from '../assets/oversized 3.png';
+import oversized3 from '../assets/oversized 3.jpg';
+import oversized4 from '../assets/oversized 4.jpg';
+import oversized5 from '../assets/oversized 5.jpg';
+import oversized6 from '../assets/oversized 6.jpg';
+
 import henley1 from '../assets/henley 1.png';
 import henley2 from '../assets/henley 2.png';
 import henley3 from '../assets/henley 3.png';
+
 import tank1 from '../assets/tank 1.png';
 import tank2 from '../assets/tank 2.png';
-import tank3 from '../assets/tank 3.png';
+import tank3 from '../assets/tank 3.jpg';
+import tank4 from '../assets/tank 4.jpg';
+import tank5 from '../assets/tank 5.jpg';
+import tank6 from '../assets/tank 6.jpg';
+
+import fullSleeve1 from '../assets/Full Sleeve T-Shirt 1.jpg';
+import fullSleeve2 from '../assets/Full Sleeve T-Shirt 2.jpg';
+import fullSleeve3 from '../assets/Full Sleeve T-Shirt 3.jpg';
+import fullSleeve4 from '../assets/Full Sleeve T-Shirt  4.jpg';
+import fullSleeve5 from '../assets/Full Sleeve T-Shirt 5.jpg';
+import fullSleeve6 from '../assets/Full Sleeve T-Shirt 6.jpg';
 
 export const products = [
     // Menswear
@@ -29,7 +60,7 @@ export const products = [
         features: ['Premium Cotton', 'Classic Fit', 'Breathable Fabric'],
         image: roundNeck1,
         hoverImage: roundNeck2,
-        images: [roundNeck1, roundNeck2, roundNeck3],
+        images: [roundNeck1, roundNeck2, roundNeck3, roundNeck4, roundNeck5, roundNeck6],
         alt: 'Man wearing a classic white round neck t-shirt',
         ref: 'SX–MW–RN–01',
         description: 'A core essential in men’s apparel, our Round Neck T-shirt is manufactured for comfort, structure, and long-term durability. Designed for bulk production, it serves as a reliable base for private label collections and wholesale distribution.',
@@ -53,7 +84,7 @@ export const products = [
         features: ['Pique Cotton', 'Ribbed Collar', 'Smart Casual'],
         image: polo1,
         hoverImage: polo2,
-        images: [polo1, polo2, polo3],
+        images: [polo1, polo2, polo3, polo4, polo5, polo6],
         alt: 'Classic polo shirt with textured fabric',
         ref: 'SX–MW–PO–02',
         description: 'Our men’s Polo T-shirt is structured for retail collections and corporate requirements. Manufactured with precision stitching and collar reinforcement, it balances comfort with a refined finish suitable for private labels and uniform programs.',
@@ -77,7 +108,7 @@ export const products = [
         features: ['Fleece Lined', 'Adjustable Hood', 'Kangaroo Pocket'],
         image: hoodie1,
         hoverImage: hoodie2,
-        images: [hoodie1, hoodie2, hoodie3],
+        images: [hoodie1, hoodie2, hoodie3, hoodie4, hoodie5, hoodie6],
         alt: 'Comfortable oversized hoodie',
         ref: 'SX–MW–HD–03',
         description: 'Built for structured bulk manufacturing, our Hoodies are designed with reinforced seams and premium fabric blends. Suitable for retail brands, winter collections, and promotional apparel programs.',
@@ -101,7 +132,7 @@ export const products = [
         features: ['Cotton Blend', 'Ribbed Cuffs', 'Relaxed Fit'],
         image: sweatshirt1,
         hoverImage: sweatshirt2,
-        images: [sweatshirt1, sweatshirt2, sweatshirt3],
+        images: [sweatshirt1, sweatshirt2, sweatshirt3, sweatshirt4, sweatshirt5, sweatshirt6],
         alt: 'Soft premium sweatshirt',
         ref: 'SX–MW–SW–04',
         description: 'Our men’s Sweatshirts are manufactured for durability and structured fall. Designed for scalable production, they offer clean finishing and consistent sizing across bulk orders.',
@@ -123,8 +154,9 @@ export const products = [
         category: 'Menswear',
         name: 'Full Sleeve T-Shirt',
         features: ['Streetwear Style', 'Drop Shoulder', 'Heavyweight Fabric'],
-        image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDdO6S9dedDKE8jV_-c5UkDaskWSdFqzP6iyibHQWyABr5mpu0vl74NqDqvThtgIecuilcEsEaj8XpgXeeiPSWdVk4UKEtwPTDUl0BH5P94pmp1Dx_wudOSQ0djeoGmLGfwFZNdxAGRSOgeo_aetqQWqn3EinroQ6fZY0geT3m-grjWYpYX55itUsG08Fu6AAU4pzNVmwD2o8HtTIcmXu0_upiiawM6cO-mUVdJ1DS2CHcva66weXoQjS_5Nxifg19G2hgLKorPkw',
-        hoverImage: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDNXz8Is0KJcxspNOCNabpq8ApXiGHbLjcCVkwlU96GW9Rh0EbOLi9_EInAgOI2jF8bfkIKtFBwaVE7oG4Sg-ZAfh2VNWjMIx0z0rQG9qZmhzFd-psHAb9KwOHQcAt9ELXv0ws4lK2GNnR9uTAK2EFLohtUdQ-HpRN9AMK8dJgBOAJWugjbvNqiQkGR4pZS-nY4IlYHcNWu-Evtv6erZbg9n0BVRglipye2B5Z1W6hRNuLgbEOQkSZLx9yM1Fh5uZ2HWr04G3B1GQ',
+        image: fullSleeve1,
+        hoverImage: fullSleeve2,
+        images: [fullSleeve1, fullSleeve2, fullSleeve3, fullSleeve4, fullSleeve5, fullSleeve6],
         alt: 'Long sleeve shirt',
         ref: 'SX–MW–FS–05',
         description: 'Designed for transitional collections and layering, our Full Sleeve T-shirts combine breathable fabric with reinforced stitching for reliable export-quality production.',
@@ -148,7 +180,7 @@ export const products = [
         features: ['Layering Essential', 'Soft Touch', 'Tailored Fit'],
         image: oversized1,
         hoverImage: oversized2,
-        images: [oversized1, oversized2, oversized3],
+        images: [oversized1, oversized2, oversized3, oversized4, oversized5, oversized6],
         alt: 'Trendy oversized t-shirt',
         ref: 'SX–MW–OS–06',
         description: 'Our Oversized T-shirts are developed for contemporary streetwear and modern retail collections. Manufactured with controlled proportions and consistent finishing for scalable production.',
@@ -196,7 +228,7 @@ export const products = [
         features: ['Summer Essential', 'Athletic Cut', 'Lightweight'],
         image: tank1,
         hoverImage: tank2,
-        images: [tank1, tank2, tank3],
+        images: [tank1, tank2, tank3, tank4, tank5, tank6],
         alt: 'Classic ribbed tank top',
         ref: 'SX–MW–TK–08',
         description: 'Manufactured for activewear, summer collections, and promotional requirements, our Tanks are produced with breathable fabrics and structured armhole finishing for export-quality standards.',

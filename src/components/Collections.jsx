@@ -13,7 +13,7 @@ const CollectionItem = ({ image, title, subtitle, description, tag, id }) => {
             <img
                 src={image}
                 alt={title}
-                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                className="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-[1.03]"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-90"></div>
             <div className="absolute bottom-0 left-0 w-full p-8 z-20 flex flex-col justify-end h-full">
