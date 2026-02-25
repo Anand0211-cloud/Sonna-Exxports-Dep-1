@@ -64,8 +64,8 @@ const ProductDetail = () => {
                             <div className="absolute top-4 left-4 bg-white dark:bg-gray-900 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-primary shadow-sm rounded-sm">New Season</div>
                         </div>
                         {/* Thumbnails */}
-                        <div className="grid grid-cols-4 gap-4 mt-4">
-                            {(product.images || [product.image, product.image, product.image, product.image]).map((img, index) => (
+                        <div className="grid grid-cols-3 gap-4 mt-4">
+                            {(product.images || [product.image, product.image, product.image, product.image, product.image, product.image]).map((img, index) => (
                                 <button
                                     key={index}
                                     onClick={() => setSelectedImage(img)}

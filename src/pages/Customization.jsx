@@ -162,6 +162,7 @@ const Customization = () => {
                                 <button
                                     key={key}
                                     onClick={() => setActiveCategory(key)}
+                                    onMouseEnter={() => setActiveCategory(key)}
                                     className={`px-8 py-3 rounded-full text-sm font-bold uppercase tracking-wider transition-all duration-300 ${activeCategory === key
                                         ? 'bg-primary text-white shadow-lg shadow-primary/30'
                                         : 'bg-white dark:bg-gray-800 text-gray-500 hover:bg-gray-100 border border-gray-200 dark:border-gray-700'
