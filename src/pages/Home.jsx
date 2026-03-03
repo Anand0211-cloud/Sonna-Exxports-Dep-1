@@ -36,13 +36,13 @@ const Home = () => {
                                 />
                             </div>
                             <div className="w-full lg:w-1/2 space-y-6">
-                                <h3 className="font-serif text-5xl font-bold">Yusrah</h3>
-                                <p className="text-gray-600 leading-loose">
-                                    With over two decades of experience in the international fashion industry, Yusrah founded SONNA EXXPORTS with a simple yet profound belief: that luxury should never come at the cost of integrity.
-                                </p>
-                                <p className="text-gray-600 leading-loose">
-                                    Starting her journey in a small tailoring workshop, she cultivated a deep appreciation for the tactile art of fabric making. Today, she leads a team of over 500 skilled professionals, bridging the gap between traditional craftsmanship and modern export demands.
-                                </p>
+                                <h3 className="font-serif text-5xl font-bold">Yusrah Ahmad</h3>
+                                <div className="text-gray-600 leading-relaxed space-y-4">
+                                    <p>Cotton isn’t just fabric — it’s what people wear on their skin every day.</p>
+                                    <p>When I stepped into the garment export space, I saw how inconsistency quietly disrupts global B2B trade. One shipment meets expectations, the next shifts in fabric, sizing, or finishing — and buyers absorb the cost.</p>
+                                    <p>India has one of the richest textile ecosystems in the world. The capability has always been here. What was missing was structure.</p>
+                                    <p>Sonna Exxports was built on one principle: in global exports, consistency matters more than claims. We supply export-grade cotton garments engineered for precision, repeatability, and scale — because in international trade, certainty is the real premium.</p>
+                                </div>
                                 <div className="pt-6">
                                     <img
                                         alt="Founder Signature"

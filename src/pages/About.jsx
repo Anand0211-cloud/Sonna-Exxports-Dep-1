@@ -31,8 +31,10 @@ const About = () => {
                 <section className="py-20 bg-gray-50">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                         <h2 className="font-serif text-4xl md:text-5xl mb-8">About Sonna Exxports</h2>
-                        <p className="text-gray-600 text-lg leading-relaxed max-w-3xl mx-auto text-justify md:text-center">
-                            Established in the heart of India's textile heritage, Sonna Exxports has grown from a local workshop to a global leader in garment manufacturing. We combine traditional craftsmanship with modern technology to deliver exceptional quality to brands worldwide, ensuring every piece tells a story of excellence and integrity.
+                        <p className="text-gray-600 text-lg leading-relaxed max-w-3xl mx-auto text-justify md:text-center space-y-4">
+                            <span className="block">India’s textile strength is unmatched. The difference lies in systems.</span>
+                            <span className="block">Sonna Exxports operates as a structured garment manufacturer & exporter, focused on stable GSM, controlled shrinkage, precise sizing, and consistent finishing across bulk production.</span>
+                            <span className="block">We don’t chase transactions. We build long-term supply reliability.</span>
                         </p>
                     </div>
                 </section>
@@ -42,7 +44,7 @@ const About = () => {
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                         <div className="text-center mb-16">
                             <span className="text-primary font-bold tracking-widest text-sm uppercase">Leadership</span>
-                            <h2 className="font-serif text-4xl md:text-5xl mt-3">The Visionary Behind SONNA</h2>
+                            <h2 className="font-serif text-4xl md:text-5xl mt-3">The Founder</h2>
                         </div>
                         <div className="flex flex-col lg:flex-row-reverse items-center gap-12 lg:gap-20">
                             <div className="w-full lg:w-1/2 relative">
@@ -54,12 +56,13 @@ const About = () => {
                                 />
                             </div>
                             <div className="w-full lg:w-1/2 space-y-6">
-                                <h3 className="font-serif text-5xl font-bold">Yusrah</h3>
+                                <h3 className="font-serif text-5xl font-bold">Yusrah Ahmad</h3>
                                 <p className="text-gray-600 leading-loose">
-                                    With over two decades of experience in the international fashion industry, Yusrah founded SONNA EXXPORTS with a simple yet profound belief: that luxury should never come at the cost of integrity.
+                                    Yusrah Ahmad established Sonna Exxports with one clear focus — to bring discipline, structure, and repeatable standards into export garment manufacturing.
                                 </p>
                                 <p className="text-gray-600 leading-loose">
-                                    Starting her journey in a small tailoring workshop, she cultivated a deep appreciation for the tactile art of fabric making. Today, she leads a team of over 500 skilled professionals, bridging the gap between traditional craftsmanship and modern export demands.
+                                    Her approach is simple:<br />
+                                    <strong>Deliver the same quality in bulk — every single time.</strong>
                                 </p>
                                 <div className="pt-6">
                                     <img
@@ -81,13 +84,13 @@ const About = () => {
                             <div className="bg-white p-10 rounded-lg shadow-sm border-l-4 border-gray-300">
                                 <h2 className="font-serif text-3xl md:text-4xl mb-6">Our Mission</h2>
                                 <p className="text-gray-600 leading-relaxed text-lg">
-                                    At SONNA EXXPORTS, we are dedicated to delivering premium apparel solutions. We strive to empower artisans, minimize our environmental footprint, and provide our partners with unparalleled textile innovation.
+                                    To deliver scalable garment manufacturing supported by disciplined quality systems and long-term supply partnerships.
                                 </p>
                             </div>
                             <div className="bg-white p-10 rounded-lg shadow-sm border-l-4 border-primary">
                                 <h2 className="font-serif text-3xl md:text-4xl mb-6">Our Vision</h2>
                                 <p className="text-gray-600 leading-relaxed text-lg">
-                                    To redefine the global textile landscape by seamlessly blending sustainable practices with haute couture craftsmanship, setting new benchmarks for quality and ethical manufacturing.
+                                    To position Indian textile manufacturing as a global benchmark for consistency, reliability, and export-grade excellence.
                                 </p>
                             </div>
                         </div>
@@ -101,96 +104,39 @@ const About = () => {
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                             <div className="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow">
                                 <span className="material-symbols-outlined text-primary text-4xl mb-4">verified</span>
-                                <h3 className="font-serif text-xl font-bold mb-3">Integrity</h3>
-                                <p className="text-gray-600 text-sm leading-relaxed">Honest partnerships and transparent practices in everything we do.</p>
+                                <h3 className="font-serif text-xl font-bold mb-3">Reliability</h3>
+                                <p className="text-gray-600 text-sm leading-relaxed">We build systems that ensure repeatable production standards across bulk orders.</p>
                             </div>
                             <div className="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                                <span className="material-symbols-outlined text-primary text-4xl mb-4">lightbulb</span>
-                                <h3 className="font-serif text-xl font-bold mb-3">Innovation</h3>
-                                <p className="text-gray-600 text-sm leading-relaxed">Embracing the latest in textile technology to stay ahead of the curve.</p>
+                                <span className="material-symbols-outlined text-primary text-4xl mb-4">sync</span>
+                                <h3 className="font-serif text-xl font-bold mb-3">Consistency</h3>
+                                <p className="text-gray-600 text-sm leading-relaxed">Every shipment follows controlled processes for stable quality output.</p>
                             </div>
                             <div className="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                                <span className="material-symbols-outlined text-primary text-4xl mb-4">eco</span>
-                                <h3 className="font-serif text-xl font-bold mb-3">Sustainability</h3>
-                                <p className="text-gray-600 text-sm leading-relaxed">Commitment to eco-friendly manufacturing and reducing our footprint.</p>
+                                <span className="material-symbols-outlined text-primary text-4xl mb-4">playlist_add_check</span>
+                                <h3 className="font-serif text-xl font-bold mb-3">Structured Quality Testing</h3>
+                                <p className="text-gray-600 text-sm leading-relaxed">Each product undergoes fabric inspection, stitching checks, measurement verification, finishing control, and final audit before dispatch.</p>
                             </div>
                             <div className="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                                <span className="material-symbols-outlined text-primary text-4xl mb-4">diamond</span>
-                                <h3 className="font-serif text-xl font-bold mb-3">Excellence</h3>
-                                <p className="text-gray-600 text-sm leading-relaxed">Uncompromising quality and attention to detail in every stitch.</p>
+                                <span className="material-symbols-outlined text-primary text-4xl mb-4">lock</span>
+                                <h3 className="font-serif text-xl font-bold mb-3">Brand Privacy</h3>
+                                <p className="text-gray-600 text-sm leading-relaxed">We respect client confidentiality. Designs, specifications, and private labels remain fully protected.</p>
                             </div>
                         </div>
                     </div>
                 </section>
 
-                {/* 4. Process Section */}
-                <section className="py-24 bg-white relative">
-                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
-                            <div className="lg:col-span-5 flex flex-col justify-center">
-                                <span className="text-primary font-bold tracking-widest text-sm uppercase mb-2">Process</span>
-                                <h2 className="font-serif text-4xl md:text-5xl mb-6">Behind The Seams</h2>
-                                <p className="text-gray-600 mb-8 text-lg leading-relaxed">
-                                    Step inside our state-of-the-art facilities where creativity meets precision. From sourcing the finest raw organic cotton to the final stitch of quality assurance, witness the dedication that goes into every garment we export.
-                                </p>
-                                <div className="space-y-4">
-                                    <div className="flex items-start">
-                                        <span className="material-symbols-outlined text-primary mt-1 mr-4">check_circle</span>
-                                        <div>
-                                            <h4 className="font-serif text-lg font-semibold">Ethical Sourcing</h4>
-                                            <p className="text-sm text-gray-500">100% traceabilty on all raw materials used in our supply chain.</p>
-                                        </div>
-                                    </div>
-                                    <div className="flex items-start">
-                                        <span className="material-symbols-outlined text-primary mt-1 mr-4">check_circle</span>
-                                        <div>
-                                            <h4 className="font-serif text-lg font-semibold">Quality Control</h4>
-                                            <p className="text-sm text-gray-500">Rigorous 5-point checking system ensuring zero-defect exports.</p>
-                                        </div>
-                                    </div>
-                                    <div className="flex items-start">
-                                        <span className="material-symbols-outlined text-primary mt-1 mr-4">check_circle</span>
-                                        <div>
-                                            <h4 className="font-serif text-lg font-semibold">Global Logistics</h4>
-                                            <p className="text-sm text-gray-500">Efficient distribution network reaching 30+ countries worldwide.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="lg:col-span-7 relative">
-                                <div className="relative w-full aspect-video overflow-hidden shadow-2xl bg-gray-900 group cursor-pointer">
-                                    <img
-                                        alt="Factory floor video thumbnail"
-                                        className="w-full h-full object-cover opacity-60 group-hover:opacity-40 transition-opacity duration-300"
-                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQAu0XU3hHCsEcKNdZ7LmVW1OKZ0pN9nyoA6qulLiDVlC7WdNjfp9_Bf4lDYR6hqZ1bYSmSVvb_gNVY66lj_4GnXSlCP4O8iJVZEBu7FqBS5_WF62hFvUOaTfAVEQwC6PGSXZTaBRu-PdKNBPKU8msHTRRdg6FlQNPKRcGxJzeKNYbU_wf4JMMiiuy4ke4AS0xdRPbDiu6qdQHmauTHNDQUBXJwHQoGExZv_CAZn01o0b4wwuei8ZoKWLHnNYJCYIkdn78chuMQ"
-                                    />
-                                    <div className="absolute inset-0 flex items-center justify-center">
-                                        <div className="w-20 h-20 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300 border border-white/50">
-                                            <span className="material-symbols-outlined text-white text-4xl pl-1">play_arrow</span>
-                                        </div>
-                                    </div>
-                                    <div className="absolute bottom-6 left-6 text-white">
-                                        <p className="uppercase text-xs tracking-wider font-bold mb-1">Watch Now</p>
-                                        <p className="font-serif text-2xl">The Art of Manufacturing</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
+
 
                 {/* 5. Contact Section */}
                 <section className="py-24 bg-gray-50">
                     <div className="max-w-4xl mx-auto px-4 text-center">
-                        <h2 className="font-serif text-4xl md:text-5xl mb-6">Ready to Collaborate?</h2>
-                        <p className="text-gray-600 text-lg mb-10 max-w-2xl mx-auto">
-                            Partner with SONNA EXXPORTS for your next collection. Let's create something extraordinary together.
-                        </p>
+                        <h2 className="font-serif text-4xl md:text-5xl mb-10">Struggling with Inconsistent Bulk Supply?</h2>
                         <a
-                            href="#"
+                            href="/contact"
                             className="inline-block bg-primary hover:bg-primary-light text-white px-10 py-4 rounded font-medium tracking-widest transition-colors duration-300 shadow-lg hover:shadow-xl"
                         >
-                            CONTACT US
+                            Discuss Your Requirement
                         </a>
                     </div>
                 </section>

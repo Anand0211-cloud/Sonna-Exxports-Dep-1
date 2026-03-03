@@ -1,249 +1,368 @@
-import roundNeck1 from '../assets/Round neck 1.png';
-import roundNeck2 from '../assets/Round neck 2.png';
-import roundNeck3 from '../assets/Round neck 3.jpg';
-import roundNeck4 from '../assets/Round neck 4.jpg';
-import roundNeck5 from '../assets/Round neck 5.jpg';
-import roundNeck6 from '../assets/Round neck 6.jpg';
+import classicTShirt1 from '../assets/1. classic t shirt/1.png';
+import classicTShirt2 from '../assets/1. classic t shirt/2.png';
+import classicTShirt3 from '../assets/1. classic t shirt/3.png';
+import classicTShirt4 from '../assets/1. classic t shirt/4.png';
+import classicTShirt5 from '../assets/1. classic t shirt/5.png';
+import classicTShirt6 from '../assets/1. classic t shirt/6.png';
 
-import polo1 from '../assets/polo 1.png';
-import polo2 from '../assets/polo 2.png';
-import polo3 from '../assets/polo 3.jpg';
-import polo4 from '../assets/polo 4.jpg';
-import polo5 from '../assets/polo 5.jpg';
-import polo6 from '../assets/polo 6.jpg';
+import dtgPrinting1 from '../assets/2. DTG Printing/60.png';
+import dtgPrinting2 from '../assets/2. DTG Printing/61.png';
+import dtgPrinting3 from '../assets/2. DTG Printing/62.png';
+import dtgPrinting4 from '../assets/2. DTG Printing/63.png';
 
-import hoodie1 from '../assets/hoodie 1.png';
-import hoodie2 from '../assets/hoodie 2.png';
-import hoodie3 from '../assets/hoodie 3.jpg';
-import hoodie4 from '../assets/hoodie 4.jpg';
-import hoodie5 from '../assets/hoodie 5.jpg';
-import hoodie6 from '../assets/hoodie 6.jpg';
+import classicPolo1 from '../assets/3. classic polo/7.png';
+import classicPolo2 from '../assets/3. classic polo/8.png';
+import classicPolo3 from '../assets/3. classic polo/9.png';
+import classicPolo4 from '../assets/3. classic polo/10.png';
+import classicPolo5 from '../assets/3. classic polo/11.png';
+import classicPolo6 from '../assets/3. classic polo/12.png';
 
-import sweatshirt1 from '../assets/sweatshirt 1.png';
-import sweatshirt2 from '../assets/sweatshirt 2.png';
-import sweatshirt3 from '../assets/sweatshirt 3.jpg';
-import sweatshirt4 from '../assets/sweatshirt 4.jpg';
-import sweatshirt5 from '../assets/sweatshirt 5.jpg';
-import sweatshirt6 from '../assets/sweatshirt 6.jpg';
+import classicHoodie1 from '../assets/4. classic hoodie/13.png';
+import classicHoodie2 from '../assets/4. classic hoodie/14.png';
+import classicHoodie3 from '../assets/4. classic hoodie/15.png';
+import classicHoodie4 from '../assets/4. classic hoodie/16.png';
+import classicHoodie5 from '../assets/4. classic hoodie/17.png';
+import classicHoodie6 from '../assets/4. classic hoodie/18.png';
 
-import oversized1 from '../assets/oversized 1.png';
-import oversized2 from '../assets/oversized 2.png';
-import oversized3 from '../assets/oversized 3.jpg';
-import oversized4 from '../assets/oversized 4.jpg';
-import oversized5 from '../assets/oversized 5.jpg';
-import oversized6 from '../assets/oversized 6.jpg';
+import embossedPrinting1 from '../assets/5. Embossed Printing/68.png';
+import embossedPrinting2 from '../assets/5. Embossed Printing/69.png';
+import embossedPrinting3 from '../assets/5. Embossed Printing/70.png';
+import embossedPrinting4 from '../assets/5. Embossed Printing/71.png';
 
-import henley1 from '../assets/henley 1.png';
-import henley2 from '../assets/henley 2.png';
-import henley3 from '../assets/henley 3.png';
+import classicSweatshirt1 from '../assets/6. classic sweatshirt/19.png';
+import classicSweatshirt2 from '../assets/6. classic sweatshirt/20.png';
+import classicSweatshirt3 from '../assets/6. classic sweatshirt/21.png';
+import classicSweatshirt4 from '../assets/6. classic sweatshirt/22.png';
+import classicSweatshirt5 from '../assets/6. classic sweatshirt/23.png';
+import classicSweatshirt6 from '../assets/6. classic sweatshirt/24.png';
 
-import tank1 from '../assets/tank 1.png';
-import tank2 from '../assets/tank 2.png';
-import tank3 from '../assets/tank 3.jpg';
-import tank4 from '../assets/tank 4.jpg';
-import tank5 from '../assets/tank 5.jpg';
-import tank6 from '../assets/tank 6.jpg';
+import screenPrinting1 from '../assets/7. Screen Printing/64.png';
+import screenPrinting2 from '../assets/7. Screen Printing/65.png';
+import screenPrinting3 from '../assets/7. Screen Printing/66.png';
+import screenPrinting4 from '../assets/7. Screen Printing/67.png';
 
-import fullSleeve1 from '../assets/Full Sleeve T-Shirt 1.jpg';
-import fullSleeve2 from '../assets/Full Sleeve T-Shirt 2.jpg';
-import fullSleeve3 from '../assets/Full Sleeve T-Shirt 3.jpg';
-import fullSleeve4 from '../assets/Full Sleeve T-Shirt  4.jpg';
-import fullSleeve5 from '../assets/Full Sleeve T-Shirt 5.jpg';
-import fullSleeve6 from '../assets/Full Sleeve T-Shirt 6.jpg';
+import classicOversized1 from '../assets/8. classic oversized/31.png';
+import classicOversized2 from '../assets/8. classic oversized/32.png';
+import classicOversized3 from '../assets/8. classic oversized/33.png';
+import classicOversized4 from '../assets/8. classic oversized/34.png';
+import classicOversized5 from '../assets/8. classic oversized/35.png';
+import classicOversized6 from '../assets/8. classic oversized/36.png';
+
+import acidWash1 from '../assets/9. Acid Wash/72.png';
+import acidWash2 from '../assets/9. Acid Wash/73.png';
+import acidWash3 from '../assets/9. Acid Wash/74.png';
+import acidWash4 from '../assets/9. Acid Wash/75.png';
+
+import classicHenley1 from '../assets/10. classic henley neck/25.png';
+import classicHenley2 from '../assets/10. classic henley neck/26.png';
+import classicHenley3 from '../assets/10. classic henley neck/27.png';
+import classicHenley4 from '../assets/10. classic henley neck/28.png';
+import classicHenley5 from '../assets/10. classic henley neck/29.png';
+import classicHenley6 from '../assets/10. classic henley neck/30.png';
+
+import classicTank1 from '../assets/11. classic tank/37.png';
+import classicTank2 from '../assets/11. classic tank/38.png';
+import classicTank3 from '../assets/11. classic tank/39.png';
+import classicTank4 from '../assets/11. classic tank/40.png';
+import classicTank5 from '../assets/11. classic tank/41.png';
+import classicTank6 from '../assets/11. classic tank/42.png';
+
+import babySuit1 from '../assets/12. baby suit/50.png';
+import babySuit2 from '../assets/12. baby suit/51.png';
+import babySuit3 from '../assets/12. baby suit/52.png';
+import babySuit4 from '../assets/12. baby suit/53.png';
+import babySuit5 from '../assets/12. baby suit/54.png';
+import babySuit6 from '../assets/12. baby suit/55.png';
 
 export const products = [
-    // Menswear
     {
         id: 1,
         category: 'Menswear',
-        name: 'Round Neck',
+        name: 'Classic T-Shirt',
         features: ['Premium Cotton', 'Classic Fit', 'Breathable Fabric'],
-        image: roundNeck1,
-        hoverImage: roundNeck2,
-        images: [roundNeck1, roundNeck2, roundNeck3, roundNeck4, roundNeck5, roundNeck6],
-        alt: 'Man wearing a classic white round neck t-shirt',
-        ref: 'SX–MW–RN–01',
-        description: 'A core essential in men’s apparel, our Round Neck T-shirt is manufactured for comfort, structure, and long-term durability. Designed for bulk production, it serves as a reliable base for private label collections and wholesale distribution.',
+        image: classicTShirt1,
+        hoverImage: classicTShirt2,
+        images: [classicTShirt1, classicTShirt2, classicTShirt3, classicTShirt4, classicTShirt5, classicTShirt6],
+        alt: 'Classic T Shirt image',
+        ref: 'SX-MW-TS-01',
+        description: 'A core essential in men’s apparel, our Classic T-Shirt is manufactured for comfort, structure, and long-term durability. Designed for bulk production, it serves as a reliable base for private label collections and wholesale distribution.',
         specifications: {
-            fabric: '100% Cotton / Cotton Blends (Customizable)',
-            gsm: '160–220 GSM',
-            fit: 'Regular / Slim / Oversized',
-            moq: '300–500 Pieces'
+            "Fabric Composition": "100% Cotton / Cotton Blends (Customizable)",
+            "GSM (Weight)": "160–220 GSM",
+            "Fit Type": "Regular / Slim",
+            "Order Qty": "Flexible MOQ"
         },
         customization: [
-            'Custom Labels & Hangtags',
-            'Embroidery or Print Detailing',
-            'Fabric & GSM Customization',
-            'Color Development'
+            "Custom Labels & Hangtags",
+            "Embroidery or Print Detailing",
+            "Fabric & GSM Customization",
+            "Color Development"
         ]
     },
     {
         id: 2,
-        category: 'Menswear',
-        name: 'Polo',
-        features: ['Pique Cotton', 'Ribbed Collar', 'Smart Casual'],
-        image: polo1,
-        hoverImage: polo2,
-        images: [polo1, polo2, polo3, polo4, polo5, polo6],
-        alt: 'Classic polo shirt with textured fabric',
-        ref: 'SX–MW–PO–02',
-        description: 'Our men’s Polo T-shirt is structured for retail collections and corporate requirements. Manufactured with precision stitching and collar reinforcement, it balances comfort with a refined finish suitable for private labels and uniform programs.',
+        category: 'Printing',
+        name: 'DTG Printing',
+        features: ['High Detail', 'Vibrant Colors', 'Soft Feel'],
+        image: dtgPrinting1,
+        hoverImage: dtgPrinting2,
+        images: [dtgPrinting1, dtgPrinting2, dtgPrinting3, dtgPrinting4],
+        alt: 'DTG Printing example',
+        ref: 'SX-PR-DTG-02',
+        description: 'Direct-to-Garment (DTG) printing allows high-resolution, detailed artwork application suitable for multi-color and intricate graphic designs. Ideal for T-Shirts, lightweight garments, and various other apparel categories requiring precision and color depth in bulk production.',
         specifications: {
-            fabric: 'Cotton Piqué / Blended Piqué',
-            gsm: '200–240 GSM',
-            fit: 'Regular / Tailored Fit',
-            moq: '300–500 Pieces'
+            "Applicable On": "T-Shirts / Lightweight Garments / Various Others",
+            "Print Type": "Direct-to-Garment",
+            "Detail Level": "High-Resolution Artwork",
+            "Color Range": "Full Color Spectrum",
+            "Order Qty": "Flexible MOQ"
         },
         customization: [
-            'Custom Collar & Placket Styles',
-            'Embroidery Branding',
-            'Custom Labeling',
-            'Bespoke Packaging'
+            "Full-Color Graphics",
+            "Detailed Artwork Printing",
+            "Custom Placement",
+            "Private Label Integration"
         ]
     },
     {
         id: 3,
         category: 'Menswear',
-        name: 'Hoodies',
-        features: ['Fleece Lined', 'Adjustable Hood', 'Kangaroo Pocket'],
-        image: hoodie1,
-        hoverImage: hoodie2,
-        images: [hoodie1, hoodie2, hoodie3, hoodie4, hoodie5, hoodie6],
-        alt: 'Comfortable oversized hoodie',
-        ref: 'SX–MW–HD–03',
-        description: 'Built for structured bulk manufacturing, our Hoodies are designed with reinforced seams and premium fabric blends. Suitable for retail brands, winter collections, and promotional apparel programs.',
+        name: 'Classic Polo',
+        features: ['Pique Cotton', 'Ribbed Collar', 'Smart Casual'],
+        image: classicPolo1,
+        hoverImage: classicPolo2,
+        images: [classicPolo1, classicPolo2, classicPolo3, classicPolo4, classicPolo5, classicPolo6],
+        alt: 'Classic Polo image',
+        ref: 'SX-MW-PO-03',
+        description: 'Our Classic Polo is structured for retail collections and corporate requirements. Manufactured with precision stitching and collar reinforcement, it balances comfort with a refined finish suitable for private labels and uniform programs.',
         specifications: {
-            fabric: 'Cotton Fleece / Terry / Blends',
-            gsm: '280–350 GSM',
-            fit: 'Regular / Oversized',
-            moq: '300–500 Pieces'
+            "Fabric Composition": "Cotton Piqué / Blended Piqué",
+            "GSM (Weight)": "200–240 GSM",
+            "Fit Type": "Regular / Tailored Fit",
+            "Order Qty": "Flexible MOQ"
         },
         customization: [
-            'Screen Printing',
-            'Puff & Specialty Prints',
-            'Custom Drawcords & Trims',
-            'Private Labeling'
+            "Custom Collar & Placket Styles",
+            "Embroidery Branding",
+            "Custom Labeling",
+            "Bespoke Packaging"
         ]
     },
     {
         id: 4,
         category: 'Menswear',
-        name: 'Sweatshirt',
-        features: ['Cotton Blend', 'Ribbed Cuffs', 'Relaxed Fit'],
-        image: sweatshirt1,
-        hoverImage: sweatshirt2,
-        images: [sweatshirt1, sweatshirt2, sweatshirt3, sweatshirt4, sweatshirt5, sweatshirt6],
-        alt: 'Soft premium sweatshirt',
-        ref: 'SX–MW–SW–04',
-        description: 'Our men’s Sweatshirts are manufactured for durability and structured fall. Designed for scalable production, they offer clean finishing and consistent sizing across bulk orders.',
+        name: 'Classic Hoodie',
+        features: ['Fleece Lined', 'Adjustable Hood', 'Kangaroo Pocket'],
+        image: classicHoodie1,
+        hoverImage: classicHoodie2,
+        images: [classicHoodie1, classicHoodie2, classicHoodie3, classicHoodie4, classicHoodie5, classicHoodie6],
+        alt: 'Classic Hoodie image',
+        ref: 'SX-MW-HD-04',
+        description: 'Built for structured bulk manufacturing, our Classic Hoodie is designed with reinforced seams and premium fabric blends. Suitable for retail brands, winter collections, and promotional apparel programs.',
         specifications: {
-            fabric: 'Fleece / French Terry',
-            gsm: '260–320 GSM',
-            fit: 'Regular / Relaxed',
-            moq: '300–500 Pieces'
+            "Fabric Composition": "Cotton Fleece / Terry / Blends",
+            "GSM (Weight)": "280–350 GSM",
+            "Fit Type": "Regular / Oversized",
+            "Order Qty": "Flexible MOQ"
         },
         customization: [
-            'Embroidery & Print',
-            'Rib & Cuff Variations',
-            'Custom Branding',
-            'Fabric Customization'
+            "Screen Printing",
+            "Puff & Specialty Prints",
+            "Custom Drawcords & Trims",
+            "Private Labeling"
         ]
     },
     {
         id: 5,
-        category: 'Menswear',
-        name: 'Full Sleeve T-Shirt',
-        features: ['Streetwear Style', 'Drop Shoulder', 'Heavyweight Fabric'],
-        image: fullSleeve1,
-        hoverImage: fullSleeve2,
-        images: [fullSleeve1, fullSleeve2, fullSleeve3, fullSleeve4, fullSleeve5, fullSleeve6],
-        alt: 'Long sleeve shirt',
-        ref: 'SX–MW–FS–05',
-        description: 'Designed for transitional collections and layering, our Full Sleeve T-shirts combine breathable fabric with reinforced stitching for reliable export-quality production.',
+        category: 'Printing',
+        name: 'Embossed Printing',
+        features: ['Tactile Feel', '3D Effect', 'Premium Finish'],
+        image: embossedPrinting1,
+        hoverImage: embossedPrinting2,
+        images: [embossedPrinting1, embossedPrinting2, embossedPrinting3, embossedPrinting4],
+        alt: 'Embossed Printing example',
+        ref: 'SX-PR-EM-05',
+        description: 'Our Embossed Printing technique adds raised texture and dimensional detailing across various garment categories including T-Shirts, Hoodies, Sweatshirts, Oversized styles, and various others. This method enhances visual depth while maintaining fabric integrity and export-grade finishing standards.',
         specifications: {
-            fabric: '100% Cotton / Blends',
-            gsm: '160–220 GSM',
-            fit: 'Regular / Slim',
-            moq: '300–500 Pieces'
+            "Applicable On": "T-Shirts / Hoodies / Sweatshirts / Oversized Styles / Various Others",
+            "Effect Type": "Raised / Textured Print",
+            "Finish": "Durable & Structured Surface",
+            "Order Qty": "Flexible MOQ"
         },
         customization: [
-            'Print & Embroidery',
-            'Custom Sleeve Detailing',
-            'Labels & Tags',
-            'Color Matching'
+            "Raised Texture Effects",
+            "Logo Embossing",
+            "Placement Customization",
+            "Private Label Integration"
         ]
     },
     {
         id: 6,
         category: 'Menswear',
-        name: 'Oversized T-Shirt',
-        features: ['Layering Essential', 'Soft Touch', 'Tailored Fit'],
-        image: oversized1,
-        hoverImage: oversized2,
-        images: [oversized1, oversized2, oversized3, oversized4, oversized5, oversized6],
-        alt: 'Trendy oversized t-shirt',
-        ref: 'SX–MW–OS–06',
-        description: 'Our Oversized T-shirts are developed for contemporary streetwear and modern retail collections. Manufactured with controlled proportions and consistent finishing for scalable production.',
+        name: 'Classic Sweatshirt',
+        features: ['Cotton Blend', 'Ribbed Cuffs', 'Relaxed Fit'],
+        image: classicSweatshirt1,
+        hoverImage: classicSweatshirt2,
+        images: [classicSweatshirt1, classicSweatshirt2, classicSweatshirt3, classicSweatshirt4, classicSweatshirt5, classicSweatshirt6],
+        alt: 'Classic Sweatshirt image',
+        ref: 'SX-MW-SW-06',
+        description: 'Our Classic Sweatshirt is manufactured for durability and structured fall. Designed for scalable production, it offers clean finishing and consistent sizing across bulk orders.',
         specifications: {
-            fabric: 'Premium Cotton / Heavy Cotton',
-            gsm: '220–260 GSM',
-            fit: 'Oversized / Relaxed',
-            moq: '300–500 Pieces'
+            "Fabric Composition": "Fleece / French Terry",
+            "GSM (Weight)": "260–320 GSM",
+            "Fit Type": "Regular / Relaxed",
+            "Order Qty": "Flexible MOQ"
         },
         customization: [
-            'Heavyweight Fabric Options',
-            'Puff Print & Graphic Printing',
-            'Custom Neck Rib',
-            'Private Labeling'
+            "Embroidery & Print",
+            "Rib & Cuff Variations",
+            "Custom Branding",
+            "Fabric Customization"
         ]
     },
     {
         id: 7,
-        category: 'Menswear',
-        name: 'Henley T-Shirt',
-        features: ['Button Placket', 'Waffle Knit', 'Casual Comfort'],
-        image: henley1,
-        hoverImage: henley2,
-        images: [henley1, henley2, henley3],
-        alt: 'Stylish henley neck shirt',
-        ref: 'SX–MW–HN–07',
-        description: 'The Henley combines structured casual design with durable construction. Ideal for premium retail and private label collections requiring subtle detailing and refined finishing.',
+        category: 'Printing',
+        name: 'Screen Printing',
+        features: ['Durable', 'Vibrant', 'Scalable'],
+        image: screenPrinting1,
+        hoverImage: screenPrinting2,
+        images: [screenPrinting1, screenPrinting2, screenPrinting3, screenPrinting4],
+        alt: 'Screen Printing example',
+        ref: 'SX-PR-SP-07',
+        description: 'Our Screen Printing capability supports bulk branding programs across T-Shirts, Hoodies, Sweatshirts, Tanks, and various other garment categories. We ensure durable print application, consistent color accuracy, and reinforced finishing aligned with export-grade quality standards.',
         specifications: {
-            fabric: 'Cotton / Blended Knit',
-            gsm: '180–220 GSM',
-            fit: 'Regular / Slim',
-            moq: '300–500 Pieces'
+            "Applicable On": "T-Shirts / Hoodies / Sweatshirts / Tanks / Various Others",
+            "Print Type": "Multi-Color Screen Printing",
+            "Ink Options": "Standard & Specialty Inks",
+            "Order Qty": "Flexible MOQ"
         },
         customization: [
-            'Button Placket Variations',
-            'Embroidery',
-            'Custom Labeling',
-            'Fabric Customization'
+            "Multi-Color Screen Printing",
+            "Specialty Inks",
+            "Large Format Prints",
+            "Private Label Integration"
         ]
     },
     {
         id: 8,
         category: 'Menswear',
-        name: 'Tank',
-        features: ['Summer Essential', 'Athletic Cut', 'Lightweight'],
-        image: tank1,
-        hoverImage: tank2,
-        images: [tank1, tank2, tank3, tank4, tank5, tank6],
-        alt: 'Classic ribbed tank top',
-        ref: 'SX–MW–TK–08',
-        description: 'Manufactured for activewear, summer collections, and promotional requirements, our Tanks are produced with breathable fabrics and structured armhole finishing for export-quality standards.',
+        name: 'Classic Oversized T-Shirt',
+        features: ['Layering Essential', 'Soft Touch', 'Tailored Drop Fit'],
+        image: classicOversized1,
+        hoverImage: classicOversized2,
+        images: [classicOversized1, classicOversized2, classicOversized3, classicOversized4, classicOversized5, classicOversized6],
+        alt: 'Classic Oversized image',
+        ref: 'SX-MW-OS-08',
+        description: 'Our Classic Oversized T-Shirt is developed for contemporary streetwear and modern retail collections. Manufactured with controlled proportions and consistent finishing for scalable production.',
         specifications: {
-            fabric: 'Cotton / Performance Blends',
-            gsm: '140–180 GSM',
-            fit: 'Regular / Athletic',
-            moq: '300–500 Pieces'
+            "Fabric Composition": "Premium Cotton / Heavy Cotton",
+            "GSM (Weight)": "220–260 GSM",
+            "Fit Type": "Oversized / Relaxed",
+            "Order Qty": "Flexible MOQ"
         },
         customization: [
-            'Print & Branding',
-            'Custom Cuts',
-            'Labeling & Tags',
-            'Color Development'
+            "Heavyweight Fabric Options",
+            "Puff Print & Graphic Printing",
+            "Custom Neck Rib",
+            "Private Label Integration"
         ]
     },
-
+    {
+        id: 9,
+        category: 'Specialty',
+        name: 'Acid Wash',
+        features: ['Vintage Look', 'Unique Finish', 'Soft Handfeel'],
+        image: acidWash1,
+        hoverImage: acidWash2,
+        images: [acidWash1, acidWash2, acidWash3, acidWash4],
+        alt: 'Acid Wash example',
+        ref: 'SX-SP-AW-09',
+        description: 'Our Enzyme and Acid Wash finishing techniques create controlled texture, softness, and vintage effects while maintaining fabric strength and shrinkage control. Applicable across T-Shirts, Hoodies, Sweatshirts, Oversized styles, and various others.',
+        specifications: {
+            "Applicable On": "T-Shirts / Hoodies / Sweatshirts / Oversized Styles / Various Others",
+            "Wash Type": "Enzyme Wash / Acid Wash",
+            "Effect": "Soft Finish / Vintage Fade",
+            "Shrinkage Control": "Pre-tested & Stabilized",
+            "Order Qty": "Flexible MOQ"
+        },
+        customization: [
+            "Controlled Fade Effects",
+            "Soft-Touch Finishing",
+            "Vintage Wash Styling",
+            "Private Label Integration"
+        ]
+    },
+    {
+        id: 10,
+        category: 'Menswear',
+        name: 'Classic Henley',
+        features: ['Button Placket', 'Waffle Knit/Knit', 'Casual Comfort'],
+        image: classicHenley1,
+        hoverImage: classicHenley2,
+        images: [classicHenley1, classicHenley2, classicHenley3, classicHenley4, classicHenley5, classicHenley6],
+        alt: 'Classic Henley Neck image',
+        ref: 'SX-MW-HN-10',
+        description: 'The Classic Henley combines structured casual design with durable construction. Ideal for premium retail and private label collections requiring subtle detailing and refined finishing.',
+        specifications: {
+            "Fabric Composition": "Cotton / Blended Knit",
+            "GSM (Weight)": "180–220 GSM",
+            "Fit Type": "Regular / Slim",
+            "Order Qty": "Flexible MOQ"
+        },
+        customization: [
+            "Button Placket Variations",
+            "Embroidery",
+            "Custom Labeling",
+            "Fabric Customization"
+        ]
+    },
+    {
+        id: 11,
+        category: 'Menswear',
+        name: 'Classic Tank',
+        features: ['Summer Essential', 'Athletic Cut', 'Lightweight'],
+        image: classicTank1,
+        hoverImage: classicTank2,
+        images: [classicTank1, classicTank2, classicTank3, classicTank4, classicTank5, classicTank6],
+        alt: 'Classic Tank image',
+        ref: 'SX-MW-TK-11',
+        description: 'Manufactured for activewear, summer collections, and promotional requirements, our Classic Tank is produced with breathable fabrics and structured armhole finishing for export-quality standards.',
+        specifications: {
+            "Fabric Composition": "Cotton / Performance Blends",
+            "GSM (Weight)": "140–180 GSM",
+            "Fit Type": "Regular / Athletic",
+            "Order Qty": "Flexible MOQ"
+        },
+        customization: [
+            "Print & Branding",
+            "Custom Cuts",
+            "Labeling & Tags",
+            "Color Development"
+        ]
+    },
+    {
+        id: 12,
+        category: 'Kidswear',
+        name: 'Baby Suit',
+        features: ['Ultra Soft', 'Snap Closures', 'Hypoallergenic'],
+        image: babySuit1,
+        hoverImage: babySuit2,
+        images: [babySuit1, babySuit2, babySuit3, babySuit4, babySuit5, babySuit6],
+        alt: 'Baby Suit image',
+        ref: 'SX-KW-BS-12',
+        description: 'Our Baby Suits are manufactured using soft, breathable, and skin-friendly fabrics designed for infant comfort and safety. Built for export-grade quality, they maintain gentle stitching and controlled shrinkage suitable for bulk supply.',
+        specifications: {
+            "Fabric Composition": "100% Combed Cotton / Organic Cotton (Optional)",
+            "GSM (Weight)": "150–200 GSM",
+            "Fit Type": "Regular Infant Fit",
+            "Order Qty": "Flexible MOQ"
+        },
+        customization: [
+            "Soft Touch Printing",
+            "Snap Button Variations",
+            "Custom Labeling",
+            "Size & Care Tags"
+        ]
+    }
 ];

@@ -1,15 +1,16 @@
 import React from 'react';
+import customizationImg from '../assets/home/home page customisation.png';
 
 const Manufacturing = () => {
     return (
         <section className="py-24 bg-[#460566]">
             <div className="layout-container flex justify-center px-4 md:px-10">
                 <div className="w-full max-w-7xl">
-                    <div className="grid lg:grid-cols-[1.4fr_1fr] gap-12 lg:gap-20 items-center">
+                    <div className="grid lg:grid-cols-[1fr_1.2fr] gap-12 lg:gap-20 items-center">
                         <div className="relative order-1">
                             <div className="relative w-full aspect-[4/3] lg:aspect-video overflow-hidden shadow-2xl group">
                                 <img
-                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzZQtZWy5jCRHxtdOskrw98GVFPJhzvIaqxDAsz7E3rcSPEb-STornx6GZDSxqgdG9cZHhDNr4jSbUaoEjxDPoYDB0Ph--v_OXvF2Meg7K1JuwnJT5EN8c2sWPhIIISFNFBT4Q9YYNO2gDBSJiAmyt0r3xgcrSAZtMK90erRvw6cSL3TOzqnDEyZkx48xiIvC7AGgHBnT0IV-3-V6aBE4Fk3twk6i69GT64s4hs_n29qSMwToEF5nrsEsbosi7PTjsxTqtCrTcWQ"
+                                    src={customizationImg}
                                     alt="Premium manufacturing machinery and finished garments"
                                     className="w-full h-full object-cover transition-all duration-700 group-hover:scale-105"
                                 />
@@ -31,18 +32,20 @@ const Manufacturing = () => {
                                 <h3 className="text-accent-beige text-sm font-bold tracking-[0.3em] uppercase">Tailored for your brand</h3>
                                 <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif text-white leading-tight">Private Label & Custom Manufacturing</h2>
                             </div>
-                            <p className="text-white/70 text-lg md:text-xl font-light leading-relaxed max-w-lg">
-                                Elevate your brand with our white-label solutions. We provide end-to-end manufacturing from conceptual design to final packaging, ensuring your unique vision is realized with uncompromising quality.
-                            </p>
+                            <div className="text-white/70 text-lg md:text-xl font-light leading-relaxed max-w-xl space-y-4">
+                                <p>We provide end-to-end custom garment manufacturing designed around your brand’s requirements.</p>
+                                <p>From fabric and fit to custom labeling and bespoke packaging, every detail is handled with structured precision.</p>
+                                <p>Whether you come with a tech pack or need full product development from scratch, our team ensures seamless execution with export-grade quality.</p>
+                            </div>
                             <div className="space-y-4 pt-4 border-t border-white/10">
                                 <div className="grid grid-cols-2 gap-y-4 gap-x-8">
                                     <div className="flex items-center gap-4 text-white/80">
                                         <span className="material-symbols-outlined text-accent-beige">palette</span>
-                                        <span className="text-sm uppercase tracking-wider font-semibold">Screen Printing</span>
+                                        <span className="text-sm uppercase tracking-wider font-semibold">Print Techniques</span>
                                     </div>
                                     <div className="flex items-center gap-4 text-white/80">
-                                        <span className="material-symbols-outlined text-accent-beige">auto_awesome</span>
-                                        <span className="text-sm uppercase tracking-wider font-semibold">Embroidery</span>
+                                        <span className="material-symbols-outlined text-accent-beige">texture</span>
+                                        <span className="text-sm uppercase tracking-wider font-semibold">Fabric Selection</span>
                                     </div>
                                     <div className="flex items-center gap-4 text-white/80">
                                         <span className="material-symbols-outlined text-accent-beige">label</span>
@@ -54,9 +57,12 @@ const Manufacturing = () => {
                                     </div>
                                 </div>
                             </div>
-                            <div className="pt-6">
+                            <p className="text-white/70 text-lg md:text-xl font-light leading-relaxed max-w-xl">
+                                As a trusted garment manufacturer & exporter, we deliver scalable production with consistency and discipline.
+                            </p>
+                            <div className="pt-2">
                                 <button className="h-14 px-12 rounded-full bg-accent-beige hover:bg-accent-beige-hover text-primary-dark font-bold text-lg transition-all shadow-lg hover:shadow-accent-beige/20 transform hover:-translate-y-1">
-                                    Discuss Your Requirement
+                                    Start Your Custom Manufacturing Journey
                                 </button>
                             </div>
                         </div>

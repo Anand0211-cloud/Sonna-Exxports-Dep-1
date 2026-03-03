@@ -5,21 +5,16 @@ const Newsletter = () => {
         <section className="py-20 border-t border-gray-200 relative overflow-hidden bg-background-light">
             <div className="absolute -right-20 -top-20 w-96 h-96 bg-accent-beige/20 rounded-full blur-3xl pointer-events-none"></div>
             <div className="relative z-10 layout-container flex flex-col items-center justify-center px-4 md:px-10 text-center gap-8">
-                <h2 className="text-3xl md:text-5xl font-serif text-primary">Join the Inner Circle</h2>
-                <p className="text-gray-600 max-w-md">Subscribe to receive early access to new collections and exclusive export insights.</p>
-                <form className="flex w-full max-w-md items-center border-b border-gray-300 focus-within:border-primary transition-colors py-2">
-                    <input
-                        type="email"
-                        className="bg-transparent border-none text-gray-900 placeholder:text-gray-400 focus:ring-0 w-full px-4 text-lg focus:outline-none"
-                        placeholder="Email Address"
-                    />
-                    <button
-                        type="button"
-                        className="text-primary font-bold uppercase text-sm tracking-wider whitespace-nowrap px-4 hover:text-primary-dark transition-colors"
-                    >
-                        Sign Up
+                <h2 className="text-3xl md:text-5xl font-serif text-primary">Start Your Manufacturing Partnership</h2>
+
+                <div className="flex flex-col sm:flex-row gap-4 mt-4 w-full justify-center">
+                    <button className="h-14 px-8 rounded-full bg-primary hover:bg-primary-dark text-white font-bold text-base transition-all shadow-md transform hover:-translate-y-1">
+                        Discuss Your Requirement
                     </button>
-                </form>
+                    <button className="h-14 px-8 rounded-full bg-accent-beige hover:bg-accent-beige-hover text-primary-dark font-bold text-base transition-all shadow-md transform hover:-translate-y-1">
+                        Catalogue
+                    </button>
+                </div>
             </div>
         </section>
     );

@@ -36,8 +36,8 @@ const CollectionItem = ({ image, title, subtitle, description, tag, id }) => {
 
 const Collections = () => {
     // Map products to portfolio items
-    // Using products 1-8 for the two rows
-    const portfolioItems = products.slice(0, 8).map(product => ({
+    // Using products 1-12 for the three rows
+    const portfolioItems = products.slice(0, 12).map(product => ({
         id: product.id,
         image: product.image, // Use the main product image
         title: product.name,
@@ -47,6 +47,7 @@ const Collections = () => {
 
     const row1 = portfolioItems.slice(0, 4);
     const row2 = portfolioItems.slice(4, 8);
+    const row3 = portfolioItems.slice(8, 12);
 
     return (
         <section className="py-20 w-full bg-background-light">
@@ -69,6 +70,13 @@ const Collections = () => {
                     {/* Row 2 */}
                     <div className="flex flex-col lg:flex-row h-[1200px] lg:h-[600px] gap-2 w-full">
                         {row2.map((item) => (
+                            <CollectionItem key={item.id} {...item} />
+                        ))}
+                    </div>
+
+                    {/* Row 3 */}
+                    <div className="flex flex-col lg:flex-row h-[1200px] lg:h-[600px] gap-2 w-full">
+                        {row3.map((item) => (
                             <CollectionItem key={item.id} {...item} />
                         ))}
                     </div>

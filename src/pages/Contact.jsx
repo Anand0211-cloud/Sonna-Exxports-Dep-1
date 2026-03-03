@@ -1,9 +1,12 @@
 import React from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import yusrahProfile from '../assets/team/yusrah-profile.jpg';
+import contactImage from '../assets/Contact.png';
+import PhoneInput from 'react-phone-input-2';
+import 'react-phone-input-2/lib/style.css';
 
 const Contact = () => {
+
     return (
         <div className="flex flex-col min-h-screen font-display bg-gray-50 dark:bg-background-dark">
             <Header />
@@ -21,7 +24,7 @@ const Contact = () => {
                     </div>
 
                     {/* Main Interaction Card */}
-                    <div className="bg-white dark:bg-gray-900 rounded-3xl overflow-hidden shadow-2xl flex flex-col lg:flex-row animate-fade-in-up">
+                    <div className="bg-white dark:bg-gray-900 rounded-3xl overflow-hidden shadow-2xl flex flex-col-reverse lg:flex-row animate-fade-in-up">
 
                         {/* Left Panel: Contact Info & Brand */}
                         <div className="lg:w-2/5 bg-[#460566] text-white p-10 lg:p-16 flex flex-col justify-between relative overflow-hidden">
@@ -34,7 +37,7 @@ const Contact = () => {
 
                                 <div className="flex flex-col items-center text-center">
                                     <div className="w-58 h-58 shrink-0 rounded-2xl overflow-hidden shadow-l mb-4">
-                                        <img src={yusrahProfile} alt="Yusrah" className="w-full h-full object-cover" />
+                                        <img src={contactImage} alt="Sonna Exxports" className="w-full h-full object-cover" />
                                     </div>
                                     <div>
                                         <p className="text-xl font-bold uppercase tracking-wider text-white">Sonna Exxport</p>
@@ -66,6 +69,16 @@ const Contact = () => {
                                                 <p className="font-light opacity-90 leading-relaxed">
                                                     A 504 Lodha bel Air, Patel Estate,<br />
                                                     Mumbai, Maharashtra - 400102
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div className="flex items-start gap-4">
+                                            <span className="material-symbols-outlined text-accent-beige mt-1">location_on</span>
+                                            <div>
+                                                <p className="text-xs font-bold uppercase tracking-widest text-purple-200 mb-1">Office</p>
+                                                <p className="font-light opacity-90 leading-relaxed">
+                                                    A- 17 New Janpath complex, Ashok Marg,<br />
+                                                    Lucknow, Uttar Pradesh 226001
                                                 </p>
                                             </div>
                                         </div>
@@ -119,19 +132,30 @@ const Contact = () => {
                                             placeholder="name@company.com"
                                         />
                                     </div>
-                                    <div className="group">
+                                    <div className="group phone-input-container">
                                         <label className="block text-xs font-bold uppercase tracking-widest text-gray-500 mb-2 group-focus-within:text-primary transition-colors">Phone Number</label>
-                                        <div className="flex items-center">
-                                            <select className="bg-transparent border-0 border-b border-gray-300 py-3 pr-8 pl-0 text-lg text-gray-500 focus:ring-0 focus:border-primary cursor-pointer">
-                                                <option>+91</option>
-                                                <option>+1</option>
-                                                <option>+44</option>
-                                                <option>+971</option>
-                                            </select>
-                                            <input
-                                                type="tel"
-                                                className="w-full bg-transparent border-0 border-b border-gray-300 px-0 py-3 text-lg focus:ring-0 focus:border-primary transition-all ml-4 placeholder-gray-300"
-                                                placeholder="98765 43210"
+                                        <div className="border-b border-gray-300 group-focus-within:border-primary transition-all">
+                                            <PhoneInput
+                                                country={'in'}
+                                                enableSearch={true}
+                                                buttonStyle={{
+                                                    background: 'transparent',
+                                                    border: 'none',
+                                                    padding: '0',
+                                                    width: '40px'
+                                                }}
+                                                inputStyle={{
+                                                    background: 'transparent',
+                                                    border: 'none',
+                                                    width: '100%',
+                                                    padding: '12px 0 12px 50px',
+                                                    fontSize: '1.125rem',
+                                                    color: '#6b7280'
+                                                }}
+                                                dropdownStyle={{
+                                                    width: '300px',
+                                                    fontFamily: 'inherit'
+                                                }}
                                             />
                                         </div>
                                     </div>

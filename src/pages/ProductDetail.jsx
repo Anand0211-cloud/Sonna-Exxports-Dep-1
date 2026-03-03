@@ -92,22 +92,12 @@ const ProductDetail = () => {
                                 <span className="material-symbols-outlined text-primary mr-2 text-xl">tune</span> Technical Specifications
                             </h3>
                             <div className="grid grid-cols-2 gap-y-6 gap-x-8">
-                                <div>
-                                    <span className="block text-gray-700 dark:text-gray-300 text-sm uppercase tracking-wider mb-1">Fabric Composition</span>
-                                    <span className="font-medium text-lg text-gray-900 dark:text-white">{product.specifications.fabric}</span>
-                                </div>
-                                <div>
-                                    <span className="block text-gray-700 dark:text-gray-300 text-sm uppercase tracking-wider mb-1">GSM (Weight)</span>
-                                    <span className="font-medium text-lg text-gray-900 dark:text-white">{product.specifications.gsm}</span>
-                                </div>
-                                <div>
-                                    <span className="block text-gray-700 dark:text-gray-300 text-sm uppercase tracking-wider mb-1">Fit Type</span>
-                                    <span className="font-medium text-lg text-gray-900 dark:text-white">{product.specifications.fit}</span>
-                                </div>
-                                <div>
-                                    <span className="block text-gray-700 dark:text-gray-300 text-sm uppercase tracking-wider mb-1">Minimum Order Qty</span>
-                                    <span className="font-medium text-lg text-gray-900 dark:text-white">{product.specifications.moq}</span>
-                                </div>
+                                {Object.entries(product.specifications).map(([key, value]) => (
+                                    <div key={key}>
+                                        <span className="block text-gray-700 dark:text-gray-300 text-sm uppercase tracking-wider mb-1">{key}</span>
+                                        <span className="font-medium text-lg text-gray-900 dark:text-white">{value}</span>
+                                    </div>
+                                ))}
                             </div>
                         </div>
 
@@ -198,7 +188,9 @@ const ProductDetail = () => {
                                                         {simProduct.name}
                                                     </Link>
                                                 </h3>
-                                                <p className="mt-1 text-sm text-gray-500 dark:text-gray-400">{simProduct.specifications.gsm} | {simProduct.specifications.fabric}</p>
+                                                <p className="mt-1 text-sm text-gray-500 dark:text-gray-400">
+                                                    {Object.values(simProduct.specifications).slice(0, 2).join(' | ')}
+                                                </p>
                                             </div>
                                         </div>
                                     </div>
