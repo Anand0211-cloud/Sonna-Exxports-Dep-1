@@ -12,7 +12,7 @@ const Footer = () => {
                                 <span className="font-serif font-bold text-xl tracking-tight">SONNA EXXPORTS</span>
                             </div>
                             <p className="text-white/60 text-sm leading-relaxed">
-                                Premium export fashion house connecting global trends with timeless quality since 1998.
+                                Premium export fashion house connecting global trends with timeless quality.
                             </p>
                             <div className="flex gap-4 mt-2">
                                 <a href="#" className="text-white/60 hover:text-accent-beige transition-colors" aria-label="Instagram">
@@ -35,7 +35,7 @@ const Footer = () => {
                         <div className="flex flex-col gap-4">
                             <h4 className="font-bold text-white uppercase tracking-wider text-sm">Categories</h4>
                             <Link to="/collections?category=Menswear" className="text-white/60 hover:text-accent-beige text-sm transition-colors">Menswear</Link>
-                            <Link to="/collections?category=Baby" className="text-white/60 hover:text-accent-beige text-sm transition-colors">Baby Suit</Link>
+                            <Link to="/product/12" className="text-white/60 hover:text-accent-beige text-sm transition-colors">Baby Suit</Link>
                             <Link to="/customization" className="text-white/60 hover:text-accent-beige text-sm transition-colors">Uniform</Link>
                         </div>
                         <div className="flex flex-col gap-4">
@@ -46,18 +46,14 @@ const Footer = () => {
                         </div>
                         <div className="flex flex-col gap-4">
                             <h4 className="font-bold text-white uppercase tracking-wider text-sm">Legal</h4>
-                            <a href="#" className="text-white/60 hover:text-accent-beige text-sm transition-colors">Privacy Policy</a>
-                            <a href="#" className="text-white/60 hover:text-accent-beige text-sm transition-colors">Terms of Service</a>
-                            <a href="#" className="text-white/60 hover:text-accent-beige text-sm transition-colors">Shipping & Returns</a>
+                            <Link to="/privacy-policy" className="text-white/60 hover:text-accent-beige text-sm transition-colors">Privacy Policy</Link>
+                            <Link to="/terms-conditions" className="text-white/60 hover:text-accent-beige text-sm transition-colors">Terms & Conditions</Link>
+                            <Link to="/shipping-policy" className="text-white/60 hover:text-accent-beige text-sm transition-colors">Shipping Policy</Link>
                         </div>
                     </div>
                     <div className="flex flex-col md:flex-row justify-between items-center gap-4 pt-6 border-t border-white/5">
                         <p className="text-white/40 text-xs">© {new Date().getFullYear()} Sonna Exxports. All rights reserved.</p>
-                        <div className="flex gap-6">
-                            <div className="h-6 w-10 bg-white/10 rounded"></div>
-                            <div className="h-6 w-10 bg-white/10 rounded"></div>
-                            <div className="h-6 w-10 bg-white/10 rounded"></div>
-                        </div>
+                        <Link to="/faq" className="text-white/40 hover:text-accent-beige text-xs font-semibold tracking-wider uppercase transition-colors">FAQ</Link>
                     </div>
                 </div>
             </div>

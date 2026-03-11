@@ -12,7 +12,7 @@ const Header = () => {
                     {/* Left Navigation (Desktop) */}
                     <nav className="hidden lg:flex items-center gap-8">
                         <Link to="/about" className="text-white/80 hover:text-accent-beige text-base font-semibold transition-colors">About</Link>
-                        <Link to="/collections" className="text-white/80 hover:text-accent-beige text-base font-semibold transition-colors">Portfolio</Link>
+                        <Link to="/collections" className="text-white/80 hover:text-accent-beige text-base font-semibold transition-colors">Collection</Link>
                     </nav>
 
                     {/* Logo (Centered on Desktop, Left on Mobile) */}
@@ -64,7 +64,7 @@ const Header = () => {
                                 onClick={() => setIsMenuOpen(false)}
                                 className="text-white/90 hover:text-accent-beige text-2xl font-serif font-medium transition-colors"
                             >
-                                Portfolio
+                                Collection
                             </Link>
                             <Link
                                 to="/customization"

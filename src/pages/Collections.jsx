@@ -4,7 +4,7 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 
 import { products as Products } from '../data/products';
-import bannerImg from '../assets/Portfolio banner.png';
+import bannerImg from '../assets/Collection Banner.png';
 
 const Collections = () => {
     return (
@@ -12,20 +12,16 @@ const Collections = () => {
             <Header />
 
             {/* Banner Section */}
-            <div className="w-full h-64 md:h-96 lg:h-[500px] relative">
-                <img src={bannerImg} alt="Portfolio Banner" className="w-full h-full object-cover object-center" />
+            <div className="w-full h-[25vh] min-h-[180px] relative mt-[88px] md:mt-[70px] bg-black overflow-hidden">
+                <img src={bannerImg} alt="Our Collection Banner" className="w-full h-full object-cover object-center" />
                 <div className="absolute inset-0 bg-black/40 flex flex-col items-center justify-center text-white px-4">
-                    <span className="text-accent-beige font-bold tracking-[0.2em] text-sm md:text-base uppercase mb-4 block">Our Work</span>
-                    <h1 className="font-serif text-4xl md:text-6xl lg:text-7xl mb-6 text-center text-white drop-shadow-md">Our Portfolio</h1>
-                    <p className="text-white/90 text-lg md:text-xl font-light text-center max-w-2xl hidden md:block">
-                        Explore our curated collection of premium garments, where craftsmanship meets contemporary design. Each piece tells a story of quality and dedication.
-                    </p>
+                    <h1 className="font-serif text-3xl md:text-5xl lg:text-6xl text-center text-white drop-shadow-md">Our Collection</h1>
                 </div>
             </div>
 
             <div className="w-full pt-16 pb-16 px-6 sm:px-10 lg:px-16">
                 {/* Product Grid */}
-                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
+                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
                     {Products.map((product) => (
                         <Link key={product.id} to={`/product/${product.id}`} className="group block cursor-pointer">
                             <div className="relative aspect-[4/5] overflow-hidden bg-[#f8f8f8] mb-4 group rounded-md">

@@ -4,6 +4,7 @@ import classicTShirt3 from '../assets/1. classic t shirt/3.png';
 import classicTShirt4 from '../assets/1. classic t shirt/4.png';
 import classicTShirt5 from '../assets/1. classic t shirt/5.png';
 import classicTShirt6 from '../assets/1. classic t shirt/6.png';
+import classicTShirtModel from '../assets/1. classic t shirt/Classic Tshirt with Model.png';
 
 import dtgPrinting1 from '../assets/2. DTG Printing/60.png';
 import dtgPrinting2 from '../assets/2. DTG Printing/61.png';
@@ -16,6 +17,7 @@ import classicPolo3 from '../assets/3. classic polo/9.png';
 import classicPolo4 from '../assets/3. classic polo/10.png';
 import classicPolo5 from '../assets/3. classic polo/11.png';
 import classicPolo6 from '../assets/3. classic polo/12.png';
+import classicPoloModel from '../assets/3. classic polo/Classic polo with model.png';
 
 import classicHoodie1 from '../assets/4. classic hoodie/13.png';
 import classicHoodie2 from '../assets/4. classic hoodie/14.png';
@@ -23,6 +25,7 @@ import classicHoodie3 from '../assets/4. classic hoodie/15.png';
 import classicHoodie4 from '../assets/4. classic hoodie/16.png';
 import classicHoodie5 from '../assets/4. classic hoodie/17.png';
 import classicHoodie6 from '../assets/4. classic hoodie/18.png';
+import classicHoodieModel from '../assets/4. classic hoodie/classic hoddie with model.png';
 
 import embossedPrinting1 from '../assets/5. Embossed Printing/68.png';
 import embossedPrinting2 from '../assets/5. Embossed Printing/69.png';
@@ -35,6 +38,7 @@ import classicSweatshirt3 from '../assets/6. classic sweatshirt/21.png';
 import classicSweatshirt4 from '../assets/6. classic sweatshirt/22.png';
 import classicSweatshirt5 from '../assets/6. classic sweatshirt/23.png';
 import classicSweatshirt6 from '../assets/6. classic sweatshirt/24.png';
+import classicSweatshirtModel from '../assets/6. classic sweatshirt/classic sweatshirt with model.png';
 
 import screenPrinting1 from '../assets/7. Screen Printing/64.png';
 import screenPrinting2 from '../assets/7. Screen Printing/65.png';
@@ -47,6 +51,7 @@ import classicOversized3 from '../assets/8. classic oversized/33.png';
 import classicOversized4 from '../assets/8. classic oversized/34.png';
 import classicOversized5 from '../assets/8. classic oversized/35.png';
 import classicOversized6 from '../assets/8. classic oversized/36.png';
+import classicOversizedModel from '../assets/8. classic oversized/classic oversized with model.png';
 
 import acidWash1 from '../assets/9. Acid Wash/72.png';
 import acidWash2 from '../assets/9. Acid Wash/73.png';
@@ -59,6 +64,7 @@ import classicHenley3 from '../assets/10. classic henley neck/27.png';
 import classicHenley4 from '../assets/10. classic henley neck/28.png';
 import classicHenley5 from '../assets/10. classic henley neck/29.png';
 import classicHenley6 from '../assets/10. classic henley neck/30.png';
+import classicHenleyModel from '../assets/10. classic henley neck/classic henley neck with model.png';
 
 import classicTank1 from '../assets/11. classic tank/37.png';
 import classicTank2 from '../assets/11. classic tank/38.png';
@@ -66,6 +72,7 @@ import classicTank3 from '../assets/11. classic tank/39.png';
 import classicTank4 from '../assets/11. classic tank/40.png';
 import classicTank5 from '../assets/11. classic tank/41.png';
 import classicTank6 from '../assets/11. classic tank/42.png';
+import classicTankModel from '../assets/11. classic tank/classic tank with model.png';
 
 import babySuit1 from '../assets/12. baby suit/50.png';
 import babySuit2 from '../assets/12. baby suit/51.png';
@@ -80,10 +87,10 @@ export const products = [
         category: 'Menswear',
         name: 'Classic T-Shirt',
         features: ['Premium Cotton', 'Classic Fit', 'Breathable Fabric'],
-        image: classicTShirt1,
-        hoverImage: classicTShirt2,
-        images: [classicTShirt1, classicTShirt2, classicTShirt3, classicTShirt4, classicTShirt5, classicTShirt6],
-        alt: 'Classic T Shirt image',
+        image: classicTShirtModel,
+        hoverImage: classicTShirt1,
+        images: [classicTShirtModel, classicTShirt1, classicTShirt2, classicTShirt3, classicTShirt4, classicTShirt5, classicTShirt6],
+        alt: 'Classic white t-shirt front view',
         ref: 'SX-MW-TS-01',
         description: 'A core essential in men’s apparel, our Classic T-Shirt is manufactured for comfort, structure, and long-term durability. Designed for bulk production, it serves as a reliable base for private label collections and wholesale distribution.',
         specifications: {
@@ -129,9 +136,9 @@ export const products = [
         category: 'Menswear',
         name: 'Classic Polo',
         features: ['Pique Cotton', 'Ribbed Collar', 'Smart Casual'],
-        image: classicPolo1,
-        hoverImage: classicPolo2,
-        images: [classicPolo1, classicPolo2, classicPolo3, classicPolo4, classicPolo5, classicPolo6],
+        image: classicPoloModel,
+        hoverImage: classicPolo1,
+        images: [classicPoloModel, classicPolo1, classicPolo2, classicPolo3, classicPolo4, classicPolo5, classicPolo6],
         alt: 'Classic Polo image',
         ref: 'SX-MW-PO-03',
         description: 'Our Classic Polo is structured for retail collections and corporate requirements. Manufactured with precision stitching and collar reinforcement, it balances comfort with a refined finish suitable for private labels and uniform programs.',
@@ -153,9 +160,9 @@ export const products = [
         category: 'Menswear',
         name: 'Classic Hoodie',
         features: ['Fleece Lined', 'Adjustable Hood', 'Kangaroo Pocket'],
-        image: classicHoodie1,
-        hoverImage: classicHoodie2,
-        images: [classicHoodie1, classicHoodie2, classicHoodie3, classicHoodie4, classicHoodie5, classicHoodie6],
+        image: classicHoodieModel,
+        hoverImage: classicHoodie1,
+        images: [classicHoodieModel, classicHoodie1, classicHoodie2, classicHoodie3, classicHoodie4, classicHoodie5, classicHoodie6],
         alt: 'Classic Hoodie image',
         ref: 'SX-MW-HD-04',
         description: 'Built for structured bulk manufacturing, our Classic Hoodie is designed with reinforced seams and premium fabric blends. Suitable for retail brands, winter collections, and promotional apparel programs.',
@@ -177,9 +184,9 @@ export const products = [
         category: 'Printing',
         name: 'Embossed Printing',
         features: ['Tactile Feel', '3D Effect', 'Premium Finish'],
-        image: embossedPrinting1,
-        hoverImage: embossedPrinting2,
-        images: [embossedPrinting1, embossedPrinting2, embossedPrinting3, embossedPrinting4],
+        image: embossedPrinting2,
+        hoverImage: embossedPrinting1,
+        images: [embossedPrinting2, embossedPrinting1, embossedPrinting3, embossedPrinting4],
         alt: 'Embossed Printing example',
         ref: 'SX-PR-EM-05',
         description: 'Our Embossed Printing technique adds raised texture and dimensional detailing across various garment categories including T-Shirts, Hoodies, Sweatshirts, Oversized styles, and various others. This method enhances visual depth while maintaining fabric integrity and export-grade finishing standards.',
@@ -201,9 +208,9 @@ export const products = [
         category: 'Menswear',
         name: 'Classic Sweatshirt',
         features: ['Cotton Blend', 'Ribbed Cuffs', 'Relaxed Fit'],
-        image: classicSweatshirt1,
-        hoverImage: classicSweatshirt2,
-        images: [classicSweatshirt1, classicSweatshirt2, classicSweatshirt3, classicSweatshirt4, classicSweatshirt5, classicSweatshirt6],
+        image: classicSweatshirtModel,
+        hoverImage: classicSweatshirt1,
+        images: [classicSweatshirtModel, classicSweatshirt1, classicSweatshirt2, classicSweatshirt3, classicSweatshirt4, classicSweatshirt5, classicSweatshirt6],
         alt: 'Classic Sweatshirt image',
         ref: 'SX-MW-SW-06',
         description: 'Our Classic Sweatshirt is manufactured for durability and structured fall. Designed for scalable production, it offers clean finishing and consistent sizing across bulk orders.',
@@ -249,9 +256,9 @@ export const products = [
         category: 'Menswear',
         name: 'Classic Oversized T-Shirt',
         features: ['Layering Essential', 'Soft Touch', 'Tailored Drop Fit'],
-        image: classicOversized1,
-        hoverImage: classicOversized2,
-        images: [classicOversized1, classicOversized2, classicOversized3, classicOversized4, classicOversized5, classicOversized6],
+        image: classicOversizedModel,
+        hoverImage: classicOversized1,
+        images: [classicOversizedModel, classicOversized1, classicOversized2, classicOversized3, classicOversized4, classicOversized5, classicOversized6],
         alt: 'Classic Oversized image',
         ref: 'SX-MW-OS-08',
         description: 'Our Classic Oversized T-Shirt is developed for contemporary streetwear and modern retail collections. Manufactured with controlled proportions and consistent finishing for scalable production.',
@@ -298,9 +305,9 @@ export const products = [
         category: 'Menswear',
         name: 'Classic Henley',
         features: ['Button Placket', 'Waffle Knit/Knit', 'Casual Comfort'],
-        image: classicHenley1,
-        hoverImage: classicHenley2,
-        images: [classicHenley1, classicHenley2, classicHenley3, classicHenley4, classicHenley5, classicHenley6],
+        image: classicHenleyModel,
+        hoverImage: classicHenley1,
+        images: [classicHenleyModel, classicHenley1, classicHenley2, classicHenley3, classicHenley4, classicHenley5, classicHenley6],
         alt: 'Classic Henley Neck image',
         ref: 'SX-MW-HN-10',
         description: 'The Classic Henley combines structured casual design with durable construction. Ideal for premium retail and private label collections requiring subtle detailing and refined finishing.',
@@ -322,9 +329,9 @@ export const products = [
         category: 'Menswear',
         name: 'Classic Tank',
         features: ['Summer Essential', 'Athletic Cut', 'Lightweight'],
-        image: classicTank1,
-        hoverImage: classicTank2,
-        images: [classicTank1, classicTank2, classicTank3, classicTank4, classicTank5, classicTank6],
+        image: classicTankModel,
+        hoverImage: classicTank1,
+        images: [classicTankModel, classicTank1, classicTank2, classicTank3, classicTank4, classicTank5, classicTank6],
         alt: 'Classic Tank image',
         ref: 'SX-MW-TK-11',
         description: 'Manufactured for activewear, summer collections, and promotional requirements, our Classic Tank is produced with breathable fabrics and structured armhole finishing for export-quality standards.',

@@ -81,10 +81,21 @@ const ProductDetail = () => {
                     <div className="mt-10 px-0 sm:mt-16 lg:mt-0">
                         <div className="mb-6">
                             <h1 className="font-display text-4xl font-bold mb-2">{product.name}</h1>
-                            <p className="text-sm text-gray-500 dark:text-gray-400 font-mono tracking-wide">REF: {product.ref}</p>
                         </div>
                         <div className="prose prose-sm dark:prose-invert text-gray-600 dark:text-gray-300 mb-8">
                             <p>{product.description}</p>
+                        </div>
+
+                        <div className="bg-gray-50 dark:bg-gray-800 rounded-xl p-6 border border-gray-100 dark:border-gray-700 mb-8">
+                            <h4 className="text-base font-semibold mb-2">Ready to place a bulk order?</h4>
+                            <p className="text-sm text-gray-500 dark:text-gray-400 mb-6">Our dedicated export team will guide you through sampling, pricing, and logistics.</p>
+                            <Link to="/contact" className="w-full flex items-center justify-center bg-primary text-white text-lg font-medium px-8 py-4 rounded-md shadow-lg hover:bg-opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary transition-all duration-200 transform hover:-translate-y-0.5">
+                                <span className="material-symbols-outlined mr-2">chat</span>
+                                Discuss Your Requirement
+                            </Link>
+                            <p className="text-center mt-3 text-xs text-gray-400 dark:text-gray-500">
+                                Typical response time: Within 24 hours
+                            </p>
                         </div>
 
                         <div className="bg-surface-light dark:bg-surface-dark border border-gray-200 dark:border-gray-700 rounded-lg p-6 mb-8 shadow-sm">
@@ -120,18 +131,6 @@ const ProductDetail = () => {
                             </div>
                         </div>
 
-
-                        <div className="bg-gray-50 dark:bg-gray-800 rounded-xl p-6 border border-gray-100 dark:border-gray-700">
-                            <h4 className="text-base font-semibold mb-2">Ready to place a bulk order?</h4>
-                            <p className="text-sm text-gray-500 dark:text-gray-400 mb-6">Our dedicated export team will guide you through sampling, pricing, and logistics.</p>
-                            <Link to="/contact" className="w-full flex items-center justify-center bg-primary text-white text-lg font-medium px-8 py-4 rounded-md shadow-lg hover:bg-opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary transition-all duration-200 transform hover:-translate-y-0.5">
-                                <span className="material-symbols-outlined mr-2">chat</span>
-                                Discuss Your Requirement
-                            </Link>
-                            <p className="text-center mt-3 text-xs text-gray-400 dark:text-gray-500">
-                                Typical response time: Within 24 hours
-                            </p>
-                        </div>
 
                         <div className="mt-8 border-t border-gray-200 dark:border-gray-700">
                             <details className="group py-4 border-b border-gray-200 dark:border-gray-700">

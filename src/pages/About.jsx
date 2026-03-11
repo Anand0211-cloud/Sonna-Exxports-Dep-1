@@ -3,6 +3,7 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import yusrahProfile from '../assets/team/yusrah-profile.jpg';
 import yusrahSignature from '../assets/team/yusrah-signature.png';
+import mainBanner from '../assets/About Banner.png';
 
 const About = () => {
     return (
@@ -10,14 +11,14 @@ const About = () => {
             <Header />
             {/* Added pt-20 to account for fixed header */}
             <main>
-                <header className="relative pt-20 h-[60vh] min-h-[500px] flex items-center justify-center overflow-hidden">
+                <header className="relative pt-20 h-[40vh] min-h-[350px] flex items-center justify-center overflow-hidden">
                     <div className="absolute inset-0 z-0">
                         <img
-                            alt="Fabric texture and fashion tools"
-                            className="w-full h-full object-cover opacity-80"
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5VqG0SsCD1Vz3n0843UWuzRsA6W6XJVOrxl1F92Z12SMXekC-bNthBuawn6gG7DmywVXuYSRWlI-xrlzwgizcZBIDVBSEkTngsK0iCbiqv7WGtWe1f98_VkM3divGZi-TotwUiECEoGESwC1iBSlb3x9eyjwlS1YD9nqq6uV2scxm5Yj3hhT7zY4H0Z6I__bgVg1T8q4c6ILb3ziwSkG7CuLqT2QIogb0xeEPt5wfMXbkqE706uFoNgiqQ-I0annHLSYirTcCQg"
+                            alt="About Sonna Exxports Banner"
+                            className="w-full h-full object-cover md:object-center object-top"
+                            src={mainBanner}
                         />
-                        <div className="absolute inset-0 bg-gradient-to-r from-primary/80 to-purple-900/60 mix-blend-multiply"></div>
+                        <div className="absolute inset-0 bg-black/40"></div>
                     </div>
                     <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
                         <h1 className="font-serif text-5xl md:text-7xl text-white font-bold mb-6 tracking-tight text-shadow">Crafting Excellence</h1>
@@ -57,13 +58,20 @@ const About = () => {
                             </div>
                             <div className="w-full lg:w-1/2 space-y-6">
                                 <h3 className="font-serif text-5xl font-bold">Yusrah Ahmad</h3>
-                                <p className="text-gray-600 leading-loose">
-                                    Yusrah Ahmad established Sonna Exxports with one clear focus — to bring discipline, structure, and repeatable standards into export garment manufacturing.
-                                </p>
-                                <p className="text-gray-600 leading-loose">
-                                    Her approach is simple:<br />
-                                    <strong>Deliver the same quality in bulk — every single time.</strong>
-                                </p>
+                                <div className="space-y-4">
+                                    <p className="text-gray-600 leading-loose">
+                                        Cotton isn’t just fabric — it’s what people wear on their skin every day.
+                                    </p>
+                                    <p className="text-gray-600 leading-loose">
+                                        When I stepped into the garment export space, I saw how inconsistency quietly disrupts global B2B trade. One shipment meets expectations, the next shifts in fabric, sizing, or finishing — and buyers absorb the cost.
+                                    </p>
+                                    <p className="text-gray-600 leading-loose">
+                                        India has one of the richest textile ecosystems in the world. The capability has always been here. What was missing was structure.
+                                    </p>
+                                    <p className="text-gray-600 leading-loose">
+                                        Sonna Exxports was built on one principle: in global exports, consistency matters more than claims. We supply export-grade cotton garments engineered for precision, repeatability, and scale — because in international trade, certainty is the real premium.
+                                    </p>
+                                </div>
                                 <div className="pt-6">
                                     <img
                                         alt="Founder Signature"
@@ -131,7 +139,7 @@ const About = () => {
                 {/* 5. Contact Section */}
                 <section className="py-24 bg-gray-50">
                     <div className="max-w-4xl mx-auto px-4 text-center">
-                        <h2 className="font-serif text-4xl md:text-5xl mb-10">Struggling with Inconsistent Bulk Supply?</h2>
+                        <h2 className="font-serif text-4xl md:text-5xl mb-10">Struggling with Inconsistent<br /> Bulk Supply?</h2>
                         <a
                             href="/contact"
                             className="inline-block bg-primary hover:bg-primary-light text-white px-10 py-4 rounded font-medium tracking-widest transition-colors duration-300 shadow-lg hover:shadow-xl"

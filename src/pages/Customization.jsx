@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { Zap, Box, TrendingUp, ShieldCheck, Globe } from 'lucide-react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -16,6 +17,7 @@ import techPrivateLabel from '../assets/customisation/Private Labeling.png';
 import techColour from '../assets/customisation/Colour Matching.png';
 import techFabric from '../assets/customisation/Fabric Selection.png';
 import techWash from '../assets/customisation/Washing & Finishing.png';
+import mainBanner from '../assets/Customisation Banner.png';
 
 const Customization = () => {
     const [activeCategory, setActiveCategory] = useState('industrial');
@@ -24,7 +26,7 @@ const Customization = () => {
         industrial: {
             id: 'industrial',
             title: "Industrial Uniforms",
-            description: "High-performance utility wear engineered for safety, durability, and professional consistency. Designed to withstand rigorous work environments while protecting your most valuable asset—your workforce.",
+            description: "",
             features: [
                 "Fire-retardant & chemical-resistant options",
                 "High-visibility reflective taping",
@@ -54,18 +56,18 @@ const Customization = () => {
             <Header />
 
             {/* 1. Hero Section */}
-            <section className="relative h-[60vh] min-h-[500px] flex items-center justify-center overflow-hidden">
-                <div className="absolute inset-0">
+            <section className="relative w-full flex items-center justify-center overflow-hidden bg-black pt-20 md:pt-16">
+                <div className="w-full">
                     <img
-                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4w8FAZohiUNpPQvARvq4AiiTbngy35u2QZN9-PJZdFvU7m3pjBAUrWUgEoF_xhmZZS0ZdiPM9tn6z0sx_8YUzmvorwByZkVjt_L89SgO32ShsDiNX6h4oqvN58voIPo3qPqusuFT80bLRIOn6Xpli6tbNSkJ6y3zJCA9YHonMXnQoyX2cjCYhsUg-1jF66Tq475Wxq4ZXu8MgQP68k03gz1JP_znKfPIQ06WkCBHVLGLiRrV5ddps_CmyWEhFRF4zRTJhHae5FQ"
-                        alt="Textile Production"
-                        className="w-full h-full object-cover"
+                        src={mainBanner}
+                        alt="Textile Production Banner"
+                        className="w-full h-auto object-contain"
                     />
-                    <div className="absolute inset-0 bg-black/50"></div>
+                    <div className="absolute inset-0 bg-black/40"></div>
                 </div>
-                <div className="relative z-10 text-center text-white px-4 max-w-5xl mx-auto">
-                    <span className="block text-accent-beige uppercase tracking-[0.3em] text-sm font-bold mb-4 animate-fade-in">Production Excellence</span>
-                    <h1 className="font-serif text-4xl md:text-6xl lg:text-7xl mb-6 leading-tight animate-fade-in-up !text-white">
+                <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white px-4 max-w-5xl mx-auto z-10 pointer-events-none">
+                    <span className="block text-accent-beige uppercase tracking-[0.3em] sm:text-sm text-xs font-bold mb-2 sm:mb-4 animate-fade-in drop-shadow-md">Production Excellence</span>
+                    <h1 className="font-serif text-3xl sm:text-4xl md:text-6xl lg:text-7xl mb-4 sm:mb-6 leading-tight animate-fade-in-up !text-white drop-shadow-lg">
                         Crafting Identity <br /> <span className="italic font-light !text-white">In Every Stitch</span>
                     </h1>
                 </div>
@@ -159,6 +161,15 @@ const Customization = () => {
                 <section id="categories" className="py-16 px-6 md:px-12 lg:px-24 bg-gray-50 dark:bg-gray-900 scroll-mt-24">
                     <div className="max-w-7xl mx-auto">
                         <div className="text-center mb-10">
+                            <div className="bg-primary/5 rounded-xl p-8 mb-12 border border-primary/10">
+                                <h3 className="font-serif text-2xl md:text-3xl text-[#460566] mb-4">Looking for customized solutions for your brand?</h3>
+                                <p className="text-gray-600 dark:text-gray-300 mb-6 max-w-2xl mx-auto">
+                                    Our export team is ready to discuss your specific bulk manufacturing requirements, from sampling to final delivery.
+                                </p>
+                                <Link to="/contact" className="inline-flex items-center justify-center bg-primary text-white text-lg font-medium px-8 py-3 rounded-md shadow-lg hover:bg-opacity-90 transition-all transform hover:-translate-y-0.5">
+                                    Discuss Your Requirement
+                                </Link>
+                            </div>
                             <h2 className="font-serif text-4xl mt-3 text-[#460566]">Specialized Uniform Manufacturing</h2>
                             <p className="text-lg text-gray-600 dark:text-gray-300 mt-4 mb-4 max-w-2xl mx-auto">
                                 We provide structured uniform manufacturing solutions designed for durability, comfort, and institutional identity.
@@ -203,9 +214,12 @@ const Customization = () => {
                                             />
                                             <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-300"></div>
                                         </div>
-                                        <div className="p-6 text-center">
+                                        <div className="p-6 text-center flex flex-col items-center">
                                             <h4 className="font-serif text-xl text-[#460566] mb-2">{variant.name}</h4>
-                                            <p className="text-sm text-gray-500 uppercase tracking-widest">Available Layout</p>
+                                            <p className="text-sm text-gray-500 uppercase tracking-widest mb-6">Available Layout</p>
+                                            <Link to="/contact" className="w-full flex items-center justify-center bg-primary text-white text-sm font-medium px-4 py-3 rounded hover:bg-opacity-90 transition-colors shadow-sm">
+                                                Discuss Requirement
+                                            </Link>
                                         </div>
                                     </div>
                                 ))}

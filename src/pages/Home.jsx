@@ -38,10 +38,13 @@ const Home = () => {
                             <div className="w-full lg:w-1/2 space-y-6">
                                 <h3 className="font-serif text-5xl font-bold">Yusrah Ahmad</h3>
                                 <div className="text-gray-600 leading-relaxed space-y-4">
-                                    <p>Cotton isn’t just fabric — it’s what people wear on their skin every day.</p>
-                                    <p>When I stepped into the garment export space, I saw how inconsistency quietly disrupts global B2B trade. One shipment meets expectations, the next shifts in fabric, sizing, or finishing — and buyers absorb the cost.</p>
-                                    <p>India has one of the richest textile ecosystems in the world. The capability has always been here. What was missing was structure.</p>
-                                    <p>Sonna Exxports was built on one principle: in global exports, consistency matters more than claims. We supply export-grade cotton garments engineered for precision, repeatability, and scale — because in international trade, certainty is the real premium.</p>
+                                    <p>
+                                        Yusrah Ahmad established Sonna Exxports with one clear focus — to bring discipline, structure, and repeatable standards into export garment manufacturing.
+                                    </p>
+                                    <p>
+                                        Her approach is simple:<br />
+                                        <strong>Deliver the same quality in bulk — every single time.</strong>
+                                    </p>
                                 </div>
                                 <div className="pt-6">
                                     <img
