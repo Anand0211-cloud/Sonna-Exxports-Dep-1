@@ -1,5 +1,6 @@
 import React from 'react';
 import customizationImg from '../assets/home/home page customisation.png';
+import { getMailtoLink } from '../utils/emailUtils';
 
 const Manufacturing = () => {
     return (
@@ -61,9 +62,12 @@ const Manufacturing = () => {
                                 As a trusted garment manufacturer & exporter, we deliver scalable production with consistency and discipline.
                             </p>
                             <div className="pt-2">
-                                <button className="h-14 px-12 rounded-full bg-accent-beige hover:bg-accent-beige-hover text-primary-dark font-bold text-lg transition-all shadow-lg hover:shadow-accent-beige/20 transform hover:-translate-y-1">
+                                <a 
+                                    href={getMailtoLink('customization')}
+                                    className="h-14 px-12 rounded-full bg-accent-beige hover:bg-accent-beige-hover text-primary-dark font-bold text-lg flex items-center justify-center transition-all shadow-lg hover:shadow-accent-beige/20 transform hover:-translate-y-1"
+                                >
                                     Start Your Custom Manufacturing Journey
-                                </button>
+                                </a>
                             </div>
                         </div>
                     </div>

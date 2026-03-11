@@ -1,4 +1,5 @@
 import React from 'react';
+import { getMailtoLink } from '../utils/emailUtils';
 
 const Hero = () => {
     return (
@@ -21,12 +22,18 @@ const Hero = () => {
                     Experience the pinnacle of luxury export fashion. Meticulously crafted textiles delivered to the world's most exclusive boutiques.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 mt-4">
-                    <button className="h-12 px-8 rounded-full bg-accent-beige hover:bg-accent-beige-hover text-primary-dark font-bold text-base transition-all transform hover:scale-105">
-                        Discover Collection
-                    </button>
-                    <button className="h-12 px-8 rounded-full border border-white/30 hover:bg-white/10 text-white font-medium text-base transition-all backdrop-blur-sm">
-                        View Lookbook
-                    </button>
+                    <a 
+                        href={getMailtoLink('general')}
+                        className="h-12 px-8 rounded-full bg-accent-beige hover:bg-accent-beige-hover text-primary-dark font-bold text-base flex items-center justify-center transition-all transform hover:scale-105"
+                    >
+                        Discuss Your Project
+                    </a>
+                    <a 
+                        href="/collections"
+                        className="h-12 px-8 rounded-full border border-white/30 hover:bg-white/10 text-white font-medium text-base flex items-center justify-center transition-all backdrop-blur-sm"
+                    >
+                        View Collection
+                    </a>
                 </div>
                 <div className="absolute bottom-10 animate-bounce">
                     <span className="material-symbols-outlined text-white/50 text-3xl">keyboard_arrow_down</span>

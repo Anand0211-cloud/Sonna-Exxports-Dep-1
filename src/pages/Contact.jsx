@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import contactImage from '../assets/Contact.png';
@@ -6,6 +6,43 @@ import PhoneInput from 'react-phone-input-2';
 import 'react-phone-input-2/lib/style.css';
 
 const Contact = () => {
+    const [formData, setFormData] = useState({
+        fullName: '',
+        email: '',
+        phone: '',
+        communication: [],
+        message: ''
+    });
+
+    const handlePhoneChange = (value) => {
+        setFormData(prev => ({ ...prev, phone: value }));
+    };
+
+    const handleCheckboxChange = (method) => {
+        setFormData(prev => {
+            const methods = prev.communication.includes(method)
+                ? prev.communication.filter(m => m !== method)
+                : [...prev.communication, method];
+            return { ...prev, communication: methods };
+        });
+    };
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        
+        const destination = "contact@sonnaexxports.com";
+        const subject = `New Inquiry from ${formData.fullName}`;
+        const body = `Full Name: ${formData.fullName}
+Email: ${formData.email}
+Phone: ${formData.phone}
+Preferred Communication: ${formData.communication.join(', ') || 'Not specified'}
+
+Message:
+${formData.message}`;
+
+        const mailtoUrl = `mailto:${destination}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        window.location.href = mailtoUrl;
+    };
 
     return (
         <div className="flex flex-col min-h-screen font-display bg-gray-50 dark:bg-background-dark">
@@ -118,6 +155,9 @@ const Contact = () => {
                                     <label className="block text-xs font-bold uppercase tracking-widest text-gray-500 mb-2 group-focus-within:text-primary transition-colors">Full Name</label>
                                     <input
                                         type="text"
+                                        required
+                                        value={formData.fullName}
+                                        onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
                                         className="w-full bg-transparent border-0 border-b border-gray-300 px-0 py-3 text-lg focus:ring-0 focus:border-primary transition-all placeholder-gray-300"
                                         placeholder="Enter your name"
                                     />
@@ -128,6 +168,9 @@ const Contact = () => {
                                         <label className="block text-xs font-bold uppercase tracking-widest text-gray-500 mb-2 group-focus-within:text-primary transition-colors">Email Address</label>
                                         <input
                                             type="email"
+                                            required
+                                            value={formData.email}
+                                            onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                                             className="w-full bg-transparent border-0 border-b border-gray-300 px-0 py-3 text-lg focus:ring-0 focus:border-primary transition-all placeholder-gray-300"
                                             placeholder="name@company.com"
                                         />
@@ -137,6 +180,8 @@ const Contact = () => {
                                         <div className="border-b border-gray-300 group-focus-within:border-primary transition-all">
                                             <PhoneInput
                                                 country={'in'}
+                                                value={formData.phone}
+                                                onChange={handlePhoneChange}
                                                 enableSearch={true}
                                                 buttonStyle={{
                                                     background: 'transparent',
@@ -166,7 +211,12 @@ const Contact = () => {
                                     <div className="flex flex-wrap gap-6">
                                         {['Email', 'WhatsApp', 'Call'].map((method) => (
                                             <label key={method} className="inline-flex items-center cursor-pointer group">
-                                                <input type="checkbox" className="w-5 h-5 text-primary border-gray-300 rounded focus:ring-primary focus:ring-offset-0 transition-all cursor-pointer" />
+                                                <input 
+                                                    type="checkbox" 
+                                                    checked={formData.communication.includes(method)}
+                                                    onChange={() => handleCheckboxChange(method)}
+                                                    className="w-5 h-5 text-primary border-gray-300 rounded focus:ring-primary focus:ring-offset-0 transition-all cursor-pointer" 
+                                                />
                                                 <span className="ml-3 text-gray-600 group-hover:text-primary transition-colors">{method}</span>
                                             </label>
                                         ))}
@@ -179,12 +229,18 @@ const Contact = () => {
                                     </label>
                                     <textarea
                                         rows="3"
+                                        value={formData.message}
+                                        onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                                         className="w-full bg-transparent border-0 border-b border-gray-300 px-0 py-3 text-lg focus:ring-0 focus:border-primary transition-all resize-none placeholder-gray-300"
                                         placeholder="Tell us about your project..."
                                     ></textarea>
                                 </div>
 
-                                <button className="group relative w-full sm:w-auto overflow-hidden bg-[#460566] text-white py-4 px-10 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                                <button 
+                                    type="submit"
+                                    onClick={handleSubmit}
+                                    className="group relative w-full sm:w-auto overflow-hidden bg-[#460566] text-white py-4 px-10 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+                                >
                                     <span className="relative z-10 font-bold uppercase tracking-widest text-sm flex items-center justify-center gap-2">
                                         Send Inquiry
                                         <span className="material-symbols-outlined text-xl group-hover:translate-x-1 transition-transform">arrow_forward</span>

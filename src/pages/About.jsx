@@ -4,6 +4,7 @@ import Footer from '../components/Footer';
 import yusrahProfile from '../assets/team/yusrah-profile.jpg';
 import yusrahSignature from '../assets/team/yusrah-signature.png';
 import mainBanner from '../assets/About Banner.png';
+import { getMailtoLink } from '../utils/emailUtils';
 
 const About = () => {
     return (
@@ -141,7 +142,7 @@ const About = () => {
                     <div className="max-w-4xl mx-auto px-4 text-center">
                         <h2 className="font-serif text-4xl md:text-5xl mb-10">Struggling with Inconsistent<br /> Bulk Supply?</h2>
                         <a
-                            href="/contact"
+                            href={getMailtoLink('about')}
                             className="inline-block bg-primary hover:bg-primary-light text-white px-10 py-4 rounded font-medium tracking-widest transition-colors duration-300 shadow-lg hover:shadow-xl"
                         >
                             Discuss Your Requirement

@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { Zap, Box, TrendingUp, ShieldCheck, Globe } from 'lucide-react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import { getMailtoLink } from '../utils/emailUtils';
 
 // Industrial Uniforms
 import industrialBlue from '../assets/customisation/Industrial Blue.png';
@@ -166,9 +167,12 @@ const Customization = () => {
                                 <p className="text-gray-600 dark:text-gray-300 mb-6 max-w-2xl mx-auto">
                                     Our export team is ready to discuss your specific bulk manufacturing requirements, from sampling to final delivery.
                                 </p>
-                                <Link to="/contact" className="inline-flex items-center justify-center bg-primary text-white text-lg font-medium px-8 py-3 rounded-md shadow-lg hover:bg-opacity-90 transition-all transform hover:-translate-y-0.5">
+                                <a 
+                                    href={getMailtoLink('customization')}
+                                    className="inline-flex items-center justify-center bg-primary text-white text-lg font-medium px-8 py-3 rounded-md shadow-lg hover:bg-opacity-90 transition-all transform hover:-translate-y-0.5"
+                                >
                                     Discuss Your Requirement
-                                </Link>
+                                </a>
                             </div>
                             <h2 className="font-serif text-4xl mt-3 text-[#460566]">Specialized Uniform Manufacturing</h2>
                             <p className="text-lg text-gray-600 dark:text-gray-300 mt-4 mb-4 max-w-2xl mx-auto">
@@ -217,9 +221,12 @@ const Customization = () => {
                                         <div className="p-6 text-center flex flex-col items-center">
                                             <h4 className="font-serif text-xl text-[#460566] mb-2">{variant.name}</h4>
                                             <p className="text-sm text-gray-500 uppercase tracking-widest mb-6">Available Layout</p>
-                                            <Link to="/contact" className="w-full flex items-center justify-center bg-primary text-white text-sm font-medium px-4 py-3 rounded hover:bg-opacity-90 transition-colors shadow-sm">
+                                            <a 
+                                                href={getMailtoLink('uniform', { variant: variant.name })}
+                                                className="w-full flex items-center justify-center bg-primary text-white text-sm font-medium px-4 py-3 rounded hover:bg-opacity-90 transition-colors shadow-sm"
+                                            >
                                                 Discuss Requirement
-                                            </Link>
+                                            </a>
                                         </div>
                                     </div>
                                 ))}
@@ -315,9 +322,12 @@ const Customization = () => {
                     <div className="max-w-4xl mx-auto">
                         <h2 className="font-serif text-4xl md:text-5xl mb-8 text-white">Ready to Start Your Private Label?</h2>
                         <div className="flex flex-col sm:flex-row justify-center gap-6 mt-10">
-                            <button className="bg-white text-primary hover:bg-gray-100 py-4 px-10 rounded-full font-bold uppercase tracking-widest text-sm transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                            <a 
+                                href={getMailtoLink('customization')}
+                                className="bg-white text-primary hover:bg-gray-100 py-4 px-10 rounded-full font-bold uppercase tracking-widest text-sm transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+                            >
                                 Discuss Now
-                            </button>
+                            </a>
                         </div>
                     </div>
                 </section>

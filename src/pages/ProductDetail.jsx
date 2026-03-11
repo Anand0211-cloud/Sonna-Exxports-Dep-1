@@ -3,6 +3,7 @@ import { useParams, Link } from 'react-router-dom';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { products } from '../data/products';
+import { getMailtoLink } from '../utils/emailUtils';
 
 const ProductDetail = () => {
     const { id } = useParams();
@@ -89,10 +90,13 @@ const ProductDetail = () => {
                         <div className="bg-gray-50 dark:bg-gray-800 rounded-xl p-6 border border-gray-100 dark:border-gray-700 mb-8">
                             <h4 className="text-base font-semibold mb-2">Ready to place a bulk order?</h4>
                             <p className="text-sm text-gray-500 dark:text-gray-400 mb-6">Our dedicated export team will guide you through sampling, pricing, and logistics.</p>
-                            <Link to="/contact" className="w-full flex items-center justify-center bg-primary text-white text-lg font-medium px-8 py-4 rounded-md shadow-lg hover:bg-opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary transition-all duration-200 transform hover:-translate-y-0.5">
+                            <a 
+                                href={getMailtoLink('product', { name: product.name, ref: product.ref })}
+                                className="w-full flex items-center justify-center bg-primary text-white text-lg font-medium px-8 py-4 rounded-md shadow-lg hover:bg-opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary transition-all duration-200 transform hover:-translate-y-0.5"
+                            >
                                 <span className="material-symbols-outlined mr-2">chat</span>
                                 Discuss Your Requirement
-                            </Link>
+                            </a>
                             <p className="text-center mt-3 text-xs text-gray-400 dark:text-gray-500">
                                 Typical response time: Within 24 hours
                             </p>

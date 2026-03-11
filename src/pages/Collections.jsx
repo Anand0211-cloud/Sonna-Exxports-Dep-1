@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import { getMailtoLink } from '../utils/emailUtils';
 
 import { products as Products } from '../data/products';
 import bannerImg from '../assets/Collection Banner.png';
@@ -47,12 +48,18 @@ const Collections = () => {
                 <div className="mt-24 mb-12 flex flex-col items-center justify-center text-center gap-6 max-w-3xl mx-auto p-10 md:p-14 bg-white border border-primary/10 rounded-2xl shadow-sm">
                     <h2 className="text-3xl md:text-4xl font-serif text-primary-dark leading-tight">Partner with a Reliable Manufacturer</h2>
                     <div className="flex flex-col sm:flex-row gap-4 mt-2 w-full justify-center">
-                        <button className="h-14 px-8 rounded-full bg-primary hover:bg-primary-dark text-white font-bold text-base transition-all shadow-md transform hover:-translate-y-1">
+                        <a 
+                            href={getMailtoLink('customization')}
+                            className="h-14 px-8 rounded-full bg-primary hover:bg-primary-dark text-white font-bold text-base flex items-center justify-center transition-all shadow-md transform hover:-translate-y-1"
+                        >
                             Let's Build Long-Term Supply
-                        </button>
-                        <button className="h-14 px-8 rounded-full bg-accent-beige hover:bg-accent-beige-hover text-primary-dark font-bold text-base transition-all shadow-md transform hover:-translate-y-1">
+                        </a>
+                        <a 
+                            href={getMailtoLink('general')}
+                            className="h-14 px-8 rounded-full bg-accent-beige hover:bg-accent-beige-hover text-primary-dark font-bold text-base flex items-center justify-center transition-all shadow-md transform hover:-translate-y-1"
+                        >
                             Catalogue
-                        </button>
+                        </a>
                     </div>
                 </div>
             </div>

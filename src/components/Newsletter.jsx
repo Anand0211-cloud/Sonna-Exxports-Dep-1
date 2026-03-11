@@ -1,4 +1,5 @@
 import React from 'react';
+import { getMailtoLink } from '../utils/emailUtils';
 
 const Newsletter = () => {
     return (
@@ -8,12 +9,18 @@ const Newsletter = () => {
                 <h2 className="text-3xl md:text-5xl font-serif text-primary">Start Your Manufacturing Partnership</h2>
 
                 <div className="flex flex-col sm:flex-row gap-4 mt-4 w-full justify-center">
-                    <button className="h-14 px-8 rounded-full bg-primary hover:bg-primary-dark text-white font-bold text-base transition-all shadow-md transform hover:-translate-y-1">
+                    <a 
+                        href={getMailtoLink('customization')}
+                        className="h-14 px-8 rounded-full bg-primary hover:bg-primary-dark text-white font-bold text-base flex items-center justify-center transition-all shadow-md transform hover:-translate-y-1"
+                    >
                         Discuss Your Requirement
-                    </button>
-                    <button className="h-14 px-8 rounded-full bg-accent-beige hover:bg-accent-beige-hover text-primary-dark font-bold text-base transition-all shadow-md transform hover:-translate-y-1">
+                    </a>
+                    <a 
+                        href={getMailtoLink('general')}
+                        className="h-14 px-8 rounded-full bg-accent-beige hover:bg-accent-beige-hover text-primary-dark font-bold text-base flex items-center justify-center transition-all shadow-md transform hover:-translate-y-1"
+                    >
                         Catalogue
-                    </button>
+                    </a>
                 </div>
             </div>
         </section>
