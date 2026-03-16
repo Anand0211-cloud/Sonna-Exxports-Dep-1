@@ -13,10 +13,10 @@ const Collections = () => {
             <Header />
 
             {/* Banner Section */}
-            <div className="w-full h-[25vh] min-h-[180px] relative mt-[88px] md:mt-[70px] bg-black overflow-hidden">
+            <div className="w-full h-[40vh] min-h-[250px] relative mt-[88px] md:mt-[70px] bg-black overflow-hidden">
                 <img src={bannerImg} alt="Our Collection Banner" className="w-full h-full object-cover object-center" />
                 <div className="absolute inset-0 bg-black/40 flex flex-col items-center justify-center text-white px-4">
-                    <h1 className="font-serif text-3xl md:text-5xl lg:text-6xl text-center text-white drop-shadow-md">Our Collection</h1>
+                    <h1 className="font-serif text-3xl md:text-5xl lg:text-6xl text-center text-white" style={{ textShadow: '0 4px 20px rgba(0,0,0,0.8), 0 2px 6px rgba(0,0,0,0.7), 0 0 40px rgba(0,0,0,0.5)' }}>Our Collection</h1>
                 </div>
             </div>
 

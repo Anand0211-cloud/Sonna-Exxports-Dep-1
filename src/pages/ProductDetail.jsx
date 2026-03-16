@@ -56,26 +56,67 @@ const ProductDetail = () => {
                 <div className="lg:grid lg:grid-cols-2 lg:gap-x-12 xl:gap-x-16">
                     {/* Product Gallery */}
                     <div className="product-gallery space-y-4">
-                        <div className="aspect-w-3 aspect-h-4 bg-gray-100 dark:bg-gray-800 overflow-hidden relative shadow-sm group">
-                            <img
-                                alt={product.alt}
-                                className="w-full h-full object-cover object-center transform transition duration-500 group-hover:scale-105"
-                                src={selectedImage || product.image}
-                            />
-                            <div className="absolute top-4 left-4 bg-white dark:bg-gray-900 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-primary shadow-sm rounded-sm">New Season</div>
-                        </div>
+                        {/* Main Image - fixed size container */}
+                        {(() => {
+                            const lbImg = product.lbImage || (product.images && product.images.length === 7 ? product.images[6] : null);
+                            const isLBSelected = lbImg && selectedImage === lbImg;
+                            return (
+                                <div className="aspect-w-3 aspect-h-4 bg-gray-100 dark:bg-gray-800 overflow-hidden relative shadow-sm group">
+                                    <img
+                                        alt={product.alt}
+                                        className={`w-full h-full object-center transform transition duration-500 group-hover:scale-105 ${isLBSelected ? 'object-contain' : 'object-cover'}`}
+                                        src={selectedImage || product.image}
+                                    />
+                                    <div className="absolute top-4 left-4 bg-white dark:bg-gray-900 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-primary shadow-sm rounded-sm">New Season</div>
+                                </div>
+                            );
+                        })()}
                         {/* Thumbnails */}
-                        <div className="grid grid-cols-3 gap-4 mt-4">
-                            {(product.images || [product.image, product.image, product.image, product.image, product.image, product.image]).map((img, index) => (
+                        {product.lbImage ? (
+                            /* 4-image products: 2x2 grid + full-width LB below */
+                            <>
+                                <div className="grid grid-cols-2 gap-4 mt-4">
+                                    {(product.images || []).map((img, index) => (
+                                        <button
+                                            key={index}
+                                            onClick={() => setSelectedImage(img)}
+                                            className={`aspect-w-1 aspect-h-1 bg-gray-100 dark:bg-gray-800 overflow-hidden ${(selectedImage || product.image) === img ? 'ring-2 ring-primary ring-offset-2 dark:ring-offset-background-dark' : 'opacity-70 hover:opacity-100 transition-opacity'}`}
+                                        >
+                                            <img alt={`Thumbnail ${index + 1}`} className="w-full h-full object-cover object-center" src={img} />
+                                        </button>
+                                    ))}
+                                </div>
                                 <button
-                                    key={index}
-                                    onClick={() => setSelectedImage(img)}
-                                    className={`aspect-w-1 aspect-h-1 bg-gray-100 dark:bg-gray-800 overflow-hidden ${(selectedImage || product.image) === img ? 'ring-2 ring-primary ring-offset-2 dark:ring-offset-background-dark' : 'opacity-70 hover:opacity-100 transition-opacity'}`}
+                                    onClick={() => setSelectedImage(product.lbImage)}
+                                    className={`w-full mt-4 bg-gray-100 dark:bg-gray-800 overflow-hidden ${(selectedImage) === product.lbImage ? 'ring-2 ring-primary ring-offset-2 dark:ring-offset-background-dark' : 'opacity-70 hover:opacity-100 transition-opacity'}`}
                                 >
-                                    <img alt={`Thumbnail ${index + 1}`} className="w-full h-full object-cover object-center" src={img} />
+                                    <img alt="Lookbook" className="w-full h-auto object-cover object-center" src={product.lbImage} />
                                 </button>
-                            ))}
-                        </div>
+                            </>
+                        ) : (
+                            /* 7-image products: first 6 in 3-column grid + LB full-width below */
+                            <>
+                                <div className="grid grid-cols-3 gap-4 mt-4">
+                                    {(product.images || []).slice(0, 6).map((img, index) => (
+                                        <button
+                                            key={index}
+                                            onClick={() => setSelectedImage(img)}
+                                            className={`aspect-w-1 aspect-h-1 bg-gray-100 dark:bg-gray-800 overflow-hidden ${(selectedImage || product.image) === img ? 'ring-2 ring-primary ring-offset-2 dark:ring-offset-background-dark' : 'opacity-70 hover:opacity-100 transition-opacity'}`}
+                                        >
+                                            <img alt={`Thumbnail ${index + 1}`} className="w-full h-full object-cover object-center" src={img} />
+                                        </button>
+                                    ))}
+                                </div>
+                                {product.images && product.images.length === 7 && (
+                                    <button
+                                        onClick={() => setSelectedImage(product.images[6])}
+                                        className={`w-full mt-4 bg-gray-100 dark:bg-gray-800 overflow-hidden ${(selectedImage) === product.images[6] ? 'ring-2 ring-primary ring-offset-2 dark:ring-offset-background-dark' : 'opacity-70 hover:opacity-100 transition-opacity'}`}
+                                    >
+                                        <img alt="Lookbook" className="w-full h-auto object-cover object-center" src={product.images[6]} />
+                                    </button>
+                                )}
+                            </>
+                        )}
                     </div>
 
                     {/* Product Info */}

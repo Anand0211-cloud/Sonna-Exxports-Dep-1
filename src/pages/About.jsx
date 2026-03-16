@@ -33,7 +33,7 @@ const About = () => {
                 <section className="py-20 bg-gray-50">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                         <h2 className="font-serif text-4xl md:text-5xl mb-8">About Sonna Exxports</h2>
-                        <p className="text-gray-600 text-lg leading-relaxed max-w-3xl mx-auto text-justify md:text-center space-y-4">
+                        <p className="text-gray-600 text-lg leading-relaxed max-w-5xl mx-auto text-justify md:text-center space-y-4">
                             <span className="block">India’s textile strength is unmatched. The difference lies in systems.</span>
                             <span className="block">Sonna Exxports operates as a structured garment manufacturer & exporter, focused on stable GSM, controlled shrinkage, precise sizing, and consistent finishing across bulk production.</span>
                             <span className="block">We don’t chase transactions. We build long-term supply reliability.</span>

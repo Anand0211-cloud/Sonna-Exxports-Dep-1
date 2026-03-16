@@ -5,11 +5,13 @@ import classicTShirt4 from '../assets/1. classic t shirt/4.png';
 import classicTShirt5 from '../assets/1. classic t shirt/5.png';
 import classicTShirt6 from '../assets/1. classic t shirt/6.png';
 import classicTShirtModel from '../assets/1. classic t shirt/Classic Tshirt with Model.png';
+import classicTShirtLB from '../assets/1. classic t shirt/Classic t shirt LB.png';
 
 import dtgPrinting1 from '../assets/2. DTG Printing/60.png';
 import dtgPrinting2 from '../assets/2. DTG Printing/61.png';
 import dtgPrinting3 from '../assets/2. DTG Printing/62.png';
 import dtgPrinting4 from '../assets/2. DTG Printing/63.png';
+import dtgPrintingLB from '../assets/2. DTG Printing/DTG LB.png';
 
 import classicPolo1 from '../assets/3. classic polo/7.png';
 import classicPolo2 from '../assets/3. classic polo/8.png';
@@ -18,6 +20,7 @@ import classicPolo4 from '../assets/3. classic polo/10.png';
 import classicPolo5 from '../assets/3. classic polo/11.png';
 import classicPolo6 from '../assets/3. classic polo/12.png';
 import classicPoloModel from '../assets/3. classic polo/Classic polo with model.png';
+import classicPoloLB from '../assets/3. classic polo/Classic Polo LB.png';
 
 import classicHoodie1 from '../assets/4. classic hoodie/13.png';
 import classicHoodie2 from '../assets/4. classic hoodie/14.png';
@@ -26,11 +29,13 @@ import classicHoodie4 from '../assets/4. classic hoodie/16.png';
 import classicHoodie5 from '../assets/4. classic hoodie/17.png';
 import classicHoodie6 from '../assets/4. classic hoodie/18.png';
 import classicHoodieModel from '../assets/4. classic hoodie/classic hoddie with model.png';
+import classicHoodieLB from '../assets/4. classic hoodie/Classic Hoddie LB.png';
 
 import embossedPrinting1 from '../assets/5. Embossed Printing/68.png';
 import embossedPrinting2 from '../assets/5. Embossed Printing/69.png';
 import embossedPrinting3 from '../assets/5. Embossed Printing/70.png';
 import embossedPrinting4 from '../assets/5. Embossed Printing/71.png';
+import embossedPrintingLB from '../assets/5. Embossed Printing/Embossed Printing LB.png';
 
 import classicSweatshirt1 from '../assets/6. classic sweatshirt/19.png';
 import classicSweatshirt2 from '../assets/6. classic sweatshirt/20.png';
@@ -39,11 +44,13 @@ import classicSweatshirt4 from '../assets/6. classic sweatshirt/22.png';
 import classicSweatshirt5 from '../assets/6. classic sweatshirt/23.png';
 import classicSweatshirt6 from '../assets/6. classic sweatshirt/24.png';
 import classicSweatshirtModel from '../assets/6. classic sweatshirt/classic sweatshirt with model.png';
+import classicSweatshirtLB from '../assets/6. classic sweatshirt/Classic Sweatshirt LB.png';
 
 import screenPrinting1 from '../assets/7. Screen Printing/64.png';
 import screenPrinting2 from '../assets/7. Screen Printing/65.png';
 import screenPrinting3 from '../assets/7. Screen Printing/66.png';
 import screenPrinting4 from '../assets/7. Screen Printing/67.png';
+import screenPrintingLB from '../assets/7. Screen Printing/Screen Printing LB.png';
 
 import classicOversized1 from '../assets/8. classic oversized/31.png';
 import classicOversized2 from '../assets/8. classic oversized/32.png';
@@ -52,11 +59,13 @@ import classicOversized4 from '../assets/8. classic oversized/34.png';
 import classicOversized5 from '../assets/8. classic oversized/35.png';
 import classicOversized6 from '../assets/8. classic oversized/36.png';
 import classicOversizedModel from '../assets/8. classic oversized/classic oversized with model.png';
+import classicOversizedLB from '../assets/8. classic oversized/Classic Oversized LB.png';
 
 import acidWash1 from '../assets/9. Acid Wash/72.png';
 import acidWash2 from '../assets/9. Acid Wash/73.png';
 import acidWash3 from '../assets/9. Acid Wash/74.png';
 import acidWash4 from '../assets/9. Acid Wash/75.png';
+import acidWashLB from '../assets/9. Acid Wash/Acid Wash LB.png';
 
 import classicHenley1 from '../assets/10. classic henley neck/25.png';
 import classicHenley2 from '../assets/10. classic henley neck/26.png';
@@ -65,6 +74,7 @@ import classicHenley4 from '../assets/10. classic henley neck/28.png';
 import classicHenley5 from '../assets/10. classic henley neck/29.png';
 import classicHenley6 from '../assets/10. classic henley neck/30.png';
 import classicHenleyModel from '../assets/10. classic henley neck/classic henley neck with model.png';
+import classicHenleyLB from '../assets/10. classic henley neck/Classic Hanley LB.png';
 
 import classicTank1 from '../assets/11. classic tank/37.png';
 import classicTank2 from '../assets/11. classic tank/38.png';
@@ -73,6 +83,7 @@ import classicTank4 from '../assets/11. classic tank/40.png';
 import classicTank5 from '../assets/11. classic tank/41.png';
 import classicTank6 from '../assets/11. classic tank/42.png';
 import classicTankModel from '../assets/11. classic tank/classic tank with model.png';
+import classicTankLB from '../assets/11. classic tank/Classic Tank LB.png';
 
 import babySuit1 from '../assets/12. baby suit/50.png';
 import babySuit2 from '../assets/12. baby suit/51.png';
@@ -80,6 +91,7 @@ import babySuit3 from '../assets/12. baby suit/52.png';
 import babySuit4 from '../assets/12. baby suit/53.png';
 import babySuit5 from '../assets/12. baby suit/54.png';
 import babySuit6 from '../assets/12. baby suit/55.png';
+import babySuitLB from '../assets/12. baby suit/baby Suit LB.png';
 
 export const products = [
     {
@@ -89,7 +101,7 @@ export const products = [
         features: ['Premium Cotton', 'Classic Fit', 'Breathable Fabric'],
         image: classicTShirtModel,
         hoverImage: classicTShirt1,
-        images: [classicTShirtModel, classicTShirt1, classicTShirt2, classicTShirt3, classicTShirt4, classicTShirt5, classicTShirt6],
+        images: [classicTShirtModel, classicTShirt1, classicTShirt2, classicTShirt3, classicTShirt4, classicTShirt5, classicTShirtLB],
         alt: 'Classic white t-shirt front view',
         ref: 'SX-MW-TS-01',
         description: 'A core essential in men’s apparel, our Classic T-Shirt is manufactured for comfort, structure, and long-term durability. Designed for bulk production, it serves as a reliable base for private label collections and wholesale distribution.',
@@ -114,6 +126,7 @@ export const products = [
         image: dtgPrinting1,
         hoverImage: dtgPrinting2,
         images: [dtgPrinting1, dtgPrinting2, dtgPrinting3, dtgPrinting4],
+        lbImage: dtgPrintingLB,
         alt: 'DTG Printing example',
         ref: 'SX-PR-DTG-02',
         description: 'Direct-to-Garment (DTG) printing allows high-resolution, detailed artwork application suitable for multi-color and intricate graphic designs. Ideal for T-Shirts, lightweight garments, and various other apparel categories requiring precision and color depth in bulk production.',
@@ -138,7 +151,7 @@ export const products = [
         features: ['Pique Cotton', 'Ribbed Collar', 'Smart Casual'],
         image: classicPoloModel,
         hoverImage: classicPolo1,
-        images: [classicPoloModel, classicPolo1, classicPolo2, classicPolo3, classicPolo4, classicPolo5, classicPolo6],
+        images: [classicPoloModel, classicPolo1, classicPolo2, classicPolo3, classicPolo4, classicPolo5, classicPoloLB],
         alt: 'Classic Polo image',
         ref: 'SX-MW-PO-03',
         description: 'Our Classic Polo is structured for retail collections and corporate requirements. Manufactured with precision stitching and collar reinforcement, it balances comfort with a refined finish suitable for private labels and uniform programs.',
@@ -162,7 +175,7 @@ export const products = [
         features: ['Fleece Lined', 'Adjustable Hood', 'Kangaroo Pocket'],
         image: classicHoodieModel,
         hoverImage: classicHoodie1,
-        images: [classicHoodieModel, classicHoodie1, classicHoodie2, classicHoodie3, classicHoodie4, classicHoodie5, classicHoodie6],
+        images: [classicHoodieModel, classicHoodie1, classicHoodie2, classicHoodie3, classicHoodie4, classicHoodie5, classicHoodieLB],
         alt: 'Classic Hoodie image',
         ref: 'SX-MW-HD-04',
         description: 'Built for structured bulk manufacturing, our Classic Hoodie is designed with reinforced seams and premium fabric blends. Suitable for retail brands, winter collections, and promotional apparel programs.',
@@ -187,6 +200,7 @@ export const products = [
         image: embossedPrinting2,
         hoverImage: embossedPrinting1,
         images: [embossedPrinting2, embossedPrinting1, embossedPrinting3, embossedPrinting4],
+        lbImage: embossedPrintingLB,
         alt: 'Embossed Printing example',
         ref: 'SX-PR-EM-05',
         description: 'Our Embossed Printing technique adds raised texture and dimensional detailing across various garment categories including T-Shirts, Hoodies, Sweatshirts, Oversized styles, and various others. This method enhances visual depth while maintaining fabric integrity and export-grade finishing standards.',
@@ -210,7 +224,7 @@ export const products = [
         features: ['Cotton Blend', 'Ribbed Cuffs', 'Relaxed Fit'],
         image: classicSweatshirtModel,
         hoverImage: classicSweatshirt1,
-        images: [classicSweatshirtModel, classicSweatshirt1, classicSweatshirt2, classicSweatshirt3, classicSweatshirt4, classicSweatshirt5, classicSweatshirt6],
+        images: [classicSweatshirtModel, classicSweatshirt1, classicSweatshirt2, classicSweatshirt3, classicSweatshirt4, classicSweatshirt5, classicSweatshirtLB],
         alt: 'Classic Sweatshirt image',
         ref: 'SX-MW-SW-06',
         description: 'Our Classic Sweatshirt is manufactured for durability and structured fall. Designed for scalable production, it offers clean finishing and consistent sizing across bulk orders.',
@@ -235,6 +249,7 @@ export const products = [
         image: screenPrinting1,
         hoverImage: screenPrinting2,
         images: [screenPrinting1, screenPrinting2, screenPrinting3, screenPrinting4],
+        lbImage: screenPrintingLB,
         alt: 'Screen Printing example',
         ref: 'SX-PR-SP-07',
         description: 'Our Screen Printing capability supports bulk branding programs across T-Shirts, Hoodies, Sweatshirts, Tanks, and various other garment categories. We ensure durable print application, consistent color accuracy, and reinforced finishing aligned with export-grade quality standards.',
@@ -258,7 +273,7 @@ export const products = [
         features: ['Layering Essential', 'Soft Touch', 'Tailored Drop Fit'],
         image: classicOversizedModel,
         hoverImage: classicOversized1,
-        images: [classicOversizedModel, classicOversized1, classicOversized2, classicOversized3, classicOversized4, classicOversized5, classicOversized6],
+        images: [classicOversizedModel, classicOversized1, classicOversized2, classicOversized3, classicOversized4, classicOversized5, classicOversizedLB],
         alt: 'Classic Oversized image',
         ref: 'SX-MW-OS-08',
         description: 'Our Classic Oversized T-Shirt is developed for contemporary streetwear and modern retail collections. Manufactured with controlled proportions and consistent finishing for scalable production.',
@@ -283,6 +298,7 @@ export const products = [
         image: acidWash1,
         hoverImage: acidWash2,
         images: [acidWash1, acidWash2, acidWash3, acidWash4],
+        lbImage: acidWashLB,
         alt: 'Acid Wash example',
         ref: 'SX-SP-AW-09',
         description: 'Our Enzyme and Acid Wash finishing techniques create controlled texture, softness, and vintage effects while maintaining fabric strength and shrinkage control. Applicable across T-Shirts, Hoodies, Sweatshirts, Oversized styles, and various others.',
@@ -307,7 +323,7 @@ export const products = [
         features: ['Button Placket', 'Waffle Knit/Knit', 'Casual Comfort'],
         image: classicHenleyModel,
         hoverImage: classicHenley1,
-        images: [classicHenleyModel, classicHenley1, classicHenley2, classicHenley3, classicHenley4, classicHenley5, classicHenley6],
+        images: [classicHenleyModel, classicHenley1, classicHenley2, classicHenley3, classicHenley4, classicHenley5, classicHenleyLB],
         alt: 'Classic Henley Neck image',
         ref: 'SX-MW-HN-10',
         description: 'The Classic Henley combines structured casual design with durable construction. Ideal for premium retail and private label collections requiring subtle detailing and refined finishing.',
@@ -331,7 +347,7 @@ export const products = [
         features: ['Summer Essential', 'Athletic Cut', 'Lightweight'],
         image: classicTankModel,
         hoverImage: classicTank1,
-        images: [classicTankModel, classicTank1, classicTank2, classicTank3, classicTank4, classicTank5, classicTank6],
+        images: [classicTankModel, classicTank1, classicTank2, classicTank3, classicTank4, classicTank5, classicTankLB],
         alt: 'Classic Tank image',
         ref: 'SX-MW-TK-11',
         description: 'Manufactured for activewear, summer collections, and promotional requirements, our Classic Tank is produced with breathable fabrics and structured armhole finishing for export-quality standards.',
@@ -355,7 +371,7 @@ export const products = [
         features: ['Ultra Soft', 'Snap Closures', 'Hypoallergenic'],
         image: babySuit1,
         hoverImage: babySuit2,
-        images: [babySuit1, babySuit2, babySuit3, babySuit4, babySuit5, babySuit6],
+        images: [babySuit1, babySuit2, babySuit3, babySuit4, babySuit5, babySuit6, babySuitLB],
         alt: 'Baby Suit image',
         ref: 'SX-KW-BS-12',
         description: 'Our Baby Suits are manufactured using soft, breathable, and skin-friendly fabrics designed for infant comfort and safety. Built for export-grade quality, they maintain gentle stitching and controlled shrinkage suitable for bulk supply.',
