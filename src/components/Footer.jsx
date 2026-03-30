@@ -53,7 +53,7 @@ const Footer = () => {
                     </div>
                     <div className="flex flex-col md:flex-row justify-between items-center gap-4 pt-6 border-t border-white/5">
                         <p className="text-white/40 text-xs">© {new Date().getFullYear()} Sonna Exxports. All rights reserved.</p>
-                        <Link to="/faq" className="text-white/40 hover:text-accent-beige text-xs font-semibold tracking-wider uppercase transition-colors">FAQ</Link>
+                        <Link to="/faq" className="bg-white text-[#460566] px-6 py-2 rounded-full hover:bg-accent-beige hover:text-primary-dark transition-all text-sm font-bold tracking-wider uppercase shadow-md inline-block">FAQ</Link>
                     </div>
                 </div>
             </div>

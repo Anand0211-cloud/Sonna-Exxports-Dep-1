@@ -9,11 +9,11 @@ const Manufacturing = () => {
                 <div className="w-full max-w-7xl">
                     <div className="grid lg:grid-cols-[1fr_1.2fr] gap-12 lg:gap-20 items-center">
                         <div className="relative order-1">
-                            <div className="relative w-full aspect-[4/3] lg:aspect-video overflow-hidden shadow-2xl group">
+                            <div className="relative w-full aspect-[4/5] overflow-hidden shadow-2xl group bg-white">
                                 <img
                                     src={customizationImg}
                                     alt="Premium manufacturing machinery and finished garments"
-                                    className="w-full h-full object-cover transition-all duration-700 group-hover:scale-105"
+                                    className="w-full h-full object-contain transition-all duration-700 group-hover:scale-105"
                                 />
                                 <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-black/60 to-transparent z-20"></div>
                                 <div className="absolute bottom-8 left-8 z-30 flex items-center gap-4">
