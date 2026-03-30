@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import yusrahProfile from '../assets/team/yusrah-profile.jpg';
@@ -19,20 +20,13 @@ const About = () => {
                             className="w-full h-full object-cover md:object-center object-top"
                             src={mainBanner}
                         />
-                        <div className="absolute inset-0 bg-black/40"></div>
-                    </div>
-                    <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
-                        <h1 className="font-serif text-5xl md:text-7xl text-white font-bold mb-6 tracking-tight text-shadow">Crafting Excellence</h1>
-                        <p className="text-lg md:text-xl text-gray-100 font-light tracking-wide max-w-2xl mx-auto">
-                            Where tradition meets modern innovation in global fashion exports.
-                        </p>
                     </div>
                 </header>
 
                 {/* 1. About Sonna Exxports */}
                 <section className="py-20 bg-gray-50">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                        <h2 className="font-serif text-4xl md:text-5xl mb-8">About Sonna Exxports</h2>
+                        <h2 className="font-serif text-4xl md:text-5xl mb-8">Sonna Exxports</h2>
                         <p className="text-gray-600 text-lg leading-relaxed max-w-5xl mx-auto text-justify md:text-center space-y-4">
                             <span className="block">India’s textile strength is unmatched. The difference lies in systems.</span>
                             <span className="block">Sonna Exxports operates as a structured garment manufacturer & exporter, focused on stable GSM, controlled shrinkage, precise sizing, and consistent finishing across bulk production.</span>
@@ -123,7 +117,7 @@ const About = () => {
                             </div>
                             <div className="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow">
                                 <span className="material-symbols-outlined text-primary text-4xl mb-4">playlist_add_check</span>
-                                <h3 className="font-serif text-xl font-bold mb-3">Structured Quality Testing</h3>
+                                <h3 className="font-serif text-xl font-bold mb-3">Quality Testing</h3>
                                 <p className="text-gray-600 text-sm leading-relaxed">Each product undergoes fabric inspection, stitching checks, measurement verification, finishing control, and final audit before dispatch.</p>
                             </div>
                             <div className="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow">
@@ -141,12 +135,20 @@ const About = () => {
                 <section className="py-24 bg-gray-50">
                     <div className="max-w-4xl mx-auto px-4 text-center">
                         <h2 className="font-serif text-4xl md:text-5xl mb-10">Struggling with Inconsistent<br /> Bulk Supply?</h2>
-                        <a
-                            href={getMailtoLink('about')}
-                            className="inline-block bg-primary hover:bg-primary-light text-white px-10 py-4 rounded font-medium tracking-widest transition-colors duration-300 shadow-lg hover:shadow-xl"
-                        >
-                            Discuss Your Requirement
-                        </a>
+                        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+                            <a
+                                href={getMailtoLink('about')}
+                                className="w-full sm:w-auto inline-block bg-primary hover:bg-primary-light text-white px-10 py-4 rounded font-medium tracking-widest transition-colors duration-300 shadow-lg hover:shadow-xl"
+                            >
+                                Discuss Your Requirement
+                            </a>
+                            <Link
+                                to="/contact"
+                                className="w-full sm:w-auto inline-block bg-white border-2 border-primary text-primary hover:bg-primary hover:text-white px-10 py-4 rounded font-medium tracking-widest transition-colors duration-300 shadow-lg hover:shadow-xl"
+                            >
+                                Contact Us
+                            </Link>
+                        </div>
                     </div>
                 </section>
             </main>

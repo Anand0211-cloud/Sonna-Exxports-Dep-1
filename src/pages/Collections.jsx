@@ -13,10 +13,19 @@ const Collections = () => {
             <Header />
 
             {/* Banner Section */}
-            <div className="w-full h-[40vh] min-h-[250px] relative mt-[88px] md:mt-[70px] bg-black overflow-hidden">
-                <img src={bannerImg} alt="Our Collection Banner" className="w-full h-full object-cover object-center" />
+            <div className="w-full relative mt-[88px] md:mt-[70px] bg-black overflow-hidden">
+                <img src={bannerImg} alt="Our Collection Banner" className="w-full h-auto block" />
                 <div className="absolute inset-0 bg-black/40 flex flex-col items-center justify-center text-white px-4">
-                    <h1 className="font-serif text-3xl md:text-5xl lg:text-6xl text-center text-white" style={{ textShadow: '0 4px 20px rgba(0,0,0,0.8), 0 2px 6px rgba(0,0,0,0.7), 0 0 40px rgba(0,0,0,0.5)' }}>Our Collection</h1>
+                    <h1 className="font-serif text-3xl md:text-5xl lg:text-7xl text-center text-white mb-8" 
+                        style={{ textShadow: '0 4px 30px rgba(0,0,0,0.9), 0 2px 10px rgba(0,0,0,0.8)' }}>
+                        Explore Our Collection
+                    </h1>
+                    <Link 
+                        to="/contact" 
+                        className="h-14 px-10 rounded-full bg-primary hover:bg-white hover:text-primary text-white font-bold text-lg flex items-center justify-center transition-all duration-300 shadow-[0_4px_20px_rgba(0,0,0,0.6)] transform hover:-translate-y-1 active:scale-95"
+                    >
+                        Contact Us
+                    </Link>
                 </div>
             </div>
 

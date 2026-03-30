@@ -29,7 +29,7 @@ const Contact = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        
+
         const destination = "contact@sonnaexxports.com";
         const subject = `New Inquiry from ${formData.fullName}`;
         const body = `Full Name: ${formData.fullName}
@@ -102,7 +102,7 @@ ${formData.message}`;
                                         <div className="flex items-start gap-4">
                                             <span className="material-symbols-outlined text-accent-beige mt-1">location_on</span>
                                             <div>
-                                                <p className="text-xs font-bold uppercase tracking-widest text-purple-200 mb-1">Headquarters</p>
+                                                <p className="text-xs font-bold uppercase tracking-widest text-purple-200 mb-1">Main Branch</p>
                                                 <p className="font-light opacity-90 leading-relaxed">
                                                     A 504 Lodha bel Air, Patel Estate,<br />
                                                     Mumbai, Maharashtra - 400102
@@ -112,7 +112,7 @@ ${formData.message}`;
                                         <div className="flex items-start gap-4">
                                             <span className="material-symbols-outlined text-accent-beige mt-1">location_on</span>
                                             <div>
-                                                <p className="text-xs font-bold uppercase tracking-widest text-purple-200 mb-1">Office</p>
+                                                <p className="text-xs font-bold uppercase tracking-widest text-purple-200 mb-1">Headquarters</p>
                                                 <p className="font-light opacity-90 leading-relaxed">
                                                     A- 17 New Janpath complex, Ashok Marg,<br />
                                                     Lucknow, Uttar Pradesh 226001
@@ -211,11 +211,11 @@ ${formData.message}`;
                                     <div className="flex flex-wrap gap-6">
                                         {['Email', 'WhatsApp', 'Call'].map((method) => (
                                             <label key={method} className="inline-flex items-center cursor-pointer group">
-                                                <input 
-                                                    type="checkbox" 
+                                                <input
+                                                    type="checkbox"
                                                     checked={formData.communication.includes(method)}
                                                     onChange={() => handleCheckboxChange(method)}
-                                                    className="w-5 h-5 text-primary border-gray-300 rounded focus:ring-primary focus:ring-offset-0 transition-all cursor-pointer" 
+                                                    className="w-5 h-5 text-primary border-gray-300 rounded focus:ring-primary focus:ring-offset-0 transition-all cursor-pointer"
                                                 />
                                                 <span className="ml-3 text-gray-600 group-hover:text-primary transition-colors">{method}</span>
                                             </label>
@@ -236,7 +236,7 @@ ${formData.message}`;
                                     ></textarea>
                                 </div>
 
-                                <button 
+                                <button
                                     type="submit"
                                     onClick={handleSubmit}
                                     className="group relative w-full sm:w-auto overflow-hidden bg-[#460566] text-white py-4 px-10 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"

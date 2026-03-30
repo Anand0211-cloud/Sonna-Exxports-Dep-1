@@ -9,7 +9,7 @@ import Footer from '../components/Footer';
 
 import Certifications from '../components/Certifications';
 import InstagramFeed from '../components/InstagramFeed';
-import yusrahProfile from '../assets/team/yusrah-profile.jpg';
+import yusrahProfile from '../assets/Home Page Founder.png';
 import yusrahSignature from '../assets/team/yusrah-signature.png';
 
 const Home = () => {
@@ -60,7 +60,7 @@ const Home = () => {
                 </section>
 
                 <Collections />
-                <VideoSection />
+
                 <Manufacturing />
 
                 <Certifications />

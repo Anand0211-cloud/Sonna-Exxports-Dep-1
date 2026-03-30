@@ -29,10 +29,10 @@ const ProductDetail = () => {
         );
     }
 
-    // Similar products logic (simple: same category, not current product)
-    const similarProducts = products
-        .filter(p => p.category === product.category && p.id !== product.id)
-        .slice(0, 4);
+    // Similar products logic: prioritize same category, then others, to always show 4
+    const categoryProducts = products.filter(p => p.category === product.category && p.id !== product.id);
+    const otherProducts = products.filter(p => p.category !== product.category && p.id !== product.id);
+    const similarProducts = [...categoryProducts, ...otherProducts].slice(0, 4);
 
     return (
         <div className="bg-background-light dark:bg-background-dark text-gray-800 dark:text-gray-200 font-body antialiased transition-colors duration-300">
@@ -80,18 +80,15 @@ const ProductDetail = () => {
                                         <button
                                             key={index}
                                             onClick={() => setSelectedImage(img)}
-                                            className={`aspect-w-1 aspect-h-1 bg-gray-100 dark:bg-gray-800 overflow-hidden ${(selectedImage || product.image) === img ? 'ring-2 ring-primary ring-offset-2 dark:ring-offset-background-dark' : 'opacity-70 hover:opacity-100 transition-opacity'}`}
+                                            className={`aspect-w-1 aspect-h-1 bg-gray-100 dark:bg-gray-800 overflow-hidden ${(selectedImage || product.image) === img ? 'ring-2 ring-primary ring-offset-2 dark:ring-offset-background-dark' : ''}`}
                                         >
                                             <img alt={`Thumbnail ${index + 1}`} className="w-full h-full object-cover object-center" src={img} />
                                         </button>
                                     ))}
                                 </div>
-                                <button
-                                    onClick={() => setSelectedImage(product.lbImage)}
-                                    className={`w-full mt-4 bg-gray-100 dark:bg-gray-800 overflow-hidden ${(selectedImage) === product.lbImage ? 'ring-2 ring-primary ring-offset-2 dark:ring-offset-background-dark' : 'opacity-70 hover:opacity-100 transition-opacity'}`}
-                                >
+                                <div className="w-full mt-4 bg-gray-100 dark:bg-gray-800 overflow-hidden">
                                     <img alt="Lookbook" className="w-full h-auto object-cover object-center" src={product.lbImage} />
-                                </button>
+                                </div>
                             </>
                         ) : (
                             /* 7-image products: first 6 in 3-column grid + LB full-width below */
@@ -101,19 +98,16 @@ const ProductDetail = () => {
                                         <button
                                             key={index}
                                             onClick={() => setSelectedImage(img)}
-                                            className={`aspect-w-1 aspect-h-1 bg-gray-100 dark:bg-gray-800 overflow-hidden ${(selectedImage || product.image) === img ? 'ring-2 ring-primary ring-offset-2 dark:ring-offset-background-dark' : 'opacity-70 hover:opacity-100 transition-opacity'}`}
+                                            className={`aspect-w-1 aspect-h-1 bg-gray-100 dark:bg-gray-800 overflow-hidden ${(selectedImage || product.image) === img ? 'ring-2 ring-primary ring-offset-2 dark:ring-offset-background-dark' : ''}`}
                                         >
                                             <img alt={`Thumbnail ${index + 1}`} className="w-full h-full object-cover object-center" src={img} />
                                         </button>
                                     ))}
                                 </div>
                                 {product.images && product.images.length === 7 && (
-                                    <button
-                                        onClick={() => setSelectedImage(product.images[6])}
-                                        className={`w-full mt-4 bg-gray-100 dark:bg-gray-800 overflow-hidden ${(selectedImage) === product.images[6] ? 'ring-2 ring-primary ring-offset-2 dark:ring-offset-background-dark' : 'opacity-70 hover:opacity-100 transition-opacity'}`}
-                                    >
+                                    <div className="w-full mt-4 bg-gray-100 dark:bg-gray-800 overflow-hidden">
                                         <img alt="Lookbook" className="w-full h-auto object-cover object-center" src={product.images[6]} />
-                                    </button>
+                                    </div>
                                 )}
                             </>
                         )}

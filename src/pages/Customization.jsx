@@ -56,21 +56,14 @@ const Customization = () => {
         <div className="bg-white dark:bg-background-dark text-gray-900 dark:text-gray-100 font-display">
             <Header />
 
-            {/* 1. Hero Section */}
-            <section className="relative w-full flex items-center justify-center overflow-hidden bg-black pt-20 md:pt-16">
+            {/* 1. Hero Section - Full Size Image, No Overlay */}
+            <section className="relative w-full overflow-hidden pt-20">
                 <div className="w-full">
                     <img
                         src={mainBanner}
                         alt="Textile Production Banner"
-                        className="w-full h-auto object-contain"
+                        className="w-full h-auto block"
                     />
-                    <div className="absolute inset-0 bg-black/40"></div>
-                </div>
-                <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white px-4 max-w-5xl mx-auto z-10 pointer-events-none">
-                    <span className="block text-accent-beige uppercase tracking-[0.3em] sm:text-sm text-xs font-bold mb-2 sm:mb-4 animate-fade-in drop-shadow-md">Production Excellence</span>
-                    <h1 className="font-serif text-3xl sm:text-4xl md:text-6xl lg:text-7xl mb-4 sm:mb-6 leading-tight animate-fade-in-up !text-white drop-shadow-lg">
-                        Crafting Identity <br /> <span className="italic font-light !text-white">In Every Stitch</span>
-                    </h1>
                 </div>
             </section>
 
@@ -87,8 +80,11 @@ const Customization = () => {
                             <p>
                                 At Sonna Exxports, we provide complete end-to-end custom garment manufacturing tailored to your brand’s specifications. From concept development and tech pack creation to fabric selection, production, finishing, and export coordination — every stage is managed with structured precision.
                             </p>
+                            <p className="font-bold text-gray-900 dark:text-white text-xl md:text-2xl py-2">
+                                We support 100% custom product development from scratch.
+                            </p>
                             <p>
-                                We support 100% custom product development from scratch. If you already have a tech pack, we execute it accurately. If not, our team can professionally develop one for you — ensuring clarity before bulk production begins. As a trusted garment manufacturer & exporter, we deliver scalable production with export-grade quality standards.
+                                If you already have a tech pack, we execute it accurately. If not, our team can professionally develop one for you — ensuring clarity before bulk production begins. As a trusted garment manufacturer & exporter, we deliver scalable production with export-grade quality standards.
                             </p>
                         </div>
                     </div>
@@ -162,40 +158,27 @@ const Customization = () => {
                 <section id="categories" className="py-16 px-6 md:px-12 lg:px-24 bg-gray-50 dark:bg-gray-900 scroll-mt-24">
                     <div className="max-w-7xl mx-auto">
                         <div className="text-center mb-10">
-                            <div className="bg-primary/5 rounded-xl p-8 mb-12 border border-primary/10">
-                                <h3 className="font-serif text-2xl md:text-3xl text-[#460566] mb-4">Looking for customized solutions for your brand?</h3>
-                                <p className="text-gray-600 dark:text-gray-300 mb-6 max-w-2xl mx-auto">
+                        <div className="bg-[#460566] rounded-xl p-10 mb-16 border border-white/10 shadow-2xl">
+                                <h3 className="font-serif text-2xl md:text-4xl text-white mb-6">Looking for customized solutions for your brand?</h3>
+                                <p className="text-white/80 mb-8 max-w-2xl mx-auto text-lg font-light">
                                     Our export team is ready to discuss your specific bulk manufacturing requirements, from sampling to final delivery.
                                 </p>
-                                <a 
-                                    href={getMailtoLink('customization')}
-                                    className="inline-flex items-center justify-center bg-primary text-white text-lg font-medium px-8 py-3 rounded-md shadow-lg hover:bg-opacity-90 transition-all transform hover:-translate-y-0.5"
+                                <Link 
+                                    to="/contact"
+                                    className="inline-flex items-center justify-center bg-white text-[#460566] text-lg font-bold px-10 py-4 rounded-md shadow-lg hover:bg-gray-100 transition-all transform hover:-translate-y-1"
                                 >
                                     Discuss Your Requirement
-                                </a>
+                                </Link>
                             </div>
-                            <h2 className="font-serif text-4xl mt-3 text-[#460566]">Specialized Uniform Manufacturing</h2>
+                            <div className="mb-12">
+                                <h2 className="inline-block font-serif text-4xl md:text-6xl text-[#460566] pb-4 border-b-4 border-primary/20 italic">Industrial Uniforms</h2>
+                            </div>
                             <p className="text-lg text-gray-600 dark:text-gray-300 mt-4 mb-4 max-w-2xl mx-auto">
                                 We provide structured uniform manufacturing solutions designed for durability, comfort, and institutional identity.
                             </p>
                         </div>
 
-                        {/* Category Tabs */}
-                        <div className="flex flex-wrap justify-center gap-4 mb-10">
-                            {Object.keys(uniformDetails).map((key) => (
-                                <button
-                                    key={key}
-                                    onClick={() => setActiveCategory(key)}
-                                    onMouseEnter={() => setActiveCategory(key)}
-                                    className={`px-8 py-3 rounded-full text-sm font-bold uppercase tracking-wider transition-all duration-300 ${activeCategory === key
-                                        ? 'bg-primary text-white shadow-lg shadow-primary/30'
-                                        : 'bg-white dark:bg-gray-800 text-gray-500 hover:bg-gray-100 border border-gray-200 dark:border-gray-700'
-                                        }`}
-                                >
-                                    {uniformDetails[key].title}
-                                </button>
-                            ))}
-                        </div>
+
 
                         {/* Dynamic Content Area */}
                         <div className="animate-fade-in">
@@ -219,11 +202,9 @@ const Customization = () => {
                                             <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-300"></div>
                                         </div>
                                         <div className="p-6 text-center flex flex-col items-center">
-                                            <h4 className="font-serif text-xl text-[#460566] mb-2">{variant.name}</h4>
-                                            <p className="text-sm text-gray-500 uppercase tracking-widest mb-6">Available Layout</p>
                                             <a 
                                                 href={getMailtoLink('uniform', { variant: variant.name })}
-                                                className="w-full flex items-center justify-center bg-primary text-white text-sm font-medium px-4 py-3 rounded hover:bg-opacity-90 transition-colors shadow-sm"
+                                                className="w-full flex items-center justify-center bg-primary text-white text-sm font-medium px-8 py-4 rounded hover:bg-opacity-90 transition-colors shadow-sm tracking-widest uppercase"
                                             >
                                                 Discuss Requirement
                                             </a>

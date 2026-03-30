@@ -63,7 +63,7 @@ const Manufacturing = () => {
                             </p>
                             <div className="pt-2">
                                 <a 
-                                    href={getMailtoLink('customization')}
+                                    href="/customization"
                                     className="h-14 px-12 rounded-full bg-accent-beige hover:bg-accent-beige-hover text-primary-dark font-bold text-lg flex items-center justify-center transition-all shadow-lg hover:shadow-accent-beige/20 transform hover:-translate-y-1"
                                 >
                                     Start Your Custom Manufacturing Journey

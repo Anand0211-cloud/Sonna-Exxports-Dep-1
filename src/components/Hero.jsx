@@ -39,67 +39,67 @@ const Hero = () => {
     }, [current, goToSlide]);
 
     return (
-        <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-28 md:pt-20">
-            {/* Background Images */}
-            {slides.map((slide, index) => (
-                <div
-                    key={index}
-                    className="absolute inset-0 z-0 transition-opacity duration-700 ease-in-out"
-                    style={{ opacity: index === current ? 1 : 0 }}
-                >
+        <section className="relative overflow-hidden bg-primary-dark pt-[88px] md:pt-[71px]">
+            {/* Image container — image in normal flow sets the section height */}
+            <div className="relative w-full">
+                {slides.map((slide, index) => (
                     <img
+                        key={index}
                         src={slide.image}
                         alt={`Banner ${index + 1}`}
-                        className="w-full h-full object-cover object-center"
-                    />
-                </div>
-            ))}
-            {/* Subtle purple overlay + bottom gradient for text readability */}
-            <div className="absolute inset-0 z-[1] bg-primary-dark/45"></div>
-            <div className="absolute inset-0 z-[1] bg-gradient-to-t from-primary-dark/60 via-transparent to-transparent"></div>
-
-            {/* Content */}
-            <div className="relative z-10 w-full max-w-7xl px-6 md:px-10 flex flex-col items-center text-center gap-8 mt-10">
-                <span className="text-accent-beige tracking-[0.2em] text-sm uppercase font-bold" style={{ textShadow: '0 2px 8px rgba(0,0,0,0.6)' }}>Sonna Exxports • Est 1998</span>
-                <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif font-medium text-white leading-[1.1] max-w-4xl tracking-tight transition-opacity duration-500" style={{ textShadow: '0 4px 16px rgba(0,0,0,0.7), 0 2px 4px rgba(0,0,0,0.5)' }}>
-                    {slides[current].heading}
-                </h1>
-                <p className="text-lg text-white/80 max-w-xl font-light leading-relaxed" style={{ textShadow: '0 2px 8px rgba(0,0,0,0.6)' }}>
-                    Experience the pinnacle of luxury export fashion. Meticulously crafted textiles delivered to the world's most exclusive boutiques.
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4 mt-4">
-                    <a 
-                        href={getMailtoLink('general')}
-                        className="h-12 px-8 rounded-full bg-accent-beige hover:bg-accent-beige-hover text-primary-dark font-bold text-base flex items-center justify-center transition-all transform hover:scale-105"
-                    >
-                        Discuss Your Project
-                    </a>
-                    <a 
-                        href="/collections"
-                        className="h-12 px-8 rounded-full border border-white/30 hover:bg-white/10 text-white font-medium text-base flex items-center justify-center transition-all backdrop-blur-sm"
-                    >
-                        View Collection
-                    </a>
-                </div>
-
-                {/* Carousel Indicators */}
-                <div className="flex gap-3 mt-4">
-                    {slides.map((_, index) => (
-                        <button
-                            key={index}
-                            onClick={() => goToSlide(index)}
-                            className={`h-2 rounded-full transition-all duration-500 ${
-                                index === current
-                                    ? 'w-8 bg-accent-beige'
-                                    : 'w-2 bg-white/40 hover:bg-white/60'
+                        className={`w-full h-auto block transition-opacity duration-700 ease-in-out ${index === 0 ? 'relative' : 'absolute inset-0'
                             }`}
-                            aria-label={`Go to slide ${index + 1}`}
-                        />
-                    ))}
-                </div>
+                        style={{
+                            opacity: index === current ? 1 : 0,
+                            zIndex: index === current ? 1 : 0
+                        }}
+                    />
+                ))}
 
-                <div className="absolute bottom-10 animate-bounce">
-                    <span className="material-symbols-outlined text-white/50 text-3xl">keyboard_arrow_down</span>
+                {/* Subtle purple overlay + bottom gradient for text readability */}
+                <div className="absolute inset-0 z-[2] bg-primary-dark/45"></div>
+                <div className="absolute inset-0 z-[2] bg-gradient-to-t from-primary-dark/60 via-transparent to-transparent"></div>
+
+                {/* Content overlay */}
+                <div className="absolute inset-0 z-10 flex items-center justify-center">
+                    <div className="w-full max-w-7xl px-6 md:px-10 flex flex-col items-center text-center gap-6 md:gap-8">
+                        <span className="text-accent-beige tracking-[0.2em] text-sm uppercase font-bold" style={{ textShadow: '0 2px 8px rgba(0,0,0,0.6)' }}>Sonna Exxports</span>
+                        <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif font-medium text-white leading-[1.1] max-w-4xl tracking-tight transition-opacity duration-500" style={{ textShadow: '0 4px 16px rgba(0,0,0,0.7), 0 2px 4px rgba(0,0,0,0.5)' }}>
+                            {slides[current].heading}
+                        </h1>
+                        <p className="text-base md:text-lg text-white/80 max-w-xl font-light leading-relaxed" style={{ textShadow: '0 2px 8px rgba(0,0,0,0.6)' }}>
+                            Experience the pinnacle of luxury export fashion. Meticulously crafted textiles delivered to the world's most exclusive boutiques.
+                        </p>
+                        <div className="flex flex-col sm:flex-row gap-4 mt-2">
+                            <a
+                                href={getMailtoLink('general')}
+                                className="h-12 px-8 rounded-full bg-accent-beige hover:bg-accent-beige-hover text-primary-dark font-bold text-base flex items-center justify-center transition-all transform hover:scale-105"
+                            >
+                                Discuss Your Project
+                            </a>
+                            <a
+                                href="/collections"
+                                className="h-12 px-8 rounded-full border border-white/30 hover:bg-white/10 text-white font-medium text-base flex items-center justify-center transition-all backdrop-blur-sm"
+                            >
+                                View Collection
+                            </a>
+                        </div>
+
+                        {/* Carousel Indicators */}
+                        <div className="flex gap-3 mt-2">
+                            {slides.map((_, index) => (
+                                <button
+                                    key={index}
+                                    onClick={() => goToSlide(index)}
+                                    className={`h-2 rounded-full transition-all duration-500 ${index === current
+                                        ? 'w-8 bg-accent-beige'
+                                        : 'w-2 bg-white/40 hover:bg-white/60'
+                                        }`}
+                                    aria-label={`Go to slide ${index + 1}`}
+                                />
+                            ))}
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
