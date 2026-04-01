@@ -4,9 +4,11 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { products } from '../data/products';
 import { getMailtoLink } from '../utils/emailUtils';
+import { useLanguage } from '../context/LanguageContext';
 
 const ProductDetail = () => {
     const { id } = useParams();
+    const { t } = useLanguage();
     const product = products.find(p => p.id === parseInt(id));
     const [selectedImage, setSelectedImage] = React.useState(null);
 
@@ -22,12 +24,17 @@ const ProductDetail = () => {
             <div className="flex h-screen w-full flex-col font-display antialiased bg-background-light dark:bg-background-dark text-text-dark dark:text-gray-100">
                 <Header />
                 <div className="flex-1 flex items-center justify-center">
-                    <h2 className="text-2xl font-bold">Product not found</h2>
+                    <h2 className="text-2xl font-bold">{t('product.not_found')}</h2>
                 </div>
                 <Footer />
             </div>
         );
     }
+
+    // Translated product fields
+    const productName = t(`pname.${product.id}`);
+    const productDesc = t(`pdesc.${product.id}`);
+    const productCategory = t(`cat.${product.category}`);
 
     // Similar products logic: prioritize same category, then others, to always show 4
     const categoryProducts = products.filter(p => p.category === product.category && p.id !== product.id);
@@ -41,13 +48,13 @@ const ProductDetail = () => {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 pt-28">
                 <nav aria-label="Breadcrumb" className="flex">
                     <ol className="flex items-center space-x-2 text-sm text-gray-500 dark:text-gray-400">
-                        <li><Link to="/" className="hover:text-primary dark:hover:text-primary">Home</Link></li>
+                        <li><Link to="/" className="hover:text-primary dark:hover:text-primary">{t('nav.home')}</Link></li>
                         <li><span className="material-symbols-outlined text-xs mx-1">chevron_right</span></li>
-                        <li><Link to="/collections" className="hover:text-primary dark:hover:text-primary">Collections</Link></li>
+                        <li><Link to="/collections" className="hover:text-primary dark:hover:text-primary">{t('nav.collection')}</Link></li>
                         <li><span className="material-symbols-outlined text-xs mx-1">chevron_right</span></li>
-                        <li><span className="hover:text-primary dark:hover:text-primary">{product.category}</span></li>
+                        <li><span className="hover:text-primary dark:hover:text-primary">{productCategory}</span></li>
                         <li><span className="material-symbols-outlined text-xs mx-1">chevron_right</span></li>
-                        <li className="font-medium text-gray-900 dark:text-white">{product.name}</li>
+                        <li className="font-medium text-gray-900 dark:text-white">{productName}</li>
                     </ol>
                 </nav>
             </div>
@@ -67,7 +74,7 @@ const ProductDetail = () => {
                                         className={`w-full h-full object-center transform transition duration-500 group-hover:scale-105 ${isLBSelected ? 'object-contain' : 'object-cover'}`}
                                         src={selectedImage || product.image}
                                     />
-                                    <div className="absolute top-4 left-4 bg-white dark:bg-gray-900 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-primary shadow-sm rounded-sm">New Season</div>
+                                    <div className="absolute top-4 left-4 bg-white dark:bg-gray-900 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-primary shadow-sm rounded-sm">{t('product.new_season')}</div>
                                 </div>
                             );
                         })()}
@@ -116,36 +123,36 @@ const ProductDetail = () => {
                     {/* Product Info */}
                     <div className="mt-10 px-0 sm:mt-16 lg:mt-0">
                         <div className="mb-6">
-                            <h1 className="font-display text-4xl font-bold mb-2">{product.name}</h1>
+                            <h1 className="font-display text-4xl font-bold mb-2">{productName}</h1>
                         </div>
                         <div className="prose prose-sm dark:prose-invert text-gray-600 dark:text-gray-300 mb-8">
-                            <p>{product.description}</p>
+                            <p>{productDesc}</p>
                         </div>
 
                         <div className="bg-gray-50 dark:bg-gray-800 rounded-xl p-6 border border-gray-100 dark:border-gray-700 mb-8">
-                            <h4 className="text-base font-semibold mb-2">Ready to place a bulk order?</h4>
-                            <p className="text-sm text-gray-500 dark:text-gray-400 mb-6">Our dedicated export team will guide you through sampling, pricing, and logistics.</p>
+                            <h4 className="text-base font-semibold mb-2">{t('product.ready')}</h4>
+                            <p className="text-sm text-gray-500 dark:text-gray-400 mb-6">{t('product.guide')}</p>
                             <a 
                                 href={getMailtoLink('product', { name: product.name, ref: product.ref })}
                                 className="w-full flex items-center justify-center bg-primary text-white text-lg font-medium px-8 py-4 rounded-md shadow-lg hover:bg-opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary transition-all duration-200 transform hover:-translate-y-0.5"
                             >
                                 <span className="material-symbols-outlined mr-2">chat</span>
-                                Discuss Your Requirement
+                                {t('product.discuss')}
                             </a>
                             <p className="text-center mt-3 text-xs text-gray-400 dark:text-gray-500">
-                                Typical response time: Within 24 hours
+                                {t('product.response')}
                             </p>
                         </div>
 
                         <div className="bg-surface-light dark:bg-surface-dark border border-gray-200 dark:border-gray-700 rounded-lg p-6 mb-8 shadow-sm">
                             <h3 className="font-display text-lg font-semibold mb-4 flex items-center">
-                                <span className="material-symbols-outlined text-primary mr-2 text-xl">tune</span> Technical Specifications
+                                <span className="material-symbols-outlined text-primary mr-2 text-xl">tune</span> {t('product.tech')}
                             </h3>
                             <div className="grid grid-cols-2 gap-y-6 gap-x-8">
                                 {Object.entries(product.specifications).map(([key, value]) => (
                                     <div key={key}>
-                                        <span className="block text-gray-700 dark:text-gray-300 text-sm uppercase tracking-wider mb-1">{key}</span>
-                                        <span className="font-medium text-lg text-gray-900 dark:text-white">{value}</span>
+                                        <span className="block text-gray-700 dark:text-gray-300 text-sm uppercase tracking-wider mb-1">{t(`spec.${key}`)}</span>
+                                        <span className="font-medium text-lg text-gray-900 dark:text-white">{t(`specval.${value}`)}</span>
                                     </div>
                                 ))}
                             </div>
@@ -153,7 +160,7 @@ const ProductDetail = () => {
 
                         <div className="space-y-6 mb-10">
                             <div className="border-t border-gray-200 dark:border-gray-700 pt-6">
-                                <h3 className="font-display text-lg font-semibold mb-4">Customization Options</h3>
+                                <h3 className="font-display text-lg font-semibold mb-4">{t('product.custom_opts')}</h3>
                                 <div className="space-y-4">
                                     {
                                         (product.customization || [
@@ -162,7 +169,7 @@ const ProductDetail = () => {
                                         ]).map((option, index) => (
                                             <div key={index} className="flex items-start space-x-2">
                                                 <span className="material-symbols-outlined text-primary text-xl mt-0.5">check_circle</span>
-                                                <p className="text-lg text-gray-800 dark:text-gray-200">{option}</p>
+                                                <p className="text-lg text-gray-800 dark:text-gray-200">{t(`cust.${option}`)}</p>
                                             </div>
                                         ))
                                     }
@@ -174,24 +181,24 @@ const ProductDetail = () => {
                         <div className="mt-8 border-t border-gray-200 dark:border-gray-700">
                             <details className="group py-4 border-b border-gray-200 dark:border-gray-700">
                                 <summary className="flex justify-between items-center font-medium cursor-pointer list-none text-gray-900 dark:text-white">
-                                    <span>Shipping & Logistics</span>
+                                    <span>{t('product.shipping_title')}</span>
                                     <span className="transition group-open:rotate-180">
                                         <span className="material-symbols-outlined">expand_more</span>
                                     </span>
                                 </summary>
                                 <div className="text-gray-500 dark:text-gray-400 mt-3 text-sm">
-                                    We ship globally via air and sea freight. FOB, CIF, and DDP terms available. Standard lead time for production is 45-60 days post-sample approval.
+                                    {t('product.shipping_desc')}
                                 </div>
                             </details>
                             <details className="group py-4 border-b border-gray-200 dark:border-gray-700">
                                 <summary className="flex justify-between items-center font-medium cursor-pointer list-none text-gray-900 dark:text-white">
-                                    <span>Sustainability Certification</span>
+                                    <span>{t('product.sust_title')}</span>
                                     <span className="transition group-open:rotate-180">
                                         <span className="material-symbols-outlined">expand_more</span>
                                     </span>
                                 </summary>
                                 <div className="text-gray-500 dark:text-gray-400 mt-3 text-sm">
-                                    Our manufacturing partners are OEKO-TEX certified. We utilize eco-friendly dyes and offer organic cotton alternatives upon request.
+                                    {t('product.sust_desc')}
                                 </div>
                             </details>
                         </div>
@@ -203,9 +210,9 @@ const ProductDetail = () => {
                     similarProducts.length > 0 && (
                         <section className="mt-24">
                             <div className="flex items-center justify-between mb-8">
-                                <h2 className="text-2xl font-display font-bold">Similar Export Styles</h2>
+                                <h2 className="text-2xl font-display font-bold">{t('product.similar')}</h2>
                                 <Link to="/collections" className="text-primary hover:text-opacity-80 font-medium flex items-center">
-                                    View Collection <span className="material-symbols-outlined ml-1 text-sm">arrow_forward</span>
+                                    {t('product.view_collection')} <span className="material-symbols-outlined ml-1 text-sm">arrow_forward</span>
                                 </Link>
                             </div>
                             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-y-10 gap-x-6 xl:gap-x-8">
@@ -223,12 +230,9 @@ const ProductDetail = () => {
                                                 <h3 className="text-sm text-primary dark:text-gray-200">
                                                     <Link to={`/product/${simProduct.id}`}>
                                                         <span aria-hidden="true" className="absolute inset-0"></span>
-                                                        {simProduct.name}
+                                                        {t(`pname.${simProduct.id}`)}
                                                     </Link>
                                                 </h3>
-                                                <p className="mt-1 text-sm text-gray-500 dark:text-gray-400">
-                                                    {Object.values(simProduct.specifications).slice(0, 2).join(' | ')}
-                                                </p>
                                             </div>
                                         </div>
                                     </div>

@@ -1,37 +1,22 @@
 import React, { useEffect, useState } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import { useLanguage } from '../context/LanguageContext';
 
 const FAQ = () => {
+    const { t } = useLanguage();
+
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
 
     const faqs = [
-        {
-            question: "Q1. Do you work only with bulk orders?",
-            answer: "We primarily work as a B2B apparel manufacturer, supporting bulk and scalable production requirements for international buyers."
-        },
-        {
-            question: "Q2. Do you offer custom garment manufacturing?",
-            answer: "Yes. We provide end-to-end custom garment manufacturing, including fabric, colour, prints, branding, and packaging."
-        },
-        {
-            question: "Q3. Do you support private label manufacturing?",
-            answer: "Yes. We work with brands seeking private label garment manufacturing, maintaining confidentiality and quality control."
-        },
-        {
-            question: "Q4. Do you manufacture uniforms?",
-            answer: "Yes. We manufacture Industrial based on custom requirements."
-        },
-        {
-            question: "Q5. Do you export to Africa and Ghana?",
-            answer: "Yes. We support international buyers and work with clients sourcing garments for Africa, including Ghana."
-        },
-        {
-            question: "Q6. How can I start working with Sonna Exxports?",
-            answer: "You can begin by submitting your requirements through the contact form. Our team will guide you through the next steps."
-        }
+        { question: t('faq.q1'), answer: t('faq.a1') },
+        { question: t('faq.q2'), answer: t('faq.a2') },
+        { question: t('faq.q3'), answer: t('faq.a3') },
+        { question: t('faq.q4'), answer: t('faq.a4') },
+        { question: t('faq.q5'), answer: t('faq.a5') },
+        { question: t('faq.q6'), answer: t('faq.a6') },
     ];
 
     const [openIndex, setOpenIndex] = useState(0);
@@ -45,8 +30,8 @@ const FAQ = () => {
             <Header />
             <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 pt-32 min-h-screen">
                 <div className="text-center mb-12">
-                    <span className="text-primary font-bold tracking-widest text-sm uppercase">Support</span>
-                    <h1 className="font-serif text-4xl md:text-5xl font-bold mt-3 text-primary-dark dark:text-gray-100">Frequently Asked Questions</h1>
+                    <span className="text-primary font-bold tracking-widest text-sm uppercase">{t('faq.support_tag')}</span>
+                    <h1 className="font-serif text-4xl md:text-5xl font-bold mt-3 text-primary-dark dark:text-gray-100">{t('faq.title')}</h1>
                 </div>
                 
                 <div className="space-y-4 max-w-3xl mx-auto">

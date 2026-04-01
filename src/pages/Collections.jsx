@@ -3,11 +3,13 @@ import { Link } from 'react-router-dom';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { getMailtoLink } from '../utils/emailUtils';
+import { useLanguage } from '../context/LanguageContext';
 
 import { products as Products } from '../data/products';
 import bannerImg from '../assets/Collection Banner.png';
 
 const Collections = () => {
+    const { t } = useLanguage();
     return (
         <div className="flex h-auto min-h-screen w-full flex-col font-display overflow-x-hidden antialiased bg-background-light dark:bg-background-dark text-text-dark dark:text-gray-100">
             <Header />
@@ -18,13 +20,13 @@ const Collections = () => {
                 <div className="absolute inset-0 bg-black/40 flex flex-col items-center justify-center text-white px-4">
                     <h1 className="font-serif text-3xl md:text-5xl lg:text-7xl text-center text-white mb-8" 
                         style={{ textShadow: '0 4px 30px rgba(0,0,0,0.9), 0 2px 10px rgba(0,0,0,0.8)' }}>
-                        Explore Our Collection
+                        {t('collection_page.banner_title')}
                     </h1>
                     <Link 
                         to="/contact" 
                         className="h-14 px-10 rounded-full bg-primary hover:bg-white hover:text-primary text-white font-bold text-lg flex items-center justify-center transition-all duration-300 shadow-[0_4px_20px_rgba(0,0,0,0.6)] transform hover:-translate-y-1 active:scale-95"
                     >
-                        Contact Us
+                        {t('collection_page.contact_cta')}
                     </Link>
                 </div>
             </div>
@@ -48,20 +50,20 @@ const Collections = () => {
                                     />
                                 )}
                             </div>
-                            <h3 className="text-xl font-medium group-hover:text-primary transition-colors">{product.name}</h3>
+                            <h3 className="text-xl font-medium group-hover:text-primary transition-colors">{t(`pname.${product.id}`)}</h3>
                         </Link>
                     ))}
                 </div>
 
                 {/* Bottom CTA */}
                 <div className="mt-24 mb-12 flex flex-col items-center justify-center text-center gap-6 max-w-3xl mx-auto p-10 md:p-14 bg-white border border-primary/10 rounded-2xl shadow-sm">
-                    <h2 className="text-3xl md:text-4xl font-serif text-primary-dark leading-tight">Partner with a Reliable Manufacturer</h2>
+                    <h2 className="text-3xl md:text-4xl font-serif text-primary-dark leading-tight">{t('collection_page.partner_title')}</h2>
                     <div className="flex flex-col sm:flex-row gap-4 mt-2 w-full justify-center">
                         <a 
                             href={getMailtoLink('customization')}
                             className="h-14 px-8 rounded-full bg-primary hover:bg-primary-dark text-white font-bold text-base flex items-center justify-center transition-all shadow-md transform hover:-translate-y-1"
                         >
-                            Let's Build Long-Term Supply
+                            {t('collection_page.partner_cta')}
                         </a>
                         <a 
                             href="https://drive.google.com/file/d/1tzwGu-CNx0mRinHnRDcXBDNQnA6YyJzO/view?usp=drive_link"
@@ -69,7 +71,7 @@ const Collections = () => {
                             rel="noopener noreferrer"
                             className="h-14 px-8 rounded-full bg-accent-beige hover:bg-accent-beige-hover text-primary-dark font-bold text-base flex items-center justify-center transition-all shadow-md transform hover:-translate-y-1"
                         >
-                            Catalogue
+                            {t('collection_page.catalogue')}
                         </a>
                     </div>
                 </div>

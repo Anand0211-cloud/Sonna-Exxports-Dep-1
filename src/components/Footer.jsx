@@ -1,7 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useLanguage } from '../context/LanguageContext';
 
 const Footer = () => {
+    const { t } = useLanguage();
     return (
         <footer className="bg-[#460566] border-t border-white/10 pt-12 pb-6 text-white">
             <div className="layout-container px-4 md:px-10 flex justify-center">
@@ -12,7 +14,7 @@ const Footer = () => {
                                 <span className="font-serif font-bold text-xl tracking-tight">SONNA EXXPORTS</span>
                             </div>
                             <p className="text-white/60 text-sm leading-relaxed">
-                                Premium export fashion house connecting global trends with timeless quality.
+                                {t('footer.desc')}
                             </p>
                             <div className="flex gap-4 mt-2">
                                 <a href="#" className="text-white/60 hover:text-accent-beige transition-colors" aria-label="Instagram">
@@ -33,27 +35,27 @@ const Footer = () => {
                             </div>
                         </div>
                         <div className="flex flex-col gap-4">
-                            <h4 className="font-bold text-white uppercase tracking-wider text-sm">Categories</h4>
-                            <Link to="/collections?category=Menswear" className="text-white/60 hover:text-accent-beige text-sm transition-colors">Menswear</Link>
-                            <Link to="/product/12" className="text-white/60 hover:text-accent-beige text-sm transition-colors">Baby Suit</Link>
-                            <Link to="/customization" className="text-white/60 hover:text-accent-beige text-sm transition-colors">Uniform</Link>
+                            <h4 className="font-bold text-white uppercase tracking-wider text-sm">{t('footer.categories')}</h4>
+                            <Link to="/collections?category=Menswear" className="text-white/60 hover:text-accent-beige text-sm transition-colors">{t('footer.menswear')}</Link>
+                            <Link to="/product/12" className="text-white/60 hover:text-accent-beige text-sm transition-colors">{t('footer.babysuit')}</Link>
+                            <Link to="/customization" className="text-white/60 hover:text-accent-beige text-sm transition-colors">{t('footer.uniform')}</Link>
                         </div>
                         <div className="flex flex-col gap-4">
-                            <h4 className="font-bold text-white uppercase tracking-wider text-sm">Company</h4>
-                            <Link to="/about" className="text-white/60 hover:text-accent-beige text-sm transition-colors">About Us</Link>
-                            <Link to="/contact" className="text-white/60 hover:text-accent-beige text-sm transition-colors">Contact</Link>
-                            <Link to="/customization" className="text-white/60 hover:text-accent-beige text-sm transition-colors">Customization</Link>
+                            <h4 className="font-bold text-white uppercase tracking-wider text-sm">{t('footer.company')}</h4>
+                            <Link to="/about" className="text-white/60 hover:text-accent-beige text-sm transition-colors">{t('footer.about_us')}</Link>
+                            <Link to="/contact" className="text-white/60 hover:text-accent-beige text-sm transition-colors">{t('nav.contact')}</Link>
+                            <Link to="/customization" className="text-white/60 hover:text-accent-beige text-sm transition-colors">{t('nav.customization')}</Link>
                         </div>
                         <div className="flex flex-col gap-4">
-                            <h4 className="font-bold text-white uppercase tracking-wider text-sm">Legal</h4>
-                            <Link to="/privacy-policy" className="text-white/60 hover:text-accent-beige text-sm transition-colors">Privacy Policy</Link>
-                            <Link to="/terms-conditions" className="text-white/60 hover:text-accent-beige text-sm transition-colors">Terms & Conditions</Link>
-                            <Link to="/shipping-policy" className="text-white/60 hover:text-accent-beige text-sm transition-colors">Shipping Policy</Link>
+                            <h4 className="font-bold text-white uppercase tracking-wider text-sm">{t('footer.legal')}</h4>
+                            <Link to="/privacy-policy" className="text-white/60 hover:text-accent-beige text-sm transition-colors">{t('footer.privacy')}</Link>
+                            <Link to="/terms-conditions" className="text-white/60 hover:text-accent-beige text-sm transition-colors">{t('footer.terms')}</Link>
+                            <Link to="/shipping-policy" className="text-white/60 hover:text-accent-beige text-sm transition-colors">{t('footer.shipping')}</Link>
                         </div>
                     </div>
                     <div className="flex flex-col md:flex-row justify-between items-center gap-4 pt-6 border-t border-white/5">
-                        <p className="text-white/40 text-xs">© {new Date().getFullYear()} Sonna Exxports. All rights reserved.</p>
-                        <Link to="/faq" className="bg-white text-[#460566] px-6 py-2 rounded-full hover:bg-accent-beige hover:text-primary-dark transition-all text-sm font-bold tracking-wider uppercase shadow-md inline-block">FAQ</Link>
+                        <p className="text-white/40 text-xs">© {new Date().getFullYear()} Sonna Exxports. {t('footer.rights')}</p>
+                        <Link to="/faq" className="bg-white text-[#460566] px-6 py-2 rounded-full hover:bg-accent-beige hover:text-primary-dark transition-all text-sm font-bold tracking-wider uppercase shadow-md inline-block">{t('footer.faq')}</Link>
                     </div>
                 </div>
             </div>

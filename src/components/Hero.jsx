@@ -3,25 +3,27 @@ import { getMailtoLink } from '../utils/emailUtils';
 import banner1 from '../assets/Banner/1.png';
 import banner2 from '../assets/Banner/2.png';
 import banner3 from '../assets/Banner/3.png';
-
-const slides = [
-    {
-        image: banner1,
-        heading: <>Global Fashion,<br /> <span className="italic text-accent-beige">Redefined.</span></>,
-    },
-    {
-        image: banner2,
-        heading: <>Export Quality,<br /> <span className="italic text-accent-beige">Production Excellence</span></>,
-    },
-    {
-        image: banner3,
-        heading: <>African Style,<br /> <span className="italic text-accent-beige">Elevated.</span></>,
-    },
-];
+import { useLanguage } from '../context/LanguageContext';
 
 const Hero = () => {
+    const { t } = useLanguage();
     const [current, setCurrent] = useState(0);
     const [isTransitioning, setIsTransitioning] = useState(false);
+
+    const slides = [
+        {
+            image: banner1,
+            heading: <>{t('hero.slide1.l1')}<br /> <span className="italic text-accent-beige">{t('hero.slide1.l2')}</span></>,
+        },
+        {
+            image: banner2,
+            heading: <>{t('hero.slide2.l1')}<br /> <span className="italic text-accent-beige">{t('hero.slide2.l2')}</span></>,
+        },
+        {
+            image: banner3,
+            heading: <>{t('hero.slide3.l1')}<br /> <span className="italic text-accent-beige">{t('hero.slide3.l2')}</span></>,
+        },
+    ];
 
     const goToSlide = useCallback((index) => {
         if (index === current || isTransitioning) return;
@@ -63,25 +65,25 @@ const Hero = () => {
                 {/* Content overlay */}
                 <div className="absolute inset-0 z-10 flex items-center justify-center">
                     <div className="w-full max-w-7xl px-6 md:px-10 flex flex-col items-center text-center gap-6 md:gap-8">
-                        <span className="text-accent-beige tracking-[0.2em] text-sm uppercase font-bold" style={{ textShadow: '0 2px 8px rgba(0,0,0,0.6)' }}>Sonna Exxports</span>
+                        <span className="text-accent-beige tracking-[0.2em] text-sm uppercase font-bold" style={{ textShadow: '0 2px 8px rgba(0,0,0,0.6)' }}>{t('hero.subtitle')}</span>
                         <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif font-medium text-white leading-[1.1] max-w-4xl tracking-tight transition-opacity duration-500" style={{ textShadow: '0 4px 16px rgba(0,0,0,0.7), 0 2px 4px rgba(0,0,0,0.5)' }}>
                             {slides[current].heading}
                         </h1>
                         <p className="text-base md:text-lg text-white/80 max-w-xl font-light leading-relaxed" style={{ textShadow: '0 2px 8px rgba(0,0,0,0.6)' }}>
-                            Experience the pinnacle of luxury export fashion. Meticulously crafted textiles delivered to the world's most exclusive boutiques.
+                            {t('hero.desc')}
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 mt-2">
                             <a
                                 href={getMailtoLink('general')}
                                 className="h-12 px-8 rounded-full bg-accent-beige hover:bg-accent-beige-hover text-primary-dark font-bold text-base flex items-center justify-center transition-all transform hover:scale-105"
                             >
-                                Discuss Your Project
+                                {t('hero.cta.discuss')}
                             </a>
                             <a
                                 href="/collections"
                                 className="h-12 px-8 rounded-full border border-white/30 hover:bg-white/10 text-white font-medium text-base flex items-center justify-center transition-all backdrop-blur-sm"
                             >
-                                View Collection
+                                {t('hero.cta.view')}
                             </a>
                         </div>
 

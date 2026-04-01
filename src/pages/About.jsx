@@ -6,8 +6,10 @@ import yusrahProfile from '../assets/team/yusrah-profile.jpg';
 import yusrahSignature from '../assets/team/yusrah-signature.png';
 import mainBanner from '../assets/About Banner.png';
 import { getMailtoLink } from '../utils/emailUtils';
+import { useLanguage } from '../context/LanguageContext';
 
 const About = () => {
+    const { t } = useLanguage();
     return (
         <div className="bg-white text-gray-900 font-display overflow-x-hidden antialiased selection:bg-accent-beige selection:text-primary-dark transition-colors duration-300">
             <Header />
@@ -26,11 +28,11 @@ const About = () => {
                 {/* 1. About Sonna Exxports */}
                 <section className="py-20 bg-gray-50">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                        <h2 className="font-serif text-4xl md:text-5xl mb-8">Sonna Exxports</h2>
+                        <h2 className="font-serif text-4xl md:text-5xl mb-8">{t('about.title')}</h2>
                         <p className="text-gray-600 text-lg leading-relaxed max-w-5xl mx-auto text-justify md:text-center space-y-4">
-                            <span className="block">India’s textile strength is unmatched. The difference lies in systems.</span>
-                            <span className="block">Sonna Exxports operates as a structured garment manufacturer & exporter, focused on stable GSM, controlled shrinkage, precise sizing, and consistent finishing across bulk production.</span>
-                            <span className="block">We don’t chase transactions. We build long-term supply reliability.</span>
+                            <span className="block">{t('about.p1')}</span>
+                            <span className="block">{t('about.p2')}</span>
+                            <span className="block">{t('about.p3')}</span>
                         </p>
                     </div>
                 </section>
@@ -39,8 +41,8 @@ const About = () => {
                 <section className="py-20 bg-white">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                         <div className="text-center mb-16">
-                            <span className="text-primary font-bold tracking-widest text-sm uppercase">Leadership</span>
-                            <h2 className="font-serif text-4xl md:text-5xl mt-3">The Founder</h2>
+                            <span className="text-primary font-bold tracking-widest text-sm uppercase">{t('about.leadership_tag')}</span>
+                            <h2 className="font-serif text-4xl md:text-5xl mt-3">{t('about.founder')}</h2>
                         </div>
                         <div className="flex flex-col lg:flex-row-reverse items-center gap-12 lg:gap-20">
                             <div className="w-full lg:w-1/2 relative">
@@ -55,16 +57,16 @@ const About = () => {
                                 <h3 className="font-serif text-5xl font-bold">Yusrah Ahmad</h3>
                                 <div className="space-y-4">
                                     <p className="text-gray-600 leading-loose">
-                                        Cotton isn’t just fabric — it’s what people wear on their skin every day.
+                                        {t('about.founder_p1')}
                                     </p>
                                     <p className="text-gray-600 leading-loose">
-                                        When I stepped into the garment export space, I saw how inconsistency quietly disrupts global B2B trade. One shipment meets expectations, the next shifts in fabric, sizing, or finishing — and buyers absorb the cost.
+                                        {t('about.founder_p2')}
                                     </p>
                                     <p className="text-gray-600 leading-loose">
-                                        India has one of the richest textile ecosystems in the world. The capability has always been here. What was missing was structure.
+                                        {t('about.founder_p3')}
                                     </p>
                                     <p className="text-gray-600 leading-loose">
-                                        Sonna Exxports was built on one principle: in global exports, consistency matters more than claims. We supply export-grade cotton garments engineered for precision, repeatability, and scale — because in international trade, certainty is the real premium.
+                                        {t('about.founder_p4')}
                                     </p>
                                 </div>
                                 <div className="pt-6">
@@ -73,7 +75,7 @@ const About = () => {
                                         className="h-16 opacity-60 mb-2"
                                         src={yusrahSignature}
                                     />
-                                    <p className="text-primary font-medium tracking-wide text-sm">FOUNDER & CEO</p>
+                                    <p className="text-primary font-medium tracking-wide text-sm">{t('about.founder_role')}</p>
                                 </div>
                             </div>
                         </div>
@@ -85,15 +87,15 @@ const About = () => {
                     <div className="max-w-7xl mx-auto">
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20">
                             <div className="bg-white p-10 rounded-lg shadow-sm border-l-4 border-gray-300">
-                                <h2 className="font-serif text-3xl md:text-4xl mb-6">Our Mission</h2>
+                                <h2 className="font-serif text-3xl md:text-4xl mb-6">{t('about.mission')}</h2>
                                 <p className="text-gray-600 leading-relaxed text-lg">
-                                    To deliver scalable garment manufacturing supported by disciplined quality systems and long-term supply partnerships.
+                                    {t('about.mission_desc')}
                                 </p>
                             </div>
                             <div className="bg-white p-10 rounded-lg shadow-sm border-l-4 border-primary">
-                                <h2 className="font-serif text-3xl md:text-4xl mb-6">Our Vision</h2>
+                                <h2 className="font-serif text-3xl md:text-4xl mb-6">{t('about.vision')}</h2>
                                 <p className="text-gray-600 leading-relaxed text-lg">
-                                    To position Indian textile manufacturing as a global benchmark for consistency, reliability, and export-grade excellence.
+                                    {t('about.vision_desc')}
                                 </p>
                             </div>
                         </div>
@@ -103,27 +105,27 @@ const About = () => {
                 {/* 4. Core Values (Moved) */}
                 <section className="py-20 bg-gray-50">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                        <h2 className="font-serif text-4xl md:text-5xl mb-12">Our Core Values</h2>
+                        <h2 className="font-serif text-4xl md:text-5xl mb-12">{t('about.values')}</h2>
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                             <div className="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow">
                                 <span className="material-symbols-outlined text-primary text-4xl mb-4">verified</span>
-                                <h3 className="font-serif text-xl font-bold mb-3">Reliability</h3>
-                                <p className="text-gray-600 text-sm leading-relaxed">We build systems that ensure repeatable production standards across bulk orders.</p>
+                                <h3 className="font-serif text-xl font-bold mb-3">{t('about.val_reliability')}</h3>
+                                <p className="text-gray-600 text-sm leading-relaxed">{t('about.val_reliability_desc')}</p>
                             </div>
                             <div className="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow">
                                 <span className="material-symbols-outlined text-primary text-4xl mb-4">sync</span>
-                                <h3 className="font-serif text-xl font-bold mb-3">Consistency</h3>
-                                <p className="text-gray-600 text-sm leading-relaxed">Every shipment follows controlled processes for stable quality output.</p>
+                                <h3 className="font-serif text-xl font-bold mb-3">{t('about.val_consistency')}</h3>
+                                <p className="text-gray-600 text-sm leading-relaxed">{t('about.val_consistency_desc')}</p>
                             </div>
                             <div className="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow">
                                 <span className="material-symbols-outlined text-primary text-4xl mb-4">playlist_add_check</span>
-                                <h3 className="font-serif text-xl font-bold mb-3">Quality Testing</h3>
-                                <p className="text-gray-600 text-sm leading-relaxed">Each product undergoes fabric inspection, stitching checks, measurement verification, finishing control, and final audit before dispatch.</p>
+                                <h3 className="font-serif text-xl font-bold mb-3">{t('about.val_quality')}</h3>
+                                <p className="text-gray-600 text-sm leading-relaxed">{t('about.val_quality_desc')}</p>
                             </div>
                             <div className="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow">
                                 <span className="material-symbols-outlined text-primary text-4xl mb-4">lock</span>
-                                <h3 className="font-serif text-xl font-bold mb-3">Brand Privacy</h3>
-                                <p className="text-gray-600 text-sm leading-relaxed">We respect client confidentiality. Designs, specifications, and private labels remain fully protected.</p>
+                                <h3 className="font-serif text-xl font-bold mb-3">{t('about.val_privacy')}</h3>
+                                <p className="text-gray-600 text-sm leading-relaxed">{t('about.val_privacy_desc')}</p>
                             </div>
                         </div>
                     </div>
@@ -134,19 +136,19 @@ const About = () => {
                 {/* 5. Contact Section */}
                 <section className="py-24 bg-gray-50">
                     <div className="max-w-4xl mx-auto px-4 text-center">
-                        <h2 className="font-serif text-4xl md:text-5xl mb-10">Struggling with Inconsistent<br /> Bulk Supply?</h2>
+                        <h2 className="font-serif text-4xl md:text-5xl mb-10">{t('about.cta_title')}<br />{t('about.cta_title2')}</h2>
                         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                             <a
                                 href={getMailtoLink('about')}
                                 className="w-full sm:w-auto inline-block bg-primary hover:bg-primary-light text-white px-10 py-4 rounded font-medium tracking-widest transition-colors duration-300 shadow-lg hover:shadow-xl"
                             >
-                                Discuss Your Requirement
+                                {t('about.cta_discuss')}
                             </a>
                             <Link
                                 to="/contact"
                                 className="w-full sm:w-auto inline-block bg-white border-2 border-primary text-primary hover:bg-primary hover:text-white px-10 py-4 rounded font-medium tracking-widest transition-colors duration-300 shadow-lg hover:shadow-xl"
                             >
-                                Contact Us
+                                {t('about.cta_contact')}
                             </Link>
                         </div>
                     </div>

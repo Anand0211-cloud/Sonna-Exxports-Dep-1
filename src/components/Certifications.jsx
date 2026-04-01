@@ -3,8 +3,10 @@ import gstImg from '../assets/home/GST Registered.png';
 import isoImg from '../assets/home/ISO 9001.png';
 import iecImg from '../assets/home/Import Export Code (IEC).png';
 import oekoTexImg from '../assets/home/OEKO-TEX®️ Standard 100.png';
+import { useLanguage } from '../context/LanguageContext';
 
 const Certifications = () => {
+    const { t } = useLanguage();
     const certs = [
         { id: 1, img: isoImg, alt: 'ISO 9001' },
         { id: 2, img: oekoTexImg, alt: 'OEKO-TEX Standard 100' },
@@ -17,8 +19,8 @@ const Certifications = () => {
             <div className="layout-container px-4 md:px-10">
                 <div className="max-w-7xl mx-auto flex flex-col items-center">
                     <div className="text-center mb-16">
-                        <span className="text-primary font-bold tracking-widest text-sm uppercase">Excellence</span>
-                        <h2 className="font-serif text-4xl md:text-5xl mt-3 text-primary-dark">Accreditations & Standards</h2>
+                        <span className="text-primary font-bold tracking-widest text-sm uppercase">{t('certifications.tag')}</span>
+                        <h2 className="font-serif text-4xl md:text-5xl mt-3 text-primary-dark">{t('certifications.title')}</h2>
                     </div>
 
                     <div className="flex flex-wrap justify-center gap-8 md:gap-16">

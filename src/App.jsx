@@ -11,11 +11,13 @@ import ShippingPolicy from './pages/ShippingPolicy';
 import TermsConditions from './pages/TermsConditions';
 import FAQ from './pages/FAQ';
 import ScrollToTop from './components/ScrollToTop';
+import LanguageToggle from './components/LanguageToggle';
 
 function App() {
   return (
     <BrowserRouter>
       <ScrollToTop />
+      <LanguageToggle />
       <Routes>
         <Route path="/product/:id" element={<ProductDetail />} />
         <Route path="/" element={<Home />} />

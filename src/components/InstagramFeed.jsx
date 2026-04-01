@@ -1,6 +1,9 @@
 import React from 'react';
+import { Instagram, ArrowUpRight } from 'lucide-react';
+import { useLanguage } from '../context/LanguageContext';
 
 const InstagramFeed = () => {
+    const { t } = useLanguage();
     // Placeholder images from Unsplash
     const posts = [
         "https://images.unsplash.com/photo-1558769132-cb1aea458c5e?q=80&w=2574&auto=format&fit=crop",
@@ -13,14 +16,24 @@ const InstagramFeed = () => {
         <section className="py-24 bg-background-light overflow-hidden">
             <div className="layout-container px-4 md:px-10">
                 <div className="max-w-7xl mx-auto">
-                    <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+                    <div className="flex flex-col md:flex-row justify-between items-end gap-6 mb-12">
                         <div>
-                            <span className="text-primary font-bold tracking-widest text-sm uppercase">Process & Lifestyle</span>
-                            <h2 className="font-serif text-4xl md:text-5xl mt-3 text-primary-dark">Follow @SonnaExxports</h2>
+                            <span className="text-secondary font-bold tracking-[0.2em] uppercase text-xs md:text-sm mb-3 block animate-fade-in flex items-center gap-2">
+                                <Instagram size={16} />
+                                {t('instagram.tag')}
+                            </span>
+                            <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif text-primary">
+                                {t('instagram.title')}
+                            </h2>
                         </div>
-                        <a href="https://instagram.com" target="_blank" rel="noreferrer" className="flex items-center gap-2 text-primary font-bold hover:text-primary-dark transition-colors border-b-2 border-primary/20 hover:border-primary pb-1">
-                            <span className="material-symbols-outlined text-xl">camera_alt</span>
-                            View Instagram
+                        <a 
+                            href="https://instagram.com/sonnaexxports" 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="group flex items-center gap-2 text-primary font-medium border-b border-primary/30 pb-1 hover:border-primary transition-colors"
+                        >
+                            {t('instagram.view')}
+                            <ArrowUpRight size={18} className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                         </a>
                     </div>
 

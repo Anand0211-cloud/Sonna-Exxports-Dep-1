@@ -1,41 +1,243 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo, useRef, useEffect } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import contactImage from '../assets/Contact.png';
-import PhoneInput from 'react-phone-input-2';
+import { useLanguage } from '../context/LanguageContext';
 import 'react-phone-input-2/lib/style.css';
 
 const Contact = () => {
+    const { t } = useLanguage();
+    const countryCodes = useMemo(() => [
+        { code: '+93', iso: 'af', name: 'Afghanistan' },
+        { code: '+355', iso: 'al', name: 'Albania' },
+        { code: '+213', iso: 'dz', name: 'Algeria' },
+        { code: '+376', iso: 'ad', name: 'Andorra' },
+        { code: '+244', iso: 'ao', name: 'Angola' },
+        { code: '+54', iso: 'ar', name: 'Argentina' },
+        { code: '+374', iso: 'am', name: 'Armenia' },
+        { code: '+61', iso: 'au', name: 'Australia' },
+        { code: '+43', iso: 'at', name: 'Austria' },
+        { code: '+994', iso: 'az', name: 'Azerbaijan' },
+        { code: '+973', iso: 'bh', name: 'Bahrain' },
+        { code: '+880', iso: 'bd', name: 'Bangladesh' },
+        { code: '+375', iso: 'by', name: 'Belarus' },
+        { code: '+32', iso: 'be', name: 'Belgium' },
+        { code: '+501', iso: 'bz', name: 'Belize' },
+        { code: '+229', iso: 'bj', name: 'Benin' },
+        { code: '+975', iso: 'bt', name: 'Bhutan' },
+        { code: '+591', iso: 'bo', name: 'Bolivia' },
+        { code: '+387', iso: 'ba', name: 'Bosnia and Herzegovina' },
+        { code: '+267', iso: 'bw', name: 'Botswana' },
+        { code: '+55', iso: 'br', name: 'Brazil' },
+        { code: '+673', iso: 'bn', name: 'Brunei' },
+        { code: '+359', iso: 'bg', name: 'Bulgaria' },
+        { code: '+226', iso: 'bf', name: 'Burkina Faso' },
+        { code: '+257', iso: 'bi', name: 'Burundi' },
+        { code: '+855', iso: 'kh', name: 'Cambodia' },
+        { code: '+237', iso: 'cm', name: 'Cameroon' },
+        { code: '+1', iso: 'ca', name: 'Canada' },
+        { code: '+236', iso: 'cf', name: 'Central African Republic' },
+        { code: '+235', iso: 'td', name: 'Chad' },
+        { code: '+56', iso: 'cl', name: 'Chile' },
+        { code: '+86', iso: 'cn', name: 'China' },
+        { code: '+57', iso: 'co', name: 'Colombia' },
+        { code: '+269', iso: 'km', name: 'Comoros' },
+        { code: '+242', iso: 'cg', name: 'Congo' },
+        { code: '+243', iso: 'cd', name: 'Congo (DRC)' },
+        { code: '+506', iso: 'cr', name: 'Costa Rica' },
+        { code: '+225', iso: 'ci', name: "CÃ´te d'Ivoire" },
+        { code: '+385', iso: 'hr', name: 'Croatia' },
+        { code: '+53', iso: 'cu', name: 'Cuba' },
+        { code: '+357', iso: 'cy', name: 'Cyprus' },
+        { code: '+420', iso: 'cz', name: 'Czech Republic' },
+        { code: '+45', iso: 'dk', name: 'Denmark' },
+        { code: '+253', iso: 'dj', name: 'Djibouti' },
+        { code: '+593', iso: 'ec', name: 'Ecuador' },
+        { code: '+20', iso: 'eg', name: 'Egypt' },
+        { code: '+503', iso: 'sv', name: 'El Salvador' },
+        { code: '+240', iso: 'gq', name: 'Equatorial Guinea' },
+        { code: '+291', iso: 'er', name: 'Eritrea' },
+        { code: '+372', iso: 'ee', name: 'Estonia' },
+        { code: '+268', iso: 'sz', name: 'Eswatini' },
+        { code: '+251', iso: 'et', name: 'Ethiopia' },
+        { code: '+679', iso: 'fj', name: 'Fiji' },
+        { code: '+358', iso: 'fi', name: 'Finland' },
+        { code: '+33', iso: 'fr', name: 'France' },
+        { code: '+241', iso: 'ga', name: 'Gabon' },
+        { code: '+220', iso: 'gm', name: 'Gambia' },
+        { code: '+995', iso: 'ge', name: 'Georgia' },
+        { code: '+49', iso: 'de', name: 'Germany' },
+        { code: '+233', iso: 'gh', name: 'Ghana' },
+        { code: '+30', iso: 'gr', name: 'Greece' },
+        { code: '+502', iso: 'gt', name: 'Guatemala' },
+        { code: '+224', iso: 'gn', name: 'Guinea' },
+        { code: '+245', iso: 'gw', name: 'Guinea-Bissau' },
+        { code: '+592', iso: 'gy', name: 'Guyana' },
+        { code: '+509', iso: 'ht', name: 'Haiti' },
+        { code: '+504', iso: 'hn', name: 'Honduras' },
+        { code: '+852', iso: 'hk', name: 'Hong Kong' },
+        { code: '+36', iso: 'hu', name: 'Hungary' },
+        { code: '+354', iso: 'is', name: 'Iceland' },
+        { code: '+91', iso: 'in', name: 'India' },
+        { code: '+62', iso: 'id', name: 'Indonesia' },
+        { code: '+98', iso: 'ir', name: 'Iran' },
+        { code: '+964', iso: 'iq', name: 'Iraq' },
+        { code: '+353', iso: 'ie', name: 'Ireland' },
+        { code: '+972', iso: 'il', name: 'Israel' },
+        { code: '+39', iso: 'it', name: 'Italy' },
+        { code: '+1', iso: 'jm', name: 'Jamaica' },
+        { code: '+81', iso: 'jp', name: 'Japan' },
+        { code: '+962', iso: 'jo', name: 'Jordan' },
+        { code: '+7', iso: 'kz', name: 'Kazakhstan' },
+        { code: '+254', iso: 'ke', name: 'Kenya' },
+        { code: '+965', iso: 'kw', name: 'Kuwait' },
+        { code: '+996', iso: 'kg', name: 'Kyrgyzstan' },
+        { code: '+856', iso: 'la', name: 'Laos' },
+        { code: '+371', iso: 'lv', name: 'Latvia' },
+        { code: '+961', iso: 'lb', name: 'Lebanon' },
+        { code: '+266', iso: 'ls', name: 'Lesotho' },
+        { code: '+231', iso: 'lr', name: 'Liberia' },
+        { code: '+218', iso: 'ly', name: 'Libya' },
+        { code: '+423', iso: 'li', name: 'Liechtenstein' },
+        { code: '+370', iso: 'lt', name: 'Lithuania' },
+        { code: '+352', iso: 'lu', name: 'Luxembourg' },
+        { code: '+853', iso: 'mo', name: 'Macau' },
+        { code: '+261', iso: 'mg', name: 'Madagascar' },
+        { code: '+265', iso: 'mw', name: 'Malawi' },
+        { code: '+60', iso: 'my', name: 'Malaysia' },
+        { code: '+960', iso: 'mv', name: 'Maldives' },
+        { code: '+223', iso: 'ml', name: 'Mali' },
+        { code: '+356', iso: 'mt', name: 'Malta' },
+        { code: '+222', iso: 'mr', name: 'Mauritania' },
+        { code: '+230', iso: 'mu', name: 'Mauritius' },
+        { code: '+52', iso: 'mx', name: 'Mexico' },
+        { code: '+373', iso: 'md', name: 'Moldova' },
+        { code: '+377', iso: 'mc', name: 'Monaco' },
+        { code: '+976', iso: 'mn', name: 'Mongolia' },
+        { code: '+382', iso: 'me', name: 'Montenegro' },
+        { code: '+212', iso: 'ma', name: 'Morocco' },
+        { code: '+258', iso: 'mz', name: 'Mozambique' },
+        { code: '+95', iso: 'mm', name: 'Myanmar' },
+        { code: '+264', iso: 'na', name: 'Namibia' },
+        { code: '+977', iso: 'np', name: 'Nepal' },
+        { code: '+31', iso: 'nl', name: 'Netherlands' },
+        { code: '+64', iso: 'nz', name: 'New Zealand' },
+        { code: '+505', iso: 'ni', name: 'Nicaragua' },
+        { code: '+227', iso: 'ne', name: 'Niger' },
+        { code: '+234', iso: 'ng', name: 'Nigeria' },
+        { code: '+850', iso: 'kp', name: 'North Korea' },
+        { code: '+389', iso: 'mk', name: 'North Macedonia' },
+        { code: '+47', iso: 'no', name: 'Norway' },
+        { code: '+968', iso: 'om', name: 'Oman' },
+        { code: '+92', iso: 'pk', name: 'Pakistan' },
+        { code: '+970', iso: 'ps', name: 'Palestine' },
+        { code: '+507', iso: 'pa', name: 'Panama' },
+        { code: '+675', iso: 'pg', name: 'Papua New Guinea' },
+        { code: '+595', iso: 'py', name: 'Paraguay' },
+        { code: '+51', iso: 'pe', name: 'Peru' },
+        { code: '+63', iso: 'ph', name: 'Philippines' },
+        { code: '+48', iso: 'pl', name: 'Poland' },
+        { code: '+351', iso: 'pt', name: 'Portugal' },
+        { code: '+974', iso: 'qa', name: 'Qatar' },
+        { code: '+40', iso: 'ro', name: 'Romania' },
+        { code: '+7', iso: 'ru', name: 'Russia' },
+        { code: '+250', iso: 'rw', name: 'Rwanda' },
+        { code: '+966', iso: 'sa', name: 'Saudi Arabia' },
+        { code: '+221', iso: 'sn', name: 'Senegal' },
+        { code: '+381', iso: 'rs', name: 'Serbia' },
+        { code: '+232', iso: 'sl', name: 'Sierra Leone' },
+        { code: '+65', iso: 'sg', name: 'Singapore' },
+        { code: '+421', iso: 'sk', name: 'Slovakia' },
+        { code: '+386', iso: 'si', name: 'Slovenia' },
+        { code: '+252', iso: 'so', name: 'Somalia' },
+        { code: '+27', iso: 'za', name: 'South Africa' },
+        { code: '+82', iso: 'kr', name: 'South Korea' },
+        { code: '+211', iso: 'ss', name: 'South Sudan' },
+        { code: '+34', iso: 'es', name: 'Spain' },
+        { code: '+94', iso: 'lk', name: 'Sri Lanka' },
+        { code: '+249', iso: 'sd', name: 'Sudan' },
+        { code: '+597', iso: 'sr', name: 'Suriname' },
+        { code: '+46', iso: 'se', name: 'Sweden' },
+        { code: '+41', iso: 'ch', name: 'Switzerland' },
+        { code: '+963', iso: 'sy', name: 'Syria' },
+        { code: '+886', iso: 'tw', name: 'Taiwan' },
+        { code: '+992', iso: 'tj', name: 'Tajikistan' },
+        { code: '+255', iso: 'tz', name: 'Tanzania' },
+        { code: '+66', iso: 'th', name: 'Thailand' },
+        { code: '+228', iso: 'tg', name: 'Togo' },
+        { code: '+216', iso: 'tn', name: 'Tunisia' },
+        { code: '+90', iso: 'tr', name: 'Turkey' },
+        { code: '+993', iso: 'tm', name: 'Turkmenistan' },
+        { code: '+256', iso: 'ug', name: 'Uganda' },
+        { code: '+380', iso: 'ua', name: 'Ukraine' },
+        { code: '+971', iso: 'ae', name: 'United Arab Emirates' },
+        { code: '+44', iso: 'gb', name: 'United Kingdom' },
+        { code: '+1', iso: 'us', name: 'United States' },
+        { code: '+598', iso: 'uy', name: 'Uruguay' },
+        { code: '+998', iso: 'uz', name: 'Uzbekistan' },
+        { code: '+58', iso: 've', name: 'Venezuela' },
+        { code: '+84', iso: 'vn', name: 'Vietnam' },
+        { code: '+967', iso: 'ye', name: 'Yemen' },
+        { code: '+260', iso: 'zm', name: 'Zambia' },
+        { code: '+263', iso: 'zw', name: 'Zimbabwe' }
+    ], []);
+
+    const [ccDropdownOpen, setCcDropdownOpen] = useState(false);
+    const [ccSearch, setCcSearch] = useState('');
+    const ccRef = useRef(null);
+    const ccSearchRef = useRef(null);
+
+    // Close country code dropdown on outside click
+    useEffect(() => {
+        const handleClickOutside = (e) => {
+            if (ccRef.current && !ccRef.current.contains(e.target)) {
+                setCcDropdownOpen(false);
+                setCcSearch('');
+            }
+        };
+        document.addEventListener('mousedown', handleClickOutside);
+        return () => document.removeEventListener('mousedown', handleClickOutside);
+    }, []);
+
+    // Focus search when dropdown opens
+    useEffect(() => {
+        if (ccDropdownOpen && ccSearchRef.current) {
+            ccSearchRef.current.focus();
+        }
+    }, [ccDropdownOpen]);
+
     const [formData, setFormData] = useState({
         fullName: '',
         email: '',
+        phoneCountryCode: '+91',
         phone: '',
-        communication: [],
+        interest: '',
         message: ''
     });
 
-    const handlePhoneChange = (value) => {
-        setFormData(prev => ({ ...prev, phone: value }));
-    };
+    const selectedCountry = useMemo(() => {
+        return countryCodes.find(c => c.code === formData.phoneCountryCode) || countryCodes.find(c => c.iso === 'in');
+    }, [formData.phoneCountryCode, countryCodes]);
 
-    const handleCheckboxChange = (method) => {
-        setFormData(prev => {
-            const methods = prev.communication.includes(method)
-                ? prev.communication.filter(m => m !== method)
-                : [...prev.communication, method];
-            return { ...prev, communication: methods };
-        });
+    const filteredCountries = useMemo(() => {
+        if (!ccSearch) return countryCodes;
+        const s = ccSearch.toLowerCase();
+        return countryCodes.filter(c => c.name.toLowerCase().includes(s) || c.code.includes(s) || c.iso.includes(s));
+    }, [ccSearch, countryCodes]);
+
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormData(prev => ({ ...prev, [name]: value }));
     };
 
     const handleSubmit = (e) => {
         e.preventDefault();
-
         const destination = "contact@sonnaexxports.com";
         const subject = `New Inquiry from ${formData.fullName}`;
         const body = `Full Name: ${formData.fullName}
 Email: ${formData.email}
-Phone: ${formData.phone}
-Preferred Communication: ${formData.communication.join(', ') || 'Not specified'}
+Phone: ${formData.phoneCountryCode} ${formData.phone}
+Preferred Communication: ${formData.interest}
 
 Message:
 ${formData.message}`;
@@ -52,11 +254,11 @@ ${formData.message}`;
                 <div className="max-w-7xl mx-auto">
 
                     {/* Header Text */}
-                    <div className="text-center max-w-3xl mx-auto  mt-10 mb-16 animate-fade-in">
-                        <span className="text-primary font-bold tracking-[0.2em] text-xs uppercase mb-3 block">Get in Touch</span>
-                        <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl text-[#460566] mb-6">Let's Start a Conversation</h1>
+                    <div className="text-center max-w-3xl mx-auto mt-10 mb-16 animate-fade-in">
+                        <span className="text-primary font-bold tracking-[0.2em] text-xs uppercase mb-3 block">{t('contact.title')}</span>
+                        <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl text-[#460566] mb-6">{t('contact.subtitle')}</h1>
                         <p className="text-gray-600 dark:text-gray-400 text-lg font-light leading-relaxed">
-                            Whether you're looking for bespoke manufacturing or have a question about our premium collections, we're here to help you craft your identity.
+                            {t('contact.desc')}
                         </p>
                     </div>
 
@@ -65,13 +267,10 @@ ${formData.message}`;
 
                         {/* Left Panel: Contact Info & Brand */}
                         <div className="lg:w-2/5 bg-[#460566] text-white p-10 lg:p-16 flex flex-col justify-between relative overflow-hidden">
-                            {/* Background Texture */}
                             <div className="absolute top-0 right-0 w-64 h-64 bg-white opacity-5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
                             <div className="absolute bottom-0 left-0 w-64 h-64 bg-purple-500 opacity-10 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2"></div>
 
                             <div className="relative z-10 space-y-12">
-                                {/* Owner Profile - Square - Moved Up */}
-
                                 <div className="flex flex-col items-center text-center">
                                     <div className="w-58 h-58 shrink-0 rounded-2xl overflow-hidden shadow-l mb-4">
                                         <img src={contactImage} alt="Sonna Exxports" className="w-full h-full object-cover" />
@@ -79,30 +278,29 @@ ${formData.message}`;
                                     <div>
                                         <p className="text-xl font-bold uppercase tracking-wider text-white">Sonna Exxport</p>
                                     </div>
-
                                 </div>
 
                                 <div>
-                                    <h3 className="font-serif text-3xl mb-8 text-white">Contact Information</h3>
+                                    <h3 className="font-serif text-3xl mb-8 text-white">{t('contact.info_title')}</h3>
                                     <div className="space-y-6">
                                         <div className="flex items-start gap-4">
                                             <span className="material-symbols-outlined text-accent-beige mt-1">call</span>
                                             <div>
-                                                <p className="text-xs font-bold uppercase tracking-widest text-purple-200 mb-1">Phone</p>
+                                                <p className="text-xs font-bold uppercase tracking-widest text-purple-200 mb-1">{t('contact.phone')}</p>
                                                 <p className="font-serif text-xl">+91 22 4567 8900</p>
                                             </div>
                                         </div>
                                         <div className="flex items-start gap-4">
                                             <span className="material-symbols-outlined text-accent-beige mt-1">mail</span>
                                             <div>
-                                                <p className="text-xs font-bold uppercase tracking-widest text-purple-200 mb-1">Email</p>
+                                                <p className="text-xs font-bold uppercase tracking-widest text-purple-200 mb-1">{t('contact.email')}</p>
                                                 <a href="mailto:contact@sonnaexxports.com" className="font-serif text-xl hover:text-accent-beige transition-colors">contact@sonnaexxports.com</a>
                                             </div>
                                         </div>
                                         <div className="flex items-start gap-4">
                                             <span className="material-symbols-outlined text-accent-beige mt-1">location_on</span>
                                             <div>
-                                                <p className="text-xs font-bold uppercase tracking-widest text-purple-200 mb-1">Main Branch</p>
+                                                <p className="text-xs font-bold uppercase tracking-widest text-purple-200 mb-1">{t('contact.address_main')}</p>
                                                 <p className="font-light opacity-90 leading-relaxed">
                                                     A 504 Lodha bel Air, Patel Estate,<br />
                                                     Mumbai, Maharashtra - 400102
@@ -112,7 +310,7 @@ ${formData.message}`;
                                         <div className="flex items-start gap-4">
                                             <span className="material-symbols-outlined text-accent-beige mt-1">location_on</span>
                                             <div>
-                                                <p className="text-xs font-bold uppercase tracking-widest text-purple-200 mb-1">Headquarters</p>
+                                                <p className="text-xs font-bold uppercase tracking-widest text-purple-200 mb-1">{t('contact.address_hq')}</p>
                                                 <p className="font-light opacity-90 leading-relaxed">
                                                     A- 17 New Janpath complex, Ashok Marg,<br />
                                                     Lucknow, Uttar Pradesh 226001
@@ -122,129 +320,155 @@ ${formData.message}`;
                                     </div>
                                 </div>
                             </div>
-
-                            {/* Social Links */}
-                            <div className="relative z-10 mt-12 flex gap-4">
-                                <a href="#" className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-white hover:text-primary transition-all duration-300 group" aria-label="Facebook">
-                                    <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.791-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
-                                    </svg>
-                                </a>
-                                <a href="#" className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-white hover:text-primary transition-all duration-300 group" aria-label="Instagram">
-                                    <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
-                                    </svg>
-                                </a>
-                                <a href="#" className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-white hover:text-primary transition-all duration-300 group" aria-label="LinkedIn">
-                                    <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9H12.909v1.632h.051c.495-.939 1.708-1.932 3.518-1.932 3.765 0 4.46 2.478 4.46 5.703v6.049zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
-                                    </svg>
-                                </a>
-                                <a href="#" className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-white hover:text-primary transition-all duration-300 group" aria-label="Twitter">
-                                    <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-14.986 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z" />
-                                    </svg>
-                                </a>
-                            </div>
                         </div>
 
                         {/* Right Panel: Form */}
                         <div className="lg:w-3/5 p-10 lg:p-16">
-                            <form className="space-y-10">
-                                <div className="group">
-                                    <label className="block text-xs font-bold uppercase tracking-widest text-gray-500 mb-2 group-focus-within:text-primary transition-colors">Full Name</label>
+                            <form className="space-y-10" onSubmit={handleSubmit}>
+                                {/* Name */}
+                                <div>
+                                    <label htmlFor="fullName" className="block text-sm font-bold text-primary mb-2 tracking-wide">
+                                        {t('contact.form.name')} <span className="text-red-500">*</span>
+                                    </label>
                                     <input
                                         type="text"
-                                        required
+                                        id="fullName"
+                                        name="fullName"
                                         value={formData.fullName}
-                                        onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
-                                        className="w-full bg-transparent border-0 border-b border-gray-300 px-0 py-3 text-lg focus:ring-0 focus:border-primary transition-all placeholder-gray-300"
-                                        placeholder="Enter your name"
+                                        onChange={handleChange}
+                                        required
+                                        className="w-full border-b border-gray-300 py-3 bg-transparent text-primary-dark focus:outline-none focus:border-primary transition-colors placeholder:text-gray-400"
+                                        placeholder="John Doe"
                                     />
                                 </div>
 
-                                <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-                                    <div className="group">
-                                        <label className="block text-xs font-bold uppercase tracking-widest text-gray-500 mb-2 group-focus-within:text-primary transition-colors">Email Address</label>
+                                {/* Email & Phone Row */}
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                                    <div>
+                                        <label htmlFor="email" className="block text-sm font-bold text-primary mb-2 tracking-wide">
+                                            {t('contact.form.email')} <span className="text-red-500">*</span>
+                                        </label>
                                         <input
                                             type="email"
-                                            required
+                                            id="email"
+                                            name="email"
                                             value={formData.email}
-                                            onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                                            className="w-full bg-transparent border-0 border-b border-gray-300 px-0 py-3 text-lg focus:ring-0 focus:border-primary transition-all placeholder-gray-300"
-                                            placeholder="name@company.com"
+                                            onChange={handleChange}
+                                            required
+                                            className="w-full border-b border-gray-300 py-3 bg-transparent text-primary-dark focus:outline-none focus:border-primary transition-colors placeholder:text-gray-400"
+                                            placeholder="john@example.com"
                                         />
                                     </div>
-                                    <div className="group phone-input-container">
-                                        <label className="block text-xs font-bold uppercase tracking-widest text-gray-500 mb-2 group-focus-within:text-primary transition-colors">Phone Number</label>
-                                        <div className="border-b border-gray-300 group-focus-within:border-primary transition-all">
-                                            <PhoneInput
-                                                country={'in'}
+                                    <div>
+                                        <label htmlFor="phone" className="block text-sm font-bold text-primary mb-2 tracking-wide">
+                                            {t('contact.form.phone')} <span className="text-red-500">*</span>
+                                        </label>
+                                        <div className="flex items-end gap-3 pr-2">
+                                            <div className="relative" ref={ccRef} style={{ minWidth: '110px' }}>
+                                                <button
+                                                    type="button"
+                                                    onClick={() => { setCcDropdownOpen(!ccDropdownOpen); setCcSearch(''); }}
+                                                    className="w-full border-b border-gray-300 py-3 bg-transparent text-primary-dark focus:outline-none focus:border-primary transition-colors flex items-center gap-2 cursor-pointer"
+                                                >
+                                                    <img src={`https://flagcdn.com/w40/${selectedCountry.iso}.png`} alt={selectedCountry.name} className="w-6 h-4 object-cover rounded-sm shadow-sm flex-shrink-0" />
+                                                    <span className="text-sm font-medium">{selectedCountry.code}</span>
+                                                    <span className="material-symbols-outlined text-gray-400 text-base ml-auto">expand_more</span>
+                                                </button>
+                                                {ccDropdownOpen && (
+                                                    <div className="absolute top-full left-0 mt-1 w-72 bg-white rounded-xl shadow-2xl border border-gray-100 z-50 overflow-hidden" style={{ maxHeight: '280px' }}>
+                                                        <div className="sticky top-0 bg-white p-2 border-b border-gray-100">
+                                                            <input
+                                                                ref={ccSearchRef}
+                                                                type="text"
+                                                                value={ccSearch}
+                                                                onChange={(e) => setCcSearch(e.target.value)}
+                                                                placeholder="Search country..."
+                                                                className="w-full px-3 py-2 text-sm bg-gray-50 rounded-lg focus:outline-none focus:ring-1 focus:ring-primary text-gray-700 placeholder:text-gray-400"
+                                                            />
+                                                        </div>
+                                                        <div className="overflow-y-auto" style={{ maxHeight: '230px' }}>
+                                                            {filteredCountries.map((c) => (
+                                                                <button
+                                                                    key={`${c.iso}-${c.code}`}
+                                                                    type="button"
+                                                                    onClick={() => {
+                                                                        setFormData(prev => ({ ...prev, phoneCountryCode: c.code }));
+                                                                        setCcDropdownOpen(false);
+                                                                        setCcSearch('');
+                                                                    }}
+                                                                    className={`w-full flex items-center gap-3 px-3 py-2.5 text-left text-sm transition-colors hover:bg-purple-50 ${
+                                                                        formData.phoneCountryCode === c.code && selectedCountry.iso === c.iso ? 'bg-purple-50 font-semibold text-primary' : 'text-gray-700'
+                                                                    }`}
+                                                                >
+                                                                    <img src={`https://flagcdn.com/w40/${c.iso}.png`} alt={c.name} className="w-6 h-4 object-cover rounded-sm shadow-sm flex-shrink-0" />
+                                                                    <span className="truncate">{c.name}</span>
+                                                                    <span className="text-gray-400 ml-auto flex-shrink-0">{c.code}</span>
+                                                                </button>
+                                                            ))}
+                                                        </div>
+                                                    </div>
+                                                )}
+                                            </div>
+                                            <input
+                                                type="tel"
+                                                id="phone"
+                                                name="phone"
                                                 value={formData.phone}
-                                                onChange={handlePhoneChange}
-                                                enableSearch={true}
-                                                buttonStyle={{
-                                                    background: 'transparent',
-                                                    border: 'none',
-                                                    padding: '0',
-                                                    width: '40px'
-                                                }}
-                                                inputStyle={{
-                                                    background: 'transparent',
-                                                    border: 'none',
-                                                    width: '100%',
-                                                    padding: '12px 0 12px 50px',
-                                                    fontSize: '1.125rem',
-                                                    color: '#6b7280'
-                                                }}
-                                                dropdownStyle={{
-                                                    width: '300px',
-                                                    fontFamily: 'inherit'
-                                                }}
+                                                onChange={handleChange}
+                                                required
+                                                className="flex-1 border border-gray-200 rounded-xl px-4 py-3 bg-gray-50/50 text-primary-dark focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all placeholder:text-gray-400"
+                                                placeholder="000 000 0000"
                                             />
                                         </div>
                                     </div>
                                 </div>
 
+                                {/* Interest/Subject */}
                                 <div>
-                                    <label className="block text-xs font-bold uppercase tracking-widest text-gray-500 mb-4">Preferred Communication</label>
-                                    <div className="flex flex-wrap gap-6">
-                                        {['Email', 'WhatsApp', 'Call'].map((method) => (
-                                            <label key={method} className="inline-flex items-center cursor-pointer group">
-                                                <input
-                                                    type="checkbox"
-                                                    checked={formData.communication.includes(method)}
-                                                    onChange={() => handleCheckboxChange(method)}
-                                                    className="w-5 h-5 text-primary border-gray-300 rounded focus:ring-primary focus:ring-offset-0 transition-all cursor-pointer"
-                                                />
-                                                <span className="ml-3 text-gray-600 group-hover:text-primary transition-colors">{method}</span>
-                                            </label>
+                                    <label htmlFor="interest" className="block text-sm font-bold text-primary mb-4 tracking-wide">
+                                        {t('contact.form.pref')}
+                                    </label>
+                                    <div className="flex flex-wrap gap-4">
+                                        {['Email', 'Phone', 'WhatsApp'].map((option) => (
+                                            <button
+                                                key={option}
+                                                type="button"
+                                                onClick={() => setFormData({ ...formData, interest: option })}
+                                                className={`px-6 py-2 rounded-full border text-sm font-medium transition-all ${formData.interest === option
+                                                        ? 'bg-primary border-primary text-white shadow-md'
+                                                        : 'border-gray-200 text-gray-600 hover:border-primary/50'
+                                                    }`}
+                                            >
+                                                {option}
+                                            </button>
                                         ))}
                                     </div>
                                 </div>
 
-                                <div className="group">
-                                    <label className="block text-xs font-bold uppercase tracking-widest text-gray-500 mb-2 group-focus-within:text-primary transition-colors">
-                                        Message <span className="text-gray-300 font-normal normal-case ml-1">(Optional)</span>
+                                {/* Message */}
+                                <div>
+                                    <label htmlFor="message" className="block text-sm font-bold text-primary mb-2 tracking-wide">
+                                        {t('contact.form.message')} <span className="text-red-500">*</span>
                                     </label>
                                     <textarea
-                                        rows="3"
+                                        id="message"
+                                        name="message"
                                         value={formData.message}
-                                        onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                                        className="w-full bg-transparent border-0 border-b border-gray-300 px-0 py-3 text-lg focus:ring-0 focus:border-primary transition-all resize-none placeholder-gray-300"
-                                        placeholder="Tell us about your project..."
+                                        onChange={handleChange}
+                                        required
+                                        rows="4"
+                                        className="w-full border-b border-gray-300 py-3 bg-transparent text-primary-dark focus:outline-none focus:border-primary transition-colors resize-none placeholder:text-gray-400"
+                                        placeholder="How can we help you?"
                                     ></textarea>
                                 </div>
 
+                                {/* Submit Button */}
                                 <button
                                     type="submit"
-                                    onClick={handleSubmit}
-                                    className="group relative w-full sm:w-auto overflow-hidden bg-[#460566] text-white py-4 px-10 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+                                    className="bg-primary text-white hover:bg-primary-dark transition-colors px-10 py-4 rounded-full font-bold uppercase tracking-wider text-sm flex items-center justify-center gap-2 group w-full sm:w-auto mt-4"
                                 >
-                                    <span className="relative z-10 font-bold uppercase tracking-widest text-sm flex items-center justify-center gap-2">
-                                        Send Inquiry
-                                        <span className="material-symbols-outlined text-xl group-hover:translate-x-1 transition-transform">arrow_forward</span>
-                                    </span>
+                                    {t('contact.form.submit')}
+                                    <span className="material-symbols-outlined text-lg group-hover:translate-x-1 transition-transform">send</span>
                                 </button>
                             </form>
 

@@ -1,9 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../assets/logo.png';
+import { useLanguage } from '../context/LanguageContext';
 
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+    const { t } = useLanguage();
 
     return (
         <header className="fixed top-0 z-50 w-full bg-[#460566] border-b border-white/10 transition-all duration-300">
@@ -11,8 +13,8 @@ const Header = () => {
                 <div className="w-full max-w-7xl flex items-center justify-between relative">
                     {/* Left Navigation (Desktop) */}
                     <nav className="hidden lg:flex items-center gap-8">
-                        <Link to="/about" className="text-white/80 hover:text-accent-beige text-base font-semibold transition-colors">About</Link>
-                        <Link to="/collections" className="text-white/80 hover:text-accent-beige text-base font-semibold transition-colors">Collection</Link>
+                        <Link to="/about" className="text-white/80 hover:text-accent-beige text-base font-semibold transition-colors">{t('nav.about')}</Link>
+                        <Link to="/collections" className="text-white/80 hover:text-accent-beige text-base font-semibold transition-colors">{t('nav.collection')}</Link>
                     </nav>
 
                     {/* Logo (Centered on Desktop, Left on Mobile) */}
@@ -27,8 +29,8 @@ const Header = () => {
                     {/* Right Navigation (Desktop) & Mobile Toggle */}
                     <div className="flex items-center gap-8">
                         <nav className="hidden lg:flex items-center gap-8">
-                            <Link to="/customization" className="text-white/80 hover:text-accent-beige text-base font-semibold transition-colors">Customization</Link>
-                            <Link to="/contact" className="text-white/80 hover:text-accent-beige text-base font-semibold transition-colors">Contact</Link>
+                            <Link to="/customization" className="text-white/80 hover:text-accent-beige text-base font-semibold transition-colors">{t('nav.customization')}</Link>
+                            <Link to="/contact" className="text-white/80 hover:text-accent-beige text-base font-semibold transition-colors">{t('nav.contact')}</Link>
                         </nav>
 
                         {/* Mobile Menu Button */}
@@ -50,35 +52,35 @@ const Header = () => {
                                 onClick={() => setIsMenuOpen(false)}
                                 className="text-white/90 hover:text-accent-beige text-2xl font-serif font-medium transition-colors"
                             >
-                                Home
+                                {t('nav.home')}
                             </Link>
                             <Link
                                 to="/about"
                                 onClick={() => setIsMenuOpen(false)}
                                 className="text-white/90 hover:text-accent-beige text-2xl font-serif font-medium transition-colors"
                             >
-                                About
+                                {t('nav.about')}
                             </Link>
                             <Link
                                 to="/collections"
                                 onClick={() => setIsMenuOpen(false)}
                                 className="text-white/90 hover:text-accent-beige text-2xl font-serif font-medium transition-colors"
                             >
-                                Collection
+                                {t('nav.collection')}
                             </Link>
                             <Link
                                 to="/customization"
                                 onClick={() => setIsMenuOpen(false)}
                                 className="text-white/90 hover:text-accent-beige text-2xl font-serif font-medium transition-colors"
                             >
-                                Customization
+                                {t('nav.customization')}
                             </Link>
                             <Link
                                 to="/contact"
                                 onClick={() => setIsMenuOpen(false)}
                                 className="text-white/90 hover:text-accent-beige text-2xl font-serif font-medium transition-colors"
                             >
-                                Contact
+                                {t('nav.contact')}
                             </Link>
                         </div>
                     </div>

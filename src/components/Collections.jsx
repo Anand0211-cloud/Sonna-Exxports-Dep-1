@@ -1,8 +1,10 @@
 import { useNavigate } from 'react-router-dom';
 import { products } from '../data/products';
+import { useLanguage } from '../context/LanguageContext';
 
 const CollectionItem = ({ image, title, subtitle, description, tag, id }) => {
     const navigate = useNavigate();
+    const { t } = useLanguage();
 
     return (
         <div
@@ -24,7 +26,7 @@ const CollectionItem = ({ image, title, subtitle, description, tag, id }) => {
                         {description}
                     </p>
                     <button className="mt-4 flex items-center gap-2 text-white border-b border-white pb-1 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-300">
-                        Explore <span className="material-symbols-outlined text-sm">arrow_forward</span>
+                        {t('collections.explore')} <span className="material-symbols-outlined text-sm">arrow_forward</span>
                     </button>
                 </div>
             </div>
@@ -35,14 +37,15 @@ const CollectionItem = ({ image, title, subtitle, description, tag, id }) => {
 
 
 const Collections = () => {
+    const { t } = useLanguage();
     // Map products to portfolio items
     // Using products 1-12 for the three rows
     const portfolioItems = products.slice(0, 12).map(product => ({
         id: product.id,
         image: product.image, // Use the main product image
-        title: product.name,
-        tag: product.category,
-        description: product.description
+        title: t(`pname.${product.id}`),
+        tag: t(`cat.${product.category}`),
+        description: t(`pdesc.${product.id}`)
     }));
 
     const row1 = portfolioItems.slice(0, 4);
@@ -54,8 +57,8 @@ const Collections = () => {
             <div className="px-4 md:px-10 max-w-[1600px] mx-auto flex flex-col gap-10">
                 <div className="flex justify-between items-end px-2">
                     <div>
-                        <h3 className="text-primary text-sm font-bold tracking-widest uppercase mb-2">Collections</h3>
-                        <h2 className="text-4xl md:text-5xl font-serif text-primary-dark">Curated Categories</h2>
+                        <h3 className="text-primary text-sm font-bold tracking-widest uppercase mb-2">{t('collections.tag')}</h3>
+                        <h2 className="text-4xl md:text-5xl font-serif text-primary-dark">{t('collections.title')}</h2>
                     </div>
                 </div>
 
