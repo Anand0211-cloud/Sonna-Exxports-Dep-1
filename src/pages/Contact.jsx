@@ -266,7 +266,7 @@ ${formData.message}`;
                     <div className="bg-white dark:bg-gray-900 rounded-3xl overflow-hidden shadow-2xl flex flex-col-reverse lg:flex-row animate-fade-in-up">
 
                         {/* Left Panel: Contact Info & Brand */}
-                        <div className="lg:w-2/5 bg-[#460566] text-white p-10 lg:p-16 flex flex-col justify-between relative overflow-hidden">
+                        <div className="lg:w-2/5 bg-[#460566] text-white p-6 sm:p-10 lg:p-16 flex flex-col justify-between relative overflow-hidden">
                             <div className="absolute top-0 right-0 w-64 h-64 bg-white opacity-5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
                             <div className="absolute bottom-0 left-0 w-64 h-64 bg-purple-500 opacity-10 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2"></div>
 
@@ -323,7 +323,7 @@ ${formData.message}`;
                         </div>
 
                         {/* Right Panel: Form */}
-                        <div className="lg:w-3/5 p-10 lg:p-16">
+                        <div className="lg:w-3/5 p-6 sm:p-10 lg:p-16">
                             <form className="space-y-10" onSubmit={handleSubmit}>
                                 {/* Name */}
                                 <div>
@@ -337,7 +337,7 @@ ${formData.message}`;
                                         value={formData.fullName}
                                         onChange={handleChange}
                                         required
-                                        className="w-full border-b border-gray-300 py-3 bg-transparent text-primary-dark focus:outline-none focus:border-primary transition-colors placeholder:text-gray-400"
+                                        className="w-full bg-gray-50/50 border border-gray-200 rounded-xl px-4 py-3 text-primary-dark focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all placeholder:text-gray-400"
                                         placeholder="John Doe"
                                     />
                                 </div>
@@ -355,7 +355,7 @@ ${formData.message}`;
                                             value={formData.email}
                                             onChange={handleChange}
                                             required
-                                            className="w-full border-b border-gray-300 py-3 bg-transparent text-primary-dark focus:outline-none focus:border-primary transition-colors placeholder:text-gray-400"
+                                            className="w-full bg-gray-50/50 border border-gray-200 rounded-xl px-4 py-3 text-primary-dark focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all placeholder:text-gray-400"
                                             placeholder="john@example.com"
                                         />
                                     </div>
@@ -363,12 +363,12 @@ ${formData.message}`;
                                         <label htmlFor="phone" className="block text-sm font-bold text-primary mb-2 tracking-wide">
                                             {t('contact.form.phone')} <span className="text-red-500">*</span>
                                         </label>
-                                        <div className="flex items-end gap-3 pr-2">
-                                            <div className="relative" ref={ccRef} style={{ minWidth: '110px' }}>
+                                        <div className="flex items-center gap-3">
+                                            <div className="relative" ref={ccRef} style={{ minWidth: '100px' }}>
                                                 <button
                                                     type="button"
                                                     onClick={() => { setCcDropdownOpen(!ccDropdownOpen); setCcSearch(''); }}
-                                                    className="w-full border-b border-gray-300 py-3 bg-transparent text-primary-dark focus:outline-none focus:border-primary transition-colors flex items-center gap-2 cursor-pointer"
+                                                    className="w-full bg-gray-50/50 border border-gray-200 rounded-xl px-3 py-3 text-primary-dark focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all flex items-center gap-2 cursor-pointer"
                                                 >
                                                     <img src={`https://flagcdn.com/w40/${selectedCountry.iso}.png`} alt={selectedCountry.name} className="w-6 h-4 object-cover rounded-sm shadow-sm flex-shrink-0" />
                                                     <span className="text-sm font-medium">{selectedCountry.code}</span>
@@ -416,7 +416,7 @@ ${formData.message}`;
                                                 value={formData.phone}
                                                 onChange={handleChange}
                                                 required
-                                                className="flex-1 border border-gray-200 rounded-xl px-4 py-3 bg-gray-50/50 text-primary-dark focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all placeholder:text-gray-400"
+                                                className="flex-1 bg-gray-50/50 border border-gray-200 rounded-xl px-4 py-3 text-primary-dark focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all placeholder:text-gray-400"
                                                 placeholder="000 000 0000"
                                             />
                                         </div>
@@ -457,7 +457,7 @@ ${formData.message}`;
                                         onChange={handleChange}
                                         required
                                         rows="4"
-                                        className="w-full border-b border-gray-300 py-3 bg-transparent text-primary-dark focus:outline-none focus:border-primary transition-colors resize-none placeholder:text-gray-400"
+                                        className="w-full bg-gray-50/50 border border-gray-200 rounded-2xl px-4 py-4 text-primary-dark focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all resize-none placeholder:text-gray-400"
                                         placeholder="How can we help you?"
                                     ></textarea>
                                 </div>
@@ -472,7 +472,7 @@ ${formData.message}`;
                                 </button>
                             </form>
 
-                            <div className="mt-20 rounded-3xl overflow-hidden shadow-xl h-[400px] animate-fade-in-up delay-200">
+                            <div className="mt-12 sm:mt-20 rounded-3xl overflow-hidden shadow-xl h-[250px] sm:h-[400px] animate-fade-in-up delay-200">
                                 <iframe
                                     src="https://maps.google.com/maps?q=Lodha%20Bel%20Air%20Mumbai&t=&z=13&ie=UTF8&iwloc=&output=embed"
                                     width="100%"

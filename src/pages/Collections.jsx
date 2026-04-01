@@ -15,16 +15,16 @@ const Collections = () => {
             <Header />
 
             {/* Banner Section */}
-            <div className="w-full relative mt-[88px] md:mt-[70px] bg-black overflow-hidden">
-                <img src={bannerImg} alt="Our Collection Banner" className="w-full h-auto block" />
+            <div className="w-full relative mt-[64px] md:mt-[70px] bg-black overflow-hidden">
+                <img src={bannerImg} alt="Our Collection Banner" className="w-full h-[300px] sm:h-[300px] md:h-auto object-cover object-center block" />
                 <div className="absolute inset-0 bg-black/40 flex flex-col items-center justify-center text-white px-4">
-                    <h1 className="font-serif text-3xl md:text-5xl lg:text-7xl text-center text-white mb-8" 
+                    <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-7xl text-center text-white mb-6 md:mb-8"
                         style={{ textShadow: '0 4px 30px rgba(0,0,0,0.9), 0 2px 10px rgba(0,0,0,0.8)' }}>
                         {t('collection_page.banner_title')}
                     </h1>
-                    <Link 
-                        to="/contact" 
-                        className="h-14 px-10 rounded-full bg-primary hover:bg-white hover:text-primary text-white font-bold text-lg flex items-center justify-center transition-all duration-300 shadow-[0_4px_20px_rgba(0,0,0,0.6)] transform hover:-translate-y-1 active:scale-95"
+                    <Link
+                        to="/contact"
+                        className="h-12 md:h-14 px-8 md:px-10 rounded-full bg-primary hover:bg-white hover:text-primary text-white font-bold text-base md:text-lg flex items-center justify-center transition-all duration-300 shadow-[0_4px_20px_rgba(0,0,0,0.6)] transform hover:-translate-y-1 active:scale-95"
                     >
                         {t('collection_page.contact_cta')}
                     </Link>
@@ -59,14 +59,15 @@ const Collections = () => {
                 <div className="mt-24 mb-12 flex flex-col items-center justify-center text-center gap-6 max-w-3xl mx-auto p-10 md:p-14 bg-white border border-primary/10 rounded-2xl shadow-sm">
                     <h2 className="text-3xl md:text-4xl font-serif text-primary-dark leading-tight">{t('collection_page.partner_title')}</h2>
                     <div className="flex flex-col sm:flex-row gap-4 mt-2 w-full justify-center">
-                        <a 
+                        <a
                             href={getMailtoLink('customization')}
                             className="h-14 px-8 rounded-full bg-primary hover:bg-primary-dark text-white font-bold text-base flex items-center justify-center transition-all shadow-md transform hover:-translate-y-1"
                         >
                             {t('collection_page.partner_cta')}
                         </a>
-                        <a 
-                            href="https://drive.google.com/file/d/1tzwGu-CNx0mRinHnRDcXBDNQnA6YyJzO/view?usp=drive_link"
+                        <a
+                            href="https://drive.google.com/uc?export=download&id=1tzwGu-CNx0mRinHnRDcXBDNQnA6YyJzO"
+                            download
                             target="_blank"
                             rel="noopener noreferrer"
                             className="h-14 px-8 rounded-full bg-accent-beige hover:bg-accent-beige-hover text-primary-dark font-bold text-base flex items-center justify-center transition-all shadow-md transform hover:-translate-y-1"

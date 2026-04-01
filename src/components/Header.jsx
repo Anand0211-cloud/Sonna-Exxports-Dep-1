@@ -9,7 +9,7 @@ const Header = () => {
 
     return (
         <header className="fixed top-0 z-50 w-full bg-[#460566] border-b border-white/10 transition-all duration-300">
-            <div className={`layout-container flex justify-center px-4 md:px-10 ${isMenuOpen ? 'py-6' : 'py-3'} md:py-6 transition-all duration-300`}>
+            <div className="layout-container flex justify-center px-4 md:px-10 py-3 md:py-6 transition-all duration-300">
                 <div className="w-full max-w-7xl flex items-center justify-between relative">
                     {/* Left Navigation (Desktop) */}
                     <nav className="hidden lg:flex items-center gap-8">
@@ -18,11 +18,11 @@ const Header = () => {
                     </nav>
 
                     {/* Logo (Centered on Desktop, Left on Mobile) */}
-                    <Link to="/" className="flex items-center justify-center lg:absolute lg:left-1/2 lg:-translate-x-1/2 transition-transform duration-300 hover:scale-105 z-50">
+                    <Link to="/" className="flex items-center justify-center lg:absolute lg:left-1/2 lg:-translate-x-1/2 transition-transform duration-300 hover:scale-105 z-[60]">
                         <img
                             src={logo}
                             alt="Sonna Exxports"
-                            className="h-16 md:h-24 w-auto object-contain"
+                            className="h-12 md:h-24 w-auto object-contain"
                         />
                     </Link>
 
@@ -36,7 +36,7 @@ const Header = () => {
                         {/* Mobile Menu Button */}
                         <button
                             onClick={() => setIsMenuOpen(!isMenuOpen)}
-                            className="lg:hidden flex items-center justify-center size-10 rounded-full hover:bg-white/10 text-white transition-colors z-50"
+                            className="lg:hidden flex items-center justify-center size-10 rounded-full hover:bg-white/10 text-white transition-colors z-[60] relative"
                         >
                             <span className="material-symbols-outlined text-3xl">
                                 {isMenuOpen ? 'close' : 'menu'}
@@ -45,40 +45,40 @@ const Header = () => {
                     </div>
 
                     {/* Mobile Menu Overlay */}
-                    <div className={`fixed inset-0 bg-[#460566] z-40 flex flex-col items-center justify-center gap-8 transition-transform duration-300 lg:hidden ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
+                    <div className={`fixed inset-0 bg-[#460566] z-[55] flex flex-col items-center justify-center gap-6 transition-transform duration-300 lg:hidden ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
                         <div className="flex flex-col items-center gap-8">
                             <Link
                                 to="/"
                                 onClick={() => setIsMenuOpen(false)}
-                                className="text-white/90 hover:text-accent-beige text-2xl font-serif font-medium transition-colors"
+                                className="text-white/90 hover:text-accent-beige text-2xl font-serif font-medium transition-colors py-2 px-6"
                             >
                                 {t('nav.home')}
                             </Link>
                             <Link
                                 to="/about"
                                 onClick={() => setIsMenuOpen(false)}
-                                className="text-white/90 hover:text-accent-beige text-2xl font-serif font-medium transition-colors"
+                                className="text-white/90 hover:text-accent-beige text-2xl font-serif font-medium transition-colors py-2 px-6"
                             >
                                 {t('nav.about')}
                             </Link>
                             <Link
                                 to="/collections"
                                 onClick={() => setIsMenuOpen(false)}
-                                className="text-white/90 hover:text-accent-beige text-2xl font-serif font-medium transition-colors"
+                                className="text-white/90 hover:text-accent-beige text-2xl font-serif font-medium transition-colors py-2 px-6"
                             >
                                 {t('nav.collection')}
                             </Link>
                             <Link
                                 to="/customization"
                                 onClick={() => setIsMenuOpen(false)}
-                                className="text-white/90 hover:text-accent-beige text-2xl font-serif font-medium transition-colors"
+                                className="text-white/90 hover:text-accent-beige text-2xl font-serif font-medium transition-colors py-2 px-6"
                             >
                                 {t('nav.customization')}
                             </Link>
                             <Link
                                 to="/contact"
                                 onClick={() => setIsMenuOpen(false)}
-                                className="text-white/90 hover:text-accent-beige text-2xl font-serif font-medium transition-colors"
+                                className="text-white/90 hover:text-accent-beige text-2xl font-serif font-medium transition-colors py-2 px-6"
                             >
                                 {t('nav.contact')}
                             </Link>

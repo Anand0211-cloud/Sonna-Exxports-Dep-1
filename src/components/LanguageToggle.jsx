@@ -17,7 +17,7 @@ const LanguageToggle = () => {
   const currentLang = LANGUAGES.find(l => l.code === language) || LANGUAGES[0];
 
   return (
-    <div ref={ref} className="fixed bottom-6 right-6 z-[9999] flex flex-col items-end gap-3">
+    <div ref={ref} className="fixed bottom-6 right-6 z-[45] flex flex-col items-end gap-3">
       {/* Language Options Popup */}
       <div className={`mb-2 bg-white/95 backdrop-blur-xl rounded-2xl shadow-2xl border border-purple-100 overflow-hidden transition-all duration-300 origin-bottom-right ${isOpen ? 'scale-100 opacity-100 translate-y-0' : 'scale-75 opacity-0 translate-y-4 pointer-events-none'}`}
         style={{ boxShadow: '0 20px 60px rgba(70, 5, 102, 0.25), 0 8px 20px rgba(0,0,0,0.1)' }}>

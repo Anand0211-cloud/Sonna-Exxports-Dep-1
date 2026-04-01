@@ -22,14 +22,14 @@ const Home = () => {
                 <Hero />
 
                 {/* Leadership Section */}
-                <section className="py-20 bg-background-light text-gray-900">
+                <section className="py-20 bg-background-light text-gray-900 overflow-hidden">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                         <div className="flex flex-col lg:flex-row-reverse items-center gap-12 lg:gap-20">
                             <div className="w-full lg:w-1/2 relative">
-                                <div className="absolute -top-4 -right-4 w-full h-full border-2 border-primary/30"></div>
+                                <div className="absolute -top-4 -right-4 w-full h-full border-2 border-primary/30 hidden md:block"></div>
                                 <img
                                     alt="Founder Portrait"
-                                    className="relative shadow-xl w-full h-[600px] object-cover object-top transition-all duration-500"
+                                    className="relative shadow-xl w-full h-[400px] sm:h-[500px] lg:h-[600px] object-cover object-top transition-all duration-500"
                                     src={yusrahProfile}
                                 />
                             </div>

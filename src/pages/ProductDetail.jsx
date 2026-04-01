@@ -46,8 +46,8 @@ const ProductDetail = () => {
             <Header />
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 pt-28">
-                <nav aria-label="Breadcrumb" className="flex">
-                    <ol className="flex items-center space-x-2 text-sm text-gray-500 dark:text-gray-400">
+                <nav aria-label="Breadcrumb" className="flex overflow-hidden">
+                    <ol className="flex items-center flex-wrap gap-y-1 text-sm text-gray-500 dark:text-gray-400">
                         <li><Link to="/" className="hover:text-primary dark:hover:text-primary">{t('nav.home')}</Link></li>
                         <li><span className="material-symbols-outlined text-xs mx-1">chevron_right</span></li>
                         <li><Link to="/collections" className="hover:text-primary dark:hover:text-primary">{t('nav.collection')}</Link></li>

@@ -47,7 +47,7 @@ const Testimonials = () => {
                     </div>
 
                     <div className="relative">
-                        <div className="bg-white p-12 md:p-16 rounded-3xl shadow-lg border border-primary/5 relative mx-4 md:mx-12">
+                        <div className="bg-white p-6 sm:p-12 md:p-16 rounded-3xl shadow-lg border border-primary/5 relative mx-0 sm:mx-4 md:mx-12">
                             <div className="absolute top-8 left-8 text-8xl text-primary/5 font-serif leading-none">"</div>
 
                             <div className="relative z-10 flex flex-col items-center text-center">
@@ -71,18 +71,18 @@ const Testimonials = () => {
                         {/* Navigation Buttons */}
                         <button
                             onClick={prevTestimonial}
-                            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-2 md:-translate-x-6 size-12 bg-white rounded-full shadow-md flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all z-20"
+                            className="absolute left-2 sm:left-0 top-1/2 -translate-y-1/2 sm:-translate-x-2 md:-translate-x-6 size-10 sm:size-12 bg-white rounded-full shadow-md flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all z-20"
                             aria-label="Previous testimonial"
                         >
-                            <span className="material-symbols-outlined">arrow_back</span>
+                            <span className="material-symbols-outlined text-xl sm:text-2xl">arrow_back</span>
                         </button>
 
                         <button
                             onClick={nextTestimonial}
-                            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-2 md:translate-x-6 size-12 bg-white rounded-full shadow-md flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all z-20"
+                            className="absolute right-2 sm:right-0 top-1/2 -translate-y-1/2 sm:translate-x-2 md:translate-x-6 size-10 sm:size-12 bg-white rounded-full shadow-md flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all z-20"
                             aria-label="Next testimonial"
                         >
-                            <span className="material-symbols-outlined">arrow_forward</span>
+                            <span className="material-symbols-outlined text-xl sm:text-2xl">arrow_forward</span>
                         </button>
 
                         {/* Dots */}

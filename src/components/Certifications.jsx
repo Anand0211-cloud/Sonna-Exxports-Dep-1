@@ -23,10 +23,10 @@ const Certifications = () => {
                         <h2 className="font-serif text-4xl md:text-5xl mt-3 text-primary-dark">{t('certifications.title')}</h2>
                     </div>
 
-                    <div className="flex flex-wrap justify-center gap-8 md:gap-16">
+                    <div className="flex flex-wrap justify-center gap-6 sm:gap-8 md:gap-16">
                         {certs.map((cert) => (
                             <div key={cert.id} className="flex flex-col items-center gap-4 group cursor-pointer">
-                                <div className="w-64 h-64 bg-white border border-primary/10 rounded-full shadow-sm flex items-center justify-center relative overflow-hidden transition-transform duration-300 group-hover:-translate-y-2 group-hover:shadow-md p-8">
+                                <div className="w-40 h-40 sm:w-52 sm:h-52 md:w-64 md:h-64 bg-white border border-primary/10 rounded-full shadow-sm flex items-center justify-center relative overflow-hidden transition-transform duration-300 group-hover:-translate-y-2 group-hover:shadow-md p-6 sm:p-8">
                                     <div className="absolute inset-0 border-4 border-double border-primary/5 rounded-full m-2"></div>
                                     <img
                                         src={cert.img}
@@ -34,7 +34,7 @@ const Certifications = () => {
                                         className="w-full h-full object-contain relative z-10 transition-transform duration-500 group-hover:scale-110"
                                     />
                                 </div>
-                                <h4 className="font-serif text-primary-dark font-bold text-xl mt-4 text-center">{cert.alt}</h4>
+                                <h4 className="font-serif text-primary-dark font-bold text-base sm:text-lg md:text-xl mt-2 sm:mt-4 text-center">{cert.alt}</h4>
                             </div>
                         ))}
                     </div>

@@ -96,12 +96,12 @@ const Customization = () => {
             <Header />
 
             {/* 1. Hero Section - Full Size Image, No Overlay */}
-            <section className="relative w-full overflow-hidden pt-20">
+            <section className="relative w-full overflow-hidden mt-[64px] md:mt-[70px]">
                 <div className="w-full">
                     <img
                         src={mainBanner}
                         alt="Textile Production Banner"
-                        className="w-full h-auto block"
+                        className="w-full h-[300px] sm:h-[400px] md:h-auto object-cover object-center block"
                     />
                 </div>
             </section>

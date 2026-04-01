@@ -9,7 +9,7 @@ const CollectionItem = ({ image, title, subtitle, description, tag, id }) => {
     return (
         <div
             onClick={() => navigate(`/product/${id}`)}
-            className="group relative flex-1 hover:flex-[2] transition-all duration-700 ease-in-out cursor-pointer overflow-hidden"
+            className="group relative flex-1 min-h-[300px] hover:flex-[2] transition-all duration-700 ease-in-out cursor-pointer overflow-hidden"
         >
             <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors z-10"></div>
             <img
@@ -64,21 +64,21 @@ const Collections = () => {
 
                 <div className="flex flex-col gap-2 animate-fade-in">
                     {/* Row 1 */}
-                    <div className="flex flex-col lg:flex-row h-[1200px] lg:h-[600px] gap-2 w-full">
+                    <div className="flex flex-col lg:flex-row lg:h-[600px] gap-2 w-full">
                         {row1.map((item) => (
                             <CollectionItem key={item.id} {...item} />
                         ))}
                     </div>
 
                     {/* Row 2 */}
-                    <div className="flex flex-col lg:flex-row h-[1200px] lg:h-[600px] gap-2 w-full">
+                    <div className="flex flex-col lg:flex-row lg:h-[600px] gap-2 w-full">
                         {row2.map((item) => (
                             <CollectionItem key={item.id} {...item} />
                         ))}
                     </div>
 
                     {/* Row 3 */}
-                    <div className="flex flex-col lg:flex-row h-[1200px] lg:h-[600px] gap-2 w-full">
+                    <div className="flex flex-col lg:flex-row lg:h-[600px] gap-2 w-full">
                         {row3.map((item) => (
                             <CollectionItem key={item.id} {...item} />
                         ))}

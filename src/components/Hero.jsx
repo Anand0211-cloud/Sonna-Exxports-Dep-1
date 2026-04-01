@@ -41,7 +41,7 @@ const Hero = () => {
     }, [current, goToSlide]);
 
     return (
-        <section className="relative overflow-hidden bg-primary-dark pt-[88px] md:pt-[71px]">
+        <section className="relative overflow-hidden bg-primary-dark pt-[64px] md:pt-[71px]">
             {/* Image container — image in normal flow sets the section height */}
             <div className="relative w-full">
                 {slides.map((slide, index) => (
@@ -49,7 +49,7 @@ const Hero = () => {
                         key={index}
                         src={slide.image}
                         alt={`Banner ${index + 1}`}
-                        className={`w-full h-auto block transition-opacity duration-700 ease-in-out ${index === 0 ? 'relative' : 'absolute inset-0'
+                        className={`w-full h-[550px] sm:h-[600px] md:h-auto object-cover object-center block transition-opacity duration-700 ease-in-out ${index === 0 ? 'relative' : 'absolute inset-0'
                             }`}
                         style={{
                             opacity: index === current ? 1 : 0,
@@ -64,24 +64,24 @@ const Hero = () => {
 
                 {/* Content overlay */}
                 <div className="absolute inset-0 z-10 flex items-center justify-center">
-                    <div className="w-full max-w-7xl px-6 md:px-10 flex flex-col items-center text-center gap-6 md:gap-8">
-                        <span className="text-accent-beige tracking-[0.2em] text-sm uppercase font-bold" style={{ textShadow: '0 2px 8px rgba(0,0,0,0.6)' }}>{t('hero.subtitle')}</span>
-                        <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif font-medium text-white leading-[1.1] max-w-4xl tracking-tight transition-opacity duration-500" style={{ textShadow: '0 4px 16px rgba(0,0,0,0.7), 0 2px 4px rgba(0,0,0,0.5)' }}>
+                    <div className="w-full max-w-7xl px-4 sm:px-6 md:px-10 flex flex-col items-center text-center gap-4 sm:gap-6 md:gap-8">
+                        <span className="text-accent-beige tracking-[0.2em] text-xs sm:text-sm uppercase font-bold" style={{ textShadow: '0 2px 8px rgba(0,0,0,0.6)' }}>{t('hero.subtitle')}</span>
+                        <h1 className="text-2xl sm:text-4xl md:text-6xl lg:text-7xl font-serif font-medium text-white leading-[1.1] max-w-4xl tracking-tight transition-opacity duration-500" style={{ textShadow: '0 4px 16px rgba(0,0,0,0.7), 0 2px 4px rgba(0,0,0,0.5)' }}>
                             {slides[current].heading}
                         </h1>
-                        <p className="text-base md:text-lg text-white/80 max-w-xl font-light leading-relaxed" style={{ textShadow: '0 2px 8px rgba(0,0,0,0.6)' }}>
+                        <p className="text-sm sm:text-base md:text-lg text-white/80 max-w-xl font-light leading-relaxed hidden sm:block" style={{ textShadow: '0 2px 8px rgba(0,0,0,0.6)' }}>
                             {t('hero.desc')}
                         </p>
-                        <div className="flex flex-col sm:flex-row gap-4 mt-2">
+                        <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mt-4 sm:mt-2 w-full sm:w-auto px-4 sm:px-0">
                             <a
                                 href={getMailtoLink('general')}
-                                className="h-12 px-8 rounded-full bg-accent-beige hover:bg-accent-beige-hover text-primary-dark font-bold text-base flex items-center justify-center transition-all transform hover:scale-105"
+                                className="h-12 sm:h-12 w-full sm:w-auto px-6 sm:px-8 rounded-full bg-accent-beige hover:bg-accent-beige-hover text-primary-dark font-bold text-sm sm:text-base flex items-center justify-center transition-all transform hover:scale-105"
                             >
                                 {t('hero.cta.discuss')}
                             </a>
                             <a
                                 href="/collections"
-                                className="h-12 px-8 rounded-full border border-white/30 hover:bg-white/10 text-white font-medium text-base flex items-center justify-center transition-all backdrop-blur-sm"
+                                className="h-12 sm:h-12 w-full sm:w-auto px-6 sm:px-8 rounded-full border border-white/30 hover:bg-white/10 text-white font-medium text-sm sm:text-base flex items-center justify-center transition-all backdrop-blur-sm"
                             >
                                 {t('hero.cta.view')}
                             </a>

@@ -2,7 +2,7 @@ import React from 'react';
 
 const Editorial = () => {
     return (
-        <section className="py-16 md:py-24 bg-[#3a1538]">
+        <section className="py-16 md:py-24 bg-[#3a1538] overflow-hidden">
             <div className="layout-container flex justify-center px-4 md:px-10">
                 <div className="w-full max-w-7xl">
                     <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
@@ -11,7 +11,7 @@ const Editorial = () => {
                                 <span className="h-px w-12 bg-accent-beige"></span>
                                 <span className="uppercase tracking-widest text-sm font-bold">Editorial Spotlight</span>
                             </div>
-                            <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif text-white leading-tight">
+                            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif text-white leading-tight">
                                 Crafting Excellence <br />Since 1998.
                             </h2>
                             <div className="space-y-6 text-white/80 text-lg font-light leading-relaxed">
@@ -42,7 +42,7 @@ const Editorial = () => {
                             </button>
                         </div>
                         <div className="order-1 lg:order-2 relative">
-                            <div className="absolute -inset-4 bg-accent-beige/10 transform rotate-3"></div>
+                            <div className="absolute -inset-4 bg-accent-beige/10 transform rotate-3 hidden sm:block"></div>
                             <div className="relative overflow-hidden aspect-[4/5] shadow-2xl">
                                 <img
                                     src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1ybDI4BeJOE3iOXM47hPnyTZSQ-g0K_gvQ1grHqdvskoKJBLpQ45AJTM7RS9zuYlt-1IKLu3XXwxN-suml_MR5LV1RZIWk98D9bSBBtKle5M2tS95H-e65pPNtBq_ROvp2Pm3arOikmLGfWm3CMcJZSsBecaHtGdYALa8CRxDXzM1j2Y35K_oeq06c3bZxsNZXX0tAsXi7lK1ie1NHKRB7SokG2jqW4j4tPt8OoxkahflSokd0xK6WXIDn2JvQRHmHxdhkn_uqA"

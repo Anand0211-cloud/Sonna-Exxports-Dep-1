@@ -50,7 +50,7 @@ const Manufacturing = () => {
                                 <p>{t('manufacturing.p3')}</p>
                             </div>
                             <div className="space-y-4 pt-4 border-t border-white/10">
-                                <div className="grid grid-cols-2 gap-4">
+                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                     {features.map((feature, index) => (
                                         <div key={index} className="flex items-center gap-3 bg-white/5 p-4 rounded-xl border border-white/10">
                                             <div className="w-10 h-10 rounded-full bg-accent-beige/20 text-accent-beige flex items-center justify-center flex-shrink-0">
@@ -67,7 +67,7 @@ const Manufacturing = () => {
                             <div className="pt-2">
                                 <a 
                                     href={getMailtoLink('sales')}
-                                    className="h-14 px-12 rounded-full bg-accent-beige hover:bg-accent-beige-hover text-primary-dark font-bold text-lg flex items-center justify-center transition-all shadow-lg hover:shadow-accent-beige/20 transform hover:-translate-y-1 gap-2"
+                                    className="h-14 px-8 sm:px-12 rounded-full bg-accent-beige hover:bg-accent-beige-hover text-primary-dark font-bold text-base sm:text-lg flex items-center justify-center transition-all shadow-lg hover:shadow-accent-beige/20 transform hover:-translate-y-1 gap-2 w-full sm:w-auto"
                                 >
                                     {t('manufacturing.cta')}
                                     <ArrowRight size={18} />

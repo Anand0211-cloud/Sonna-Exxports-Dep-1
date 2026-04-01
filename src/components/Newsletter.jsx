@@ -18,7 +18,7 @@ const Newsletter = () => {
                         {t('newsletter.cta.discuss')}
                     </a>
                     <a 
-                        href="https://drive.google.com/file/d/1tzwGu-CNx0mRinHnRDcXBDNQnA6YyJzO/view?usp=drive_link"
+                        href="https://drive.google.com/uc?export=download&id=1tzwGu-CNx0mRinHnRDcXBDNQnA6YyJzO"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="h-14 px-8 rounded-full bg-accent-beige hover:bg-accent-beige-hover text-primary-dark font-bold text-base flex items-center justify-center transition-all shadow-md transform hover:-translate-y-1"
