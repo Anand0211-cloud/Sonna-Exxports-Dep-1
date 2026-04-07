@@ -287,7 +287,7 @@ ${formData.message}`;
                                             <span className="material-symbols-outlined text-accent-beige mt-1">call</span>
                                             <div>
                                                 <p className="text-xs font-bold uppercase tracking-widest text-purple-200 mb-1">{t('contact.phone')}</p>
-                                                <p className="font-serif text-xl">+91 22 4567 8900</p>
+                                                <p className="font-serif text-xl">+91 73078 00177</p>
                                             </div>
                                         </div>
                                         <div className="flex items-start gap-4">
@@ -396,9 +396,8 @@ ${formData.message}`;
                                                                         setCcDropdownOpen(false);
                                                                         setCcSearch('');
                                                                     }}
-                                                                    className={`w-full flex items-center gap-3 px-3 py-2.5 text-left text-sm transition-colors hover:bg-purple-50 ${
-                                                                        formData.phoneCountryCode === c.code && selectedCountry.iso === c.iso ? 'bg-purple-50 font-semibold text-primary' : 'text-gray-700'
-                                                                    }`}
+                                                                    className={`w-full flex items-center gap-3 px-3 py-2.5 text-left text-sm transition-colors hover:bg-purple-50 ${formData.phoneCountryCode === c.code && selectedCountry.iso === c.iso ? 'bg-purple-50 font-semibold text-primary' : 'text-gray-700'
+                                                                        }`}
                                                                 >
                                                                     <img src={`https://flagcdn.com/w40/${c.iso}.png`} alt={c.name} className="w-6 h-4 object-cover rounded-sm shadow-sm flex-shrink-0" />
                                                                     <span className="truncate">{c.name}</span>
@@ -435,8 +434,8 @@ ${formData.message}`;
                                                 type="button"
                                                 onClick={() => setFormData({ ...formData, interest: option })}
                                                 className={`px-6 py-2 rounded-full border text-sm font-medium transition-all ${formData.interest === option
-                                                        ? 'bg-primary border-primary text-white shadow-md'
-                                                        : 'border-gray-200 text-gray-600 hover:border-primary/50'
+                                                    ? 'bg-primary border-primary text-white shadow-md'
+                                                    : 'border-gray-200 text-gray-600 hover:border-primary/50'
                                                     }`}
                                             >
                                                 {option}
