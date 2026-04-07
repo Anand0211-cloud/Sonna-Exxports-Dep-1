@@ -20,6 +20,7 @@ import techColour from '../assets/customisation/Colour Matching.png';
 import techFabric from '../assets/customisation/Fabric Selection.png';
 import techWash from '../assets/customisation/Washing & Finishing.png';
 import mainBanner from '../assets/Customisation Banner.png';
+import mobileBanner from '../assets/customisation_mobile.png';
 
 const Customization = () => {
     const { t } = useLanguage();
@@ -96,13 +97,16 @@ const Customization = () => {
             <Header />
 
             {/* 1. Hero Section - Full Size Image, No Overlay */}
-            <section className="relative w-full overflow-hidden mt-[64px] md:mt-[70px]">
+            <section className="relative w-full overflow-hidden mt-[72px]">
                 <div className="w-full">
-                    <img
-                        src={mainBanner}
-                        alt="Textile Production Banner"
-                        className="w-full h-[300px] sm:h-[400px] md:h-auto object-cover object-center block"
-                    />
+                    <picture>
+                        <source media="(max-width: 767px)" srcSet={mobileBanner} />
+                        <img
+                            src={mainBanner}
+                            alt="Textile Production Banner"
+                            className="w-full h-[300px] sm:h-[400px] md:h-auto object-cover object-center block"
+                        />
+                    </picture>
                 </div>
             </section>
 

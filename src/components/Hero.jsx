@@ -3,6 +3,9 @@ import { getMailtoLink } from '../utils/emailUtils';
 import banner1 from '../assets/Banner/1.png';
 import banner2 from '../assets/Banner/2.png';
 import banner3 from '../assets/Banner/3.png';
+import banner1Mobile from '../assets/home 1_mobile.png';
+import banner2Mobile from '../assets/home 2_mobile.png';
+import banner3Mobile from '../assets/home 3_mobile.png';
 import { useLanguage } from '../context/LanguageContext';
 
 const Hero = () => {
@@ -13,14 +16,17 @@ const Hero = () => {
     const slides = [
         {
             image: banner1,
+            mobileImage: banner1Mobile,
             heading: <>{t('hero.slide1.l1')}<br /> <span className="italic text-accent-beige">{t('hero.slide1.l2')}</span></>,
         },
         {
             image: banner2,
+            mobileImage: banner2Mobile,
             heading: <>{t('hero.slide2.l1')}<br /> <span className="italic text-accent-beige">{t('hero.slide2.l2')}</span></>,
         },
         {
             image: banner3,
+            mobileImage: banner3Mobile,
             heading: <>{t('hero.slide3.l1')}<br /> <span className="italic text-accent-beige">{t('hero.slide3.l2')}</span></>,
         },
     ];
@@ -41,21 +47,26 @@ const Hero = () => {
     }, [current, goToSlide]);
 
     return (
-        <section className="relative overflow-hidden bg-primary-dark pt-[64px] md:pt-[71px]">
+        <section className="relative overflow-hidden bg-primary-dark pt-[72px]">
             {/* Image container — image in normal flow sets the section height */}
             <div className="relative w-full">
                 {slides.map((slide, index) => (
-                    <img
+                    <picture
                         key={index}
-                        src={slide.image}
-                        alt={`Banner ${index + 1}`}
-                        className={`w-full h-[550px] sm:h-[600px] md:h-auto object-cover object-center block transition-opacity duration-700 ease-in-out ${index === 0 ? 'relative' : 'absolute inset-0'
+                        className={`w-full h-[550px] sm:h-[600px] md:h-auto block transition-opacity duration-700 ease-in-out ${index === 0 ? 'relative' : 'absolute inset-0'
                             }`}
                         style={{
                             opacity: index === current ? 1 : 0,
                             zIndex: index === current ? 1 : 0
                         }}
-                    />
+                    >
+                        <source media="(max-width: 767px)" srcSet={slide.mobileImage} />
+                        <img
+                            src={slide.image}
+                            alt={`Banner ${index + 1}`}
+                            className="w-full h-full object-cover object-center block"
+                        />
+                    </picture>
                 ))}
 
                 {/* Subtle purple overlay + bottom gradient for text readability */}

@@ -5,6 +5,7 @@ import Footer from '../components/Footer';
 import yusrahProfile from '../assets/team/yusrah-profile.jpg';
 import yusrahSignature from '../assets/team/yusrah-signature.png';
 import mainBanner from '../assets/About Banner.png';
+import mobileBanner from '../assets/about_mobile.png';
 import { getMailtoLink } from '../utils/emailUtils';
 import { useLanguage } from '../context/LanguageContext';
 
@@ -15,13 +16,16 @@ const About = () => {
             <Header />
             {/* Added pt-20 to account for fixed header */}
             <main>
-                <header className="relative w-full mt-[64px] md:mt-[70px] h-[300px] sm:h-[400px] md:h-[40vh] md:min-h-[350px] flex items-center justify-center overflow-hidden bg-black">
+                <header className="relative w-full mt-[72px] h-[300px] sm:h-[400px] md:h-[40vh] md:min-h-[350px] flex items-center justify-center overflow-hidden bg-black">
                     <div className="absolute inset-0 z-0">
-                        <img
-                            alt="About Sonna Exxports Banner"
-                            className="w-full h-full object-cover object-center block"
-                            src={mainBanner}
-                        />
+                        <picture>
+                            <source media="(max-width: 767px)" srcSet={mobileBanner} />
+                            <img
+                                alt="About Sonna Exxports Banner"
+                                className="w-full h-full object-cover object-center block"
+                                src={mainBanner}
+                            />
+                        </picture>
                     </div>
                 </header>
 

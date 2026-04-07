@@ -7,6 +7,7 @@ import { useLanguage } from '../context/LanguageContext';
 
 import { products as Products } from '../data/products';
 import bannerImg from '../assets/Collection Banner.png';
+import mobileBannerImg from '../assets/collection_mobile.png';
 
 const Collections = () => {
     const { t } = useLanguage();
@@ -15,8 +16,15 @@ const Collections = () => {
             <Header />
 
             {/* Banner Section */}
-            <div className="w-full relative mt-[64px] md:mt-[70px] bg-black overflow-hidden">
-                <img src={bannerImg} alt="Our Collection Banner" className="w-full h-[300px] sm:h-[300px] md:h-auto object-cover object-center block" />
+            <div className="w-full relative mt-[72px] bg-black overflow-hidden">
+                <picture>
+                    <source media="(max-width: 767px)" srcSet={mobileBannerImg} />
+                    <img
+                        src={bannerImg}
+                        alt="Our Collection Banner"
+                        className="w-full h-[300px] sm:h-[300px] md:h-auto object-cover object-center block"
+                    />
+                </picture>
                 <div className="absolute inset-0 bg-black/40 flex flex-col items-center justify-center text-white px-4">
                     <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-7xl text-center text-white mb-6 md:mb-8"
                         style={{ textShadow: '0 4px 30px rgba(0,0,0,0.9), 0 2px 10px rgba(0,0,0,0.8)' }}>
